@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingRight="@dimen/vertical_margin">
+
+    <ImageView android:id="@+id/image"
+               android:layout_width="80dp"
+               android:layout_height="80dp"
+               android:layout_marginTop="@dimen/vertical_margin"
+               android:layout_marginLeft="@dimen/vertical_margin"
+               android:layout_marginRight="@dimen/vertical_margin"
+               android:scaleType="fitXY"/>
+
+
+    <TextView android:id="@+id/title"
+              style="@style/comm_text_black"
+              android:gravity="top"
+              android:minHeight="40dp"
+              android:maxLines="2"
+              android:layout_toRightOf="@id/image"
+              android:layout_marginTop="@dimen/vertical_margin"
+              android:text="itle"/>
+    <TextView android:id="@+id/price"
+              style="@style/comm_text"
+              android:drawableLeft="@mipmap/penny"
+              android:textColor="@color/red"
+              android:layout_marginTop="@dimen/vertical_margin"
+              android:layout_toRightOf="@id/image"
+              android:layout_below="@id/title"
+              android:textSize="@dimen/font_title"
+              android:text="0 ￥0.00"/>
+
+    <TextView android:id="@+id/content"
+              style="@style/comm_text"
+              android:layout_below="@id/image"
+              android:layout_marginTop="@dimen/vertical_margin"
+              android:layout_marginLeft="@dimen/vertical_margin"
+              android:text="评论："/>
+
+    <HorizontalScrollView android:id="@+id/horizontal"
+                          android:layout_below="@id/content"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginTop="@dimen/vertical_margin">
+        <LinearLayout android:id="@+id/image_layout"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal">
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+    <TextView android:id="@+id/create"
+              style="@style/comm_text"
+              android:layout_marginTop="@dimen/vertical_margin"
+              android:layout_marginLeft="@dimen/vertical_margin"
+              android:layout_below="@id/horizontal"
+              android:text="0"/>
+
+    <View android:layout_below="@id/create"
+          android:layout_marginTop="@dimen/vertical_margin"
+          style="@style/comm_line_horizontal"/>
+
+</RelativeLayout>

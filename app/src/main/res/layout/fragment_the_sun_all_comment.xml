@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background">
+
+    <RelativeLayout android:id="@+id/relative"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:padding="@dimen/padding_extra_samll"
+                    android:background="@color/white">
+        <Button style="@style/button_style"
+                android:layout_height="32dp"
+                android:layout_marginRight="@dimen/vertical_margin"
+                android:layout_centerVertical="true"
+                android:id="@+id/send"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="发送"/>
+
+        <EditText style="@style/comm_text"
+                  android:id="@+id/content"
+                  android:padding="@dimen/padding_extra_samll"
+                  android:layout_marginLeft="@dimen/vertical_margin"
+                  android:layout_marginRight="@dimen/vertical_margin"
+                  android:layout_marginBottom="@dimen/horizontal_margin_small"
+                  android:minHeight="35dp"
+                  android:maxLines="3"
+                  android:maxLength="80"
+                  android:layout_toLeftOf="@id/send"
+                  android:layout_centerVertical="true"
+                  android:background="@drawable/round_gray_transparent"
+                  android:layout_width="match_parent"
+                  android:text=""/>
+    </RelativeLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView android:id="@+id/pullList"
+                                                              android:layout_width="match_parent"
+                                                              android:layout_height="match_parent"
+                                                              android:layout_above="@id/relative"
+                                                              android:divider="@color/transparent"
+                                                              android:listSelector="@color/transparent"
+                                                              android:cacheColorHint="@color/transparent"
+                                                              android:background="@color/white">
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+</RelativeLayout>

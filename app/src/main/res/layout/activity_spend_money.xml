@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.cadyd.app.ui.activity.SpendMoneyActivity">
+
+    <LinearLayout
+        android:id="@+id/spend_money_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/gray"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="获得花币："
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_small" />
+
+            <TextView
+                android:id="@+id/the_actual_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/Orange"
+                android:textSize="@dimen/font_small" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="8dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/enter_editText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:paddingLeft="8dp"
+                android:background="@drawable/corners_gray_line"
+                android:hint="请输入其它金额"
+                android:inputType="number"
+                android:maxLength="5"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_small" />
+
+            <TextView
+                android:id="@+id/send"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/corners_orange_line"
+                android:gravity="center"
+                android:text="充值"
+                android:textColor="@color/Orange"
+                android:textSize="@dimen/font_small" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/spend_money_bottom"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="账户余额"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_title" />
+
+                <TextView
+                    android:id="@+id/Currency_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:id="@+id/spend_money_way"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="充值方式"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/font_title" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/spend_money_way"
+                    android:background="@color/font_gray" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/spend_money_way"
+                    android:background="@color/font_gray" />
+
+            </RelativeLayout>
+
+            <RadioGroup
+                android:id="@+id/RadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/Alipay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/radiobtn_alipay_selector"
+                    android:button="@null" />
+
+                <RadioButton
+                    android:id="@+id/WeChat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/radiobtn_wechat_selector"
+                    android:button="@null" />
+            </RadioGroup>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:id="@+id/spend_money_quick"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="快捷充值"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/font_title" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/spend_money_quick"
+                    android:background="@color/font_gray" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/spend_money_quick"
+                    android:background="@color/font_gray" />
+
+            </RelativeLayout>
+
+            <com.cadyd.app.ui.view.AutoLoadRecyclerView
+                android:id="@+id/spend_money_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

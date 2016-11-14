@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/edit_phone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/horizontal_margin">
+
+    <EditText
+        android:id="@+id/ui_register_phone"
+        style="@style/text_style"
+        android:background="@drawable/text_boolen_round_yellow_transparent"
+        android:drawableLeft="@mipmap/phone_image"
+        android:drawablePadding="@dimen/padding_extra_samll"
+        android:hint="请输入你要修改的电话号码"
+        android:padding="12dp"
+        android:phoneNumber="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/progress_normal"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/ui_register_set_code"
+            style="@style/text_style"
+            android:layout_width="0dp"
+            android:layout_weight="0.7"
+            android:drawableLeft="@mipmap/key_image"
+            android:hint="请输入验证码"
+            android:padding="12dp" />
+
+        <Button
+            android:id="@+id/ui_register_get_code"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/horizontal_margin_small"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="@dimen/horizontal_margin_small"
+            android:layout_weight="0.3"
+            android:background="@drawable/orange_button"
+            android:gravity="center"
+            android:text="获取验证码"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_small" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/password"
+        style="@style/text_style"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/text_boolen_round_yellow_transparent"
+        android:drawableLeft="@mipmap/user_password"
+        android:drawablePadding="@dimen/padding_extra_samll"
+        android:hint="请输入你的密码"
+        android:padding="12dp"
+        android:password="true" />
+
+    <Button
+        android:id="@+id/ui_register_send"
+        style="@style/button_style"
+        android:layout_marginTop="48dp"
+        android:text="修改" />
+
+</LinearLayout>

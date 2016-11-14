@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.8" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center|top"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.cadyd.app.ui.view.CircleImageView
+                android:id="@+id/individualstores_head"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/user_default"
+                app:border_color="@color/white" />
+
+            <TextView
+                android:id="@+id/individualstores_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/individualstores_head"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="13dp"
+                android:drawablePadding="5dp"
+                android:drawableRight="@mipmap/men"
+                android:gravity="center"
+                android:text="某某" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/individualstores_sentiment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0人气"
+                android:textColor="@color/text_primary_gray" />
+
+            <TextView
+                android:id="@+id/individualstores_fans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="0粉丝"
+                android:textColor="@color/text_primary_gray" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+
+            <CheckBox
+                android:id="@+id/individualstores_dianpu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shap_individualstores_dianpu"
+                android:button="@null"
+                android:text="关注店铺"
+                android:textColor="@color/title_bg" />
+
+            <TextView
+                android:id="@+id/individualstores_jinru"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/shap_individualstores_jinru"
+                android:text="进入店铺"
+                android:textColor="@color/text_black" />
+        </LinearLayout>
+
+
+        <ListView
+            android:id="@+id/individualstores_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:divider="@color/text_primary_gray"
+            android:dividerHeight="0.5dp"
+            android:visibility="gone"></ListView>
+    </LinearLayout>
+</LinearLayout>

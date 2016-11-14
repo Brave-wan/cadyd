@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.wcy.android.widget.NoScrollGridView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:id="@+id/topMenu"
+        android:layout_height="wrap_content"
+        android:background="@color/light_gray"
+        android:numColumns="2"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="@dimen/line_height"
+        android:horizontalSpacing="@dimen/line_height">
+</org.wcy.android.widget.NoScrollGridView>

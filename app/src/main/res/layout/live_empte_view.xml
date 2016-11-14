@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#cd000000"
+              android:focusable="false"
+              android:gravity="center"
+              android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/live_empty_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="网络错误或主播还未开播"
+        android:textColor="@color/white"
+        android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/live_leave"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/shape_live_leave_btn"
+        android:text="退出"
+        android:textColor="@color/purchase_pressed"/>
+
+</LinearLayout>

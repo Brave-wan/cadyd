@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="horizontal"
+              android:paddingTop="@dimen/horizontal_margin"
+              android:paddingBottom="@dimen/horizontal_margin"
+              android:background="@color/white">
+    <TextView style="@style/comm_text"
+              android:id="@+id/des"
+              android:singleLine="false"
+              android:layout_width="100dip"/>
+    <TextView style="@style/comm_text_black"
+              android:id="@+id/mixfield"
+              android:singleLine="false"
+              android:layout_marginLeft="@dimen/horizontal_margin"/>
+</LinearLayout>

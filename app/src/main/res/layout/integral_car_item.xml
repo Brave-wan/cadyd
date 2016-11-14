@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/vertical_margin">
+
+    <CheckBox android:id="@+id/checkbox"
+              android:layout_width="20dp"
+              android:layout_height="20dp"
+              android:button="@null"
+              android:layout_centerVertical="true"
+              android:background="@drawable/orange_checked"/>
+
+    <ImageView android:id="@+id/image_view"
+               android:layout_toRightOf="@id/checkbox"
+               android:layout_centerVertical="true"
+               android:layout_marginLeft="@dimen/horizontal_margin_small"
+               android:layout_marginRight="@dimen/horizontal_margin_small"
+               android:layout_width="80dip"
+               android:layout_height="90dp"
+               android:scaleType="fitXY"
+               android:background="@mipmap/goods_top_defalut"/>
+    <TextView
+            android:layout_toRightOf="@id/image_view"
+            android:id="@+id/title"
+            style="@style/comm_text"
+            android:layout_width="match_parent"
+            android:singleLine="false"
+            android:lines="2"
+            android:ellipsize="end"
+            android:text="title title title"/>
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/image_view"
+                    android:layout_alignParentBottom="true">
+
+        <TextView android:id="@+id/unit_price"
+                  style="@style/comm_text"
+                  android:layout_width="wrap_content"
+                  android:textColor="@color/red"
+                  android:singleLine="false"
+                  android:lines="1"
+                  android:ellipsize="end"
+                  android:textSize="@dimen/font_title"
+                  android:drawableLeft="@mipmap/penny"
+                  android:text="1000 + ￥200"/>
+
+        <TextView android:id="@+id/number"
+                  style="@style/comm_text"
+                  android:layout_alignParentRight="true"
+                  android:layout_width="wrap_content"
+                  android:singleLine="false"
+                  android:lines="1"
+                  android:ellipsize="end"
+                  android:textSize="@dimen/font_title"
+                  android:text="1件1套x1"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

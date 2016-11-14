@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:orientation="vertical">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/LinearLayout"
+                  android:layout_alignParentBottom="true"
+                  android:paddingTop="@dimen/vertical_margin"
+                  android:paddingBottom="@dimen/vertical_margin"
+                  android:background="@color/light_transparent"
+                  android:orientation="horizontal">
+
+        <TextView style="@style/comm_text"
+                  android:drawablePadding="@dimen/horizontal_margin_small"
+                  android:drawableLeft="@mipmap/guanxin"
+                  android:textColor="@color/white"
+                  android:layout_marginLeft="@dimen/horizontal_margin"
+                  android:layout_width="wrap_content"
+                  android:visibility="gone"
+                  android:text=""/>
+
+        <TextView style="@style/comm_text"
+                  android:id="@+id/details_comment"
+                  android:layout_alignParentRight="true"
+                  android:textColor="@color/white"
+                  android:layout_marginLeft="@dimen/horizontal_margin"
+                  android:drawablePadding="@dimen/horizontal_margin_small"
+                  android:drawableLeft="@mipmap/pinglun"
+                  android:layout_width="wrap_content"
+                  android:text="5"/>
+
+        <TextView style="@style/comm_text"
+                  android:id="@+id/details_praise"
+                  android:layout_centerHorizontal="true"
+                  android:textColor="@color/white"
+                  android:layout_marginLeft="@dimen/horizontal_margin"
+                  android:drawablePadding="@dimen/horizontal_margin_small"
+                  android:drawableLeft="@mipmap/guanxin"
+                  android:layout_width="wrap_content"
+                  android:text="14"/>
+
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager android:id="@+id/view_pager"
+                                       android:layout_above="@id/LinearLayout"
+                                       android:layout_width="match_parent"
+                                       android:layout_height="match_parent">
+    </android.support.v4.view.ViewPager>
+
+
+    <TextView style="@style/comm_text"
+              android:id="@+id/content_text"
+              android:layout_width="match_parent"
+              android:padding="@dimen/padding_extra_samll"
+              android:layout_above="@id/LinearLayout"
+              android:textColor="@color/white"
+              android:background="@color/light_transparent"
+              android:text=""/>
+
+
+</RelativeLayout>

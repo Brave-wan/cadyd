@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:shape="rectangle">
+
+    <solid android:color="@color/white"/>
+
+    <stroke
+            android:width="@dimen/league_prefer_btn_order"
+            android:color="@color/league_prefer_three"/>
+    <corners
+            android:radius="@dimen/league_prefer_btn_radius"/>
+    <padding
+            android:bottom="@dimen/league_prefer_btn_order"
+            android:left="@dimen/league_prefer_btn_order"
+            android:right="@dimen/league_prefer_btn_order"
+            android:top="@dimen/league_prefer_btn_order"/>
+</shape>

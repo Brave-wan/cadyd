@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+
+        <com.cadyd.app.ui.view.CircleImageView
+            android:id="@+id/direct_item_head"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/user_default"
+            app:border_color="@color/white" />
+
+        <TextView
+            android:id="@+id/direct_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/direct_item_head"
+            android:text="董秀闲"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/direct_item_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/direct_item_name"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@+id/direct_item_head"
+            android:text="如果遇见，好久不见"
+            android:textColor="@color/more_text"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <ImageView
+            android:id="@+id/direct_item_backgroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:paddingLeft="20dp">
+
+            <TextView
+                android:id="@+id/direct_item_danmu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="别挡道，冲我来，秒杀冲我来!"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/direct_item_zhibo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/direct_item_danmu"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/shap_directroom_live_red"
+                android:paddingBottom="1dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="1dp"
+                android:text="直播"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/direct_item_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/direct_item_zhibo"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/direct_item_zhibo"
+                android:text="64亿人观看"
+
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/direct_item_fashioncollocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shap_fashion_collocation_bg"
+            android:paddingBottom="3dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="3dp"
+            android:text="时尚搭配"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+</LinearLayout>

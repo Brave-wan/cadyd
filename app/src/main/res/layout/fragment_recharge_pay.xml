@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:padding="@dimen/horizontal_margin"
+              android:orientation="vertical">
+
+
+    <TextView style="@style/comm_text"
+              android:id="@+id/order_number"
+              android:text=""/>
+
+    <TextView style="@style/comm_text"
+              android:id="@+id/order_money"
+              android:layout_marginTop="@dimen/vertical_margin"
+              android:text=""/>
+
+    <TextView style="@style/comm_text"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/edit_height"
+              android:background="@color/background"
+              android:layout_marginTop="@dimen/vertical_margin"
+              android:text="请选择支付方式"/>
+
+    <RelativeLayout style="@style/item_relativeLayout">
+        <TextView style="@style/user_title_left_text"
+                  android:drawableLeft="@mipmap/wx"
+                  android:text="微信支付"/>
+        <CheckBox android:id="@+id/wx"
+                  android:layout_width="20dp"
+                  android:layout_height="20dp"
+                  android:button="@null"
+                  android:layout_centerVertical="true"
+                  android:background="@drawable/orange_checked"
+                  android:layout_marginRight="@dimen/horizontal_margin"
+                  android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <View style="@style/comm_line_horizontal"/>
+
+    <RelativeLayout style="@style/item_relativeLayout">
+        <TextView style="@style/user_title_left_text"
+                  android:drawableLeft="@mipmap/zfp"
+                  android:text="支付宝支付"/>
+        <CheckBox android:id="@+id/zfb"
+                  android:layout_width="20dp"
+                  android:layout_height="20dp"
+                  android:button="@null"
+                  android:layout_centerVertical="true"
+                  android:background="@drawable/orange_checked"
+                  android:layout_marginRight="@dimen/horizontal_margin"
+                  android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <View style="@style/comm_line_horizontal"/>
+    <Button style="@style/button_wrap_read_style"
+            android:id="@+id/send"
+            android:layout_width="match_parent"
+            android:layout_marginTop="24dp"
+            android:textSize="@dimen/font_submit"
+            android:text="确认充值"/>
+
+
+</LinearLayout>

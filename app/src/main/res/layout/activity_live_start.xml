@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="com.cadyd.app.ui.activity.LiveStartActivity">
+
+    <android.opengl.GLSurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"/>
+
+    <RelativeLayout
+        android:id="@+id/relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <ImageView
+            android:id="@+id/live_start_rotate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@mipmap/icon_nva_shexingtou"
+            android:clickable="true"
+            android:onClick="RotateClick"/>
+
+        <ImageView
+            android:id="@+id/live_start_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@mipmap/icon_nva_cha"
+            android:clickable="true"
+            android:onClick="CloseClick"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/live_start_rotate"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:clickable="true"
+                android:gravity="center_horizontal|bottom"
+                android:onClick="ChangCoverClick">
+
+                <ImageView
+                    android:id="@+id/live_start_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:background="@mipmap/bg_live_cover"/>
+
+                <TextView
+                    android:layout_width="72dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/corners_btn_black_alphe"
+                    android:gravity="center"
+                    android:text="修改封面"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_small"/>
+            </FrameLayout>
+
+            <EditText
+                android:id="@+id/live_start_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/horizontal_margin"
+                android:background="@null"
+                android:gravity="top"
+                android:hint="输入直播标题吸引更多观众！"
+                android:textColor="@color/white"
+                android:textColorHint="#969696"
+                android:textSize="@dimen/font_title"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:padding="8dp"
+                android:text="分享直播给好友，增加更多人气。"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_submit"/>
+
+            <RadioGroup
+                android:id="@+id/live_start_rag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <RadioButton
+                    android:id="@+id/live_start_rb_sina"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/radiobtn_sina_selector"
+                    android:button="@null"/>
+
+                <RadioButton
+                    android:id="@+id/live_start_rb_weixin"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:background="@drawable/radiobtn_wexin_selector"
+                    android:button="@null"/>
+
+                <RadioButton
+                    android:id="@+id/live_start_rb_friend"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:background="@drawable/radiobtn_friend_selector"
+                    android:button="@null"/>
+
+                <RadioButton
+                    android:id="@+id/live_start_rb_qq"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:background="@drawable/radiobtn_qq_selector"
+                    android:button="@null"/>
+
+                <RadioButton
+                    android:id="@+id/live_start_rb_kongjian"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:background="@drawable/radiobtn_kongjian_selector"
+                    android:button="@null"/>
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:background="@drawable/corners_btn_orange"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="StartLiveClick"
+                android:text="开始直播"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_submit"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/live_start_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_vertical_margin"
+                    android:text="我已阅读并同意"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_small"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="AgreementClick"
+                    android:text="《第一点直播协议》"
+                    android:textColor="@color/Orange"
+                    android:textSize="@dimen/font_small"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

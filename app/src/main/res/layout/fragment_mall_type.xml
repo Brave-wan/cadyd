@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mall_type_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_height"
+        android:layout_margin="@dimen/vertical_margin"
+        android:layout_marginLeft="@dimen/horizontal_margin"
+        android:layout_marginRight="@dimen/horizontal_margin_small"
+        android:layout_marginTop="@dimen/vertical_margin"
+        android:background="@drawable/corners"
+        android:drawableLeft="@mipmap/search_type_ico"
+        android:drawablePadding="@dimen/horizontal_margin_small"
+        android:editable="false"
+        android:hint="请输入商品名次"
+        android:paddingLeft="@dimen/horizontal_margin"
+        android:textColor="@color/black"
+        android:textColorHint="@color/text_primary_gray"
+        android:textSize="@dimen/font_small" />
+
+    <View style="@style/comm_line_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <ScrollView
+            android:id="@+id/tools_scrlllview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="@color/light_gray"
+            android:fadingEdge="none"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" />
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/empty_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <com.handmark.pulltorefresh.library.PullToRefreshGridView
+                android:id="@+id/goods_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:horizontalSpacing="@dimen/horizontal_margin"
+                android:numColumns="2"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="@dimen/horizontal_margin" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

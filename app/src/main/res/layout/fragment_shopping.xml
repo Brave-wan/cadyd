@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.handmark.pulltorefresh.library.PullToRefreshScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pullListView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.cadyd.app.ui.view.guide.ImageCycleView
+            android:id="@+id/guid_top_view"
+            android:layout_width="match_parent"
+            android:layout_height="220dip"
+            android:background="@mipmap/adv_top" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_heigh"
+            android:gravity="left|center_vertical"
+            android:paddingBottom="@dimen/vertical_margin"
+            android:paddingLeft="@dimen/horizontal_margin"
+            android:paddingTop="@dimen/vertical_margin"
+            android:text="为顾客推荐的商品"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <View
+            style="@style/comm_line_horizontal"
+            android:background="#F5B9B7" />
+
+        <org.wcy.android.widget.NoScrollGridView
+            android:id="@+id/mall_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:horizontalSpacing="@dimen/horizontal_margin"
+            android:numColumns="3"
+            android:paddingLeft="@dimen/horizontal_margin"
+            android:paddingRight="@dimen/horizontal_margin"
+            android:stretchMode="columnWidth" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dip"
+            android:layout_marginTop="@dimen/vertical_margin"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <ImageView
+                android:id="@+id/bargain_price"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:background="@mipmap/adv_left_right"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/favorable"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:background="@mipmap/adv_left_right"
+                android:scaleType="fitXY" />
+        </LinearLayout>
+
+        <com.cadyd.app.ui.view.guide.ImageCycleView
+            android:id="@+id/guid_brand_view"
+            android:layout_width="match_parent"
+            android:layout_height="130dip" />
+
+        <com.cadyd.app.ui.view.AutoLoadRecyclerView
+            android:id="@+id/goods_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/vertical_margin"
+            android:background="@color/transparent" />
+    </LinearLayout>
+</com.handmark.pulltorefresh.library.PullToRefreshScrollView>

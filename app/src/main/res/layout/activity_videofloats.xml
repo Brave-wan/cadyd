@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/videofloats_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:background="@color/white"
+        android:padding="2dp"
+        app:layout_heightPercent="26%"
+        app:layout_widthPercent="34%">
+
+        <SurfaceView
+            android:id="@+id/SurfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:id="@+id/LoadingView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginRight="5dp"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/video_zoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="3dp"
+            android:src="@mipmap/zooom_icon"/>
+    </FrameLayout>
+
+
+</android.support.percent.PercentRelativeLayout>

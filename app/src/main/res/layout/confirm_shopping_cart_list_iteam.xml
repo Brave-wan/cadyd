@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/orthogonal_vertical"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/shop_name"
+        style="@style/comm_text_black"
+        android:layout_height="@dimen/edit_height"
+        android:layout_marginLeft="@dimen/horizontal_margin"
+        android:layout_toRightOf="@+id/shop_checkbox"
+        android:text="达到萨芬" />
+
+    <org.wcy.android.widget.MyListView
+        android:id="@+id/my_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:visibility="gone" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:visibility="gone" />
+
+    <View
+        style="@style/comm_line_horizontal"
+        android:layout_height="@dimen/vertical_margin"
+        android:background="@color/background" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_height"
+        android:paddingLeft="@dimen/horizontal_margin"
+        android:paddingRight="@dimen/horizontal_margin">
+
+        <TextView
+            android:id="@+id/left_two"
+            style="@style/comm_text_black"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="配送方式" />
+
+        <TextView
+            android:id="@+id/distribution_type"
+            style="@style/comm_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:layout_toRightOf="@+id/left_two"
+            android:drawableRight="@mipmap/arrow_right"
+            android:ellipsize="end"
+            android:gravity="right|center_vertical"
+            android:hint="请选择配送方式" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_height"
+        android:background="@drawable/orthogonal_vertical"
+        android:paddingLeft="@dimen/horizontal_margin"
+        android:paddingRight="@dimen/horizontal_margin">
+
+        <TextView
+            style="@style/comm_text_black"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="优惠卷" />
+
+        <TextView
+            android:id="@+id/prefer_choos"
+            style="@style/comm_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:drawableRight="@mipmap/arrow_right"
+            android:gravity="right|center_vertical"
+            android:hint="请选择优惠卷" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_height"
+        android:paddingLeft="@dimen/horizontal_margin"
+        android:paddingRight="@dimen/horizontal_margin">
+
+        <TextView
+            android:id="@+id/left_title"
+            style="@style/comm_text_black"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="卖家留言:" />
+
+        <EditText
+            android:id="@+id/message"
+            style="@style/comm_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/left_title"
+            android:background="@color/white"
+            android:hint="给卖家留言"
+            android:maxLength="180"
+            android:singleLine="true" />
+    </RelativeLayout>
+
+    <View style="@style/comm_line_horizontal" />
+
+    <TextView
+        android:id="@+id/subtotal"
+        style="@style/comm_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_height"
+        android:layout_marginRight="@dimen/horizontal_margin"
+        android:gravity="right|center_vertical"
+        android:text="共53件商品，合计：￥21094"
+        android:textColor="@color/goods_detail_red" />
+</LinearLayout>

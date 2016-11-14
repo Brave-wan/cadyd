@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:gravity="center_vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <TextView
+        android:id="@+id/item_indualStores_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="喜欢宠物和家有萌宠好福利预告" />
+s
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/item_indualStores_title"
+        android:background="@mipmap/huifang"
+        android:gravity="center"
+        android:text="回放"
+        android:textColor="@color/add_cart_nor"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/arrow_right" />
+
+
+    <TextView
+        android:id="@+id/item_indualStores_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_indualStores_title"
+        android:layout_marginTop="5dp"
+        android:text="1314520人观看"
+        android:textSize="12sp" />
+
+</RelativeLayout>

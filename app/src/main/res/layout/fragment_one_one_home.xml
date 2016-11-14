@@ -1,0 +1,139 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/white">
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/one_one_home_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.cadyd.app.ui.view.guide.ZImageCycleView
+                android:id="@+id/one_one_home_cycle"
+                android:layout_width="match_parent"
+                android:layout_height="200dip"/>
+
+            <View style="@style/comm_line_horizontal"/>
+
+            <org.wcy.android.widget.NoScrollGridView
+                android:id="@+id/one_one_home_type"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/horizontal_margin_small"
+                android:layout_marginRight="@dimen/horizontal_margin_small"
+                android:layout_marginTop="@dimen/horizontal_margin_small"
+                android:background="@color/white"
+                android:divider="@color/transparent"
+                android:horizontalSpacing="@dimen/horizontal_margin_small"
+                android:numColumns="2"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="@dimen/horizontal_margin_small"/>
+
+            <org.wcy.android.widget.MyListView
+                android:id="@+id/one_one_home_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/horizontal_margin_small"
+                android:layout_marginRight="@dimen/horizontal_margin_small"
+                android:layout_marginTop="@dimen/horizontal_margin_small"
+                android:divider="@color/transparent"
+                android:dividerHeight="@dimen/horizontal_margin_small"></org.wcy.android.widget.MyListView>
+
+            <org.wcy.android.widget.NoScrollGridView
+                android:id="@+id/one_one_home_type_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/horizontal_margin_small"
+                android:background="@color/white"
+                android:horizontalSpacing="@dimen/line_height"
+                android:numColumns="4"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="@dimen/line_height"/>
+
+            <TextView
+                style="@style/comm_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_height"
+                android:layout_marginTop="@dimen/vertical_margin"
+                android:background="@color/line_bg"
+                android:gravity="center"
+                android:text="热门推荐"/>
+
+            <org.wcy.android.widget.NoScrollGridView
+                android:id="@+id/one_one_content_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/vertical_margin"
+                android:divider="@color/line_bg"
+                android:dividerHeight="@dimen/line_height"
+                android:horizontalSpacing="@dimen/horizontal_margin"
+                android:numColumns="2"
+                android:paddingLeft="@dimen/horizontal_margin"
+                android:paddingRight="@dimen/horizontal_margin"
+                android:stretchMode="columnWidth">
+
+            </org.wcy.android.widget.NoScrollGridView>
+
+        </LinearLayout>
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_heigh"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="top"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/vertical_margin"
+        android:paddingRight="@dimen/vertical_margin">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_circle"
+            android:drawablePadding="5dip"
+            android:gravity="center"
+            android:padding="@dimen/horizontal_margin_small"
+            android:src="@mipmap/back_left_ico"/>
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/comm_text"
+            android:layout_centerInParent="true"
+            android:text="一乡一物"
+            android:textColor="@color/text_primary_gray"
+            android:textSize="@dimen/font_big"/>
+
+        <ImageView
+            android:id="@+id/shopping_cart"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_circle"
+            android:gravity="center"
+            android:padding="@dimen/vertical_margin"
+            android:paddingRight="@dimen/vertical_margin"
+            android:src="@mipmap/shoppingcar_image_ico_writh"
+            android:visibility="gone"/>
+
+        <EditText
+            android:id="@+id/topedit"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:editable="false"
+            android:enabled="false"/>
+    </RelativeLayout>
+
+</FrameLayout>

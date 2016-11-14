@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/vertical_margin">
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="140dip"
+        android:layout_height="160dip"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/name"
+        style="@style/comm_text"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/horizontal_margin_small"
+        android:ellipsize="end"
+        android:lines="2"
+        android:singleLine="false"
+        android:text="雷柏（Rapoo）V500S 背光机械游戏键盘 机械黑轴        黑色版"
+        android:textColor="@color/black" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/horizontal_margin_small">
+
+        <TextView
+            android:id="@+id/price"
+            style="@style/comm_text"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="0dip"
+            android:ellipsize="end"
+            android:singleLine="false"
+            android:text="￥23.56"
+            android:textColor="@color/red"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/old_price"
+            style="@style/comm_text"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:layout_toRightOf="@id/price"
+            android:ellipsize="end"
+            android:singleLine="false"
+            android:text="￥23.56"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/home_goods_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/vertical_margin"
+        android:layout_marginRight="@dimen/vertical_margin"
+        android:layout_marginTop="@dimen/horizontal_margin_small">
+
+
+        <TextView
+            android:id="@+id/shop_distance"
+            style="@style/comm_text"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@mipmap/juli"
+            android:text="100m"
+            android:textSize="10sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/shop_name"
+            style="@style/comm_text"
+            android:layout_width="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="@dimen/horizontal_margin_small"
+            android:layout_toLeftOf="@id/shop_distance"
+            android:ellipsize="end"
+            android:lines="2"
+            android:text="好友来店铺"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</LinearLayout>

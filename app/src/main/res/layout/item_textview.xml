@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          style="@style/comm_text"
+          android:background="@android:color/transparent"
+          android:paddingLeft="@dimen/vertical_margin"
+          android:paddingRight="@dimen/vertical_margin"
+          android:paddingTop="@dimen/vertical_margin"
+          android:text="测试的"
+          android:drawablePadding="3dip"
+          android:drawableLeft="@mipmap/on_check">
+</TextView>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:padding="@dimen/vertical_margin"
+        android:orientation="horizontal">
+    <RelativeLayout
+            android:id="@+id/league_bg"
+            android:layout_width="match_parent"
+            android:layout_height="120dip"
+            android:orientation="horizontal"
+            android:background="@mipmap/league_prefer_one"
+            android:paddingLeft="@dimen/horizontal_margin"
+            android:paddingTop="@dimen/horizontal_margin_small"
+            android:paddingRight="@dimen/vertical_margin"
+            android:paddingBottom="@dimen/vertical_margin">
+
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_above="@+id/bottom_layout">
+            <LinearLayout
+                    android:id="@+id/right_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true">
+                <TextView style="@style/comm_text"
+                          android:textSize="30sp"
+                          android:textColor="@color/white"
+                          android:text="￥20"
+                          android:gravity="center"
+                          android:singleLine="false"
+                          android:id="@+id/price"
+                          android:layout_gravity="center_horizontal"/>
+                <TextView style="@style/league_prefer_btn"
+                          android:background="@drawable/league_prefer_one_bg"
+                          android:text="立即领取"
+                          android:id="@+id/receive"/>
+            </LinearLayout>
+            <ImageView
+                    android:id="@+id/line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/league_prefer_line"
+                    android:layout_toLeftOf="@+id/right_layout"
+                    android:layout_marginRight="@dimen/vertical_margin"
+                    android:layout_marginLeft="@dimen/vertical_margin"
+                    android:layout_marginBottom="@dimen/horizontal_margin_small"/>
+            <TextView style="@style/comm_text"
+                      android:layout_width="match_parent"
+                      android:textSize="@dimen/font_big"
+                      android:textColor="@color/white"
+                      android:text="第一点专用"
+                      android:gravity="center"
+                      android:singleLine="false"
+                      android:layout_centerVertical="true"
+                      android:id="@+id/title"
+                      android:layout_toLeftOf="@+id/line"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:id="@+id/bottom_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_alignParentBottom="true">
+            <TextView style="@style/comm_text"
+                      android:id="@+id/shop_name"
+                      android:textColor="@color/white"
+                      android:text="阿迪达斯优惠卷"
+                      android:layout_alignParentLeft="true"
+                      android:textSize="@dimen/font_tiny"/>
+            <TextView style="@style/comm_text"
+                      android:id="@+id/valid"
+                      android:textColor="@color/white"
+                      android:text="有效期：2016-05-30至2016-08-20"
+                      android:layout_alignParentRight="true"
+                      android:textSize="@dimen/font_tiny"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

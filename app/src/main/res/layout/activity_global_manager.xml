@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true">
+
+    <RadioGroup android:id="@+id/global_rgs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#EDEDED"
+                android:layout_alignParentBottom="true">
+
+        <RadioButton style="@style/one__radio_btn"
+                     android:id="@+id/global_home"
+                     android:drawableTop="@drawable/one_home"
+                     android:checked="true"
+                     android:text="首页"/>
+
+        <RadioButton style="@style/one__radio_btn"
+                     android:id="@+id/global_type"
+                     android:drawableTop="@drawable/mall_main_type_radio_selector"
+                     android:text="分类"/>
+
+        <RadioButton style="@style/one__radio_btn"
+                     android:id="@+id/global_car"
+                     android:drawableTop="@drawable/main_radio_shopping_cart_selector"
+                     android:text="购物车"/>
+
+        <RadioButton style="@style/one__radio_btn"
+                     android:id="@+id/global_user"
+                     android:drawableTop="@drawable/one_my"
+                     android:text="我的"/>
+
+        <RadioButton style="@style/one__radio_btn"
+                     android:visibility="gone"
+                     android:id="@+id/global_doing"
+                     android:drawableTop="@drawable/one_dynamic"
+                     android:text="动态"/>
+    </RadioGroup>
+
+    <FrameLayout android:id="@+id/common_frame"
+                 android:layout_above="@id/global_rgs"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent">
+    </FrameLayout>
+
+</RelativeLayout>

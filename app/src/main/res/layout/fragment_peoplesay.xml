@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/peopleSay_rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/input_text"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/peopleSay_listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#00000000"
+            android:dividerHeight="10dp"/>
+
+        <include
+            android:id="@+id/item_liveDetals"
+            layout="@layout/item_livedetails"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/input_text"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/btn_disable"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <EditText
+            android:id="@+id/void_content"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="3.6"
+            android:background="@drawable/shap_peoplesay_content_bg"
+            android:hint="跟主播聊什么?"
+            android:paddingLeft="8dp"
+            android:textColorHint="@color/white"
+            android:textSize="14sp"/>
+
+        <LinearLayout
+            android:id="@+id/peopler_sendMsg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0.6"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/shape_round_bg_white"
+                android:gravity="center"
+                android:text="发送"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/peopler_sendGift"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0.6"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/voide_send"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/live_gift_icon"
+                android:gravity="center"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

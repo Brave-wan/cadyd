@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_attention_and_fans"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabGravity="center"
+            app:tabIndicatorColor="@color/Orange"
+            app:tabMode="fixed"
+            app:tabPadding="@dimen/activity_horizontal_margin"
+            app:tabSelectedTextColor="@color/Orange"
+            app:tabTextColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/vertical_margin"
+            android:background="@mipmap/back" />
+    </RelativeLayout>
+
+    <View
+        style="@style/comm_line_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/vertical_margin" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" />
+
+</LinearLayout>

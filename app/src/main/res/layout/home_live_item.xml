@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/vertical_margin"
+    android:paddingLeft="@dimen/horizontal_margin_small"
+    android:paddingRight="@dimen/horizontal_margin_small"
+    android:paddingTop="@dimen/vertical_margin">
+
+
+    <ImageView
+        android:id="@+id/live_image"
+        android:layout_width="100dp"
+        android:layout_height="110dp"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:id="@+id/live_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/live_image"
+        android:layout_marginTop="@dimen/horizontal_margin_small"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/live_text"
+            style="@style/comm_text_black"
+            android:text="热门" />
+
+        <TextView
+            android:id="@+id/hot_tab"
+            style="@style/comm_text_black"
+            android:layout_marginLeft="@dimen/vertical_margin"
+            android:background="@drawable/round_red_untransparent"
+            android:text="直播中"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/live_title"
+        style="@style/comm_text"
+        android:layout_below="@id/live_layout"
+        android:layout_marginTop="@dimen/horizontal_margin_small"
+        android:singleLine="true"
+        android:text="价格空间噶结果阿姐鼓克拉" />
+
+
+</RelativeLayout>

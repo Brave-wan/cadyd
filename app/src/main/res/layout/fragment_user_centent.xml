@@ -1,0 +1,531 @@
+<!-- TODO: Update blank fragment layout -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/usercenter_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:paddingRight="15dp">
+
+        <RelativeLayout
+            android:layout_width="72dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <TextView
+                android:id="@+id/userCentent_msgCenter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="消息中心"
+                android:textColor="@color/text_primary_gray" />
+
+            <View
+                android:id="@+id/userCentent_badge"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="个人中心"
+            android:textColor="@color/text_primary_gray"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <View
+        style="@style/comm_line_horizontal"
+        android:layout_height="1px"
+        android:background="@color/radio_nor" />
+
+    <ScrollView
+        android:id="@+id/Refresh_ScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/hui"
+        android:scrollbars="none">
+
+
+        <LinearLayout
+            android:id="@+id/LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/horizontal_margin">
+
+            <RelativeLayout
+                android:id="@+id/ui_user_centent_un_sign_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/vertical_margin"
+                android:paddingTop="@dimen/vertical_margin"
+                android:visibility="gone">
+
+                <Button
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/round_yellow_transparent"
+                    android:text="未登录！请登录"
+                    android:textColor="@color/Orange"
+                    android:textSize="@dimen/font_title" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/ui_user_centent_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/vertical_margin"
+                android:paddingLeft="@dimen/horizontal_margin"
+                android:paddingRight="@dimen/horizontal_margin"
+                android:paddingTop="@dimen/vertical_margin">
+
+                <com.cadyd.app.utils.CircleImageView
+                    android:id="@+id/ui_user_center_user_image"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    app:border_color="@color/white"
+                    app:border_width="2dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/horizontal_margin"
+                    android:layout_marginRight="24dp"
+                    android:layout_toRightOf="@+id/ui_user_center_user_image"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/user_massage"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/ui_user_center_name"
+                            style="@style/comm_text"
+                            android:text="" />
+
+                        <TextView
+                            android:id="@+id/user_vips"
+                            style="@style/button_wrap_read_style"
+                            android:text="" />
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/ui_user_center_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/text_primary_gray"
+                        android:textSize="@dimen/font_small" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/comm_text"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/vertical_margin"
+                    android:drawablePadding="@dimen/vertical_margin"
+                    android:drawableRight="@mipmap/arrow_right"
+                    android:text="" />
+            </RelativeLayout>
+
+            <View style="@style/comm_line_horizontal" />
+
+            <LinearLayout style="@style/linearlayout_vertical">
+
+                <RelativeLayout
+                    android:id="@+id/user_my_balance"
+                    style="@style/relativeLayout"
+                    android:layout_height="@dimen/good_type_image_widht"
+                    android:layout_margin="@dimen/vertical_margin"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/user_title_left_text"
+                        android:drawableLeft="@mipmap/ka_image"
+                        android:text="我的余额" />
+
+                    <TextView
+                        android:id="@+id/user_balance"
+                        style="@style/user_title_right_text"
+                        android:gravity="right"
+                        android:minWidth="85dp"
+                        android:text="充值/提现"
+                        android:textColor="@color/more_text" />
+
+                    <TextView
+                        android:id="@+id/balance"
+                        style="@style/comm_text"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/vertical_margin"
+                        android:layout_toLeftOf="@id/user_balance"
+                        android:text="0"
+                        android:textColor="@color/more_text" />
+
+                </RelativeLayout>
+
+                <View style="@style/comm_line_horizontal" />
+
+                <RelativeLayout
+                    android:id="@+id/user_integral_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/good_type_image_widht"
+                    android:layout_margin="@dimen/vertical_margin">
+
+                    <TextView
+                        style="@style/user_title_left_text"
+                        android:drawableLeft="@mipmap/money_image"
+                        android:text="我的积分" />
+
+                    <TextView
+                        android:id="@+id/user_integral"
+                        style="@style/user_title_right_text"
+                        android:gravity="right"
+                        android:minWidth="85dp"
+                        android:text="查看"
+                        android:textColor="@color/more_text" />
+
+                    <TextView
+                        android:id="@+id/integral"
+                        style="@style/comm_text"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/vertical_margin"
+                        android:layout_toLeftOf="@id/user_integral"
+                        android:text="0"
+                        android:textColor="@color/more_text" />
+                </RelativeLayout>
+
+                <View style="@style/comm_line_horizontal" />
+
+                <RelativeLayout
+                    android:id="@+id/user_huabi_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edit_height"
+                    android:layout_margin="@dimen/vertical_margin">
+
+                    <TextView
+                        style="@style/user_title_left_text"
+                        android:drawableLeft="@mipmap/currency_image"
+                        android:text="我的花币" />
+
+                    <TextView
+                        android:id="@+id/user_huabi"
+                        style="@style/user_title_right_text"
+                        android:gravity="right"
+                        android:minWidth="85dp"
+                        android:text="充值"
+                        android:textColor="@color/more_text" />
+
+                    <TextView
+                        android:id="@+id/huabi"
+                        style="@style/comm_text"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/vertical_margin"
+                        android:layout_toLeftOf="@id/user_huabi"
+                        android:text="0"
+                        android:textColor="@color/more_text" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearlayout_vertical">
+
+                <RelativeLayout style="@style/relativeLayout">
+
+                    <TextView
+                        style="@style/user_title_left_text"
+                        android:drawableLeft="@mipmap/user_shopping"
+                        android:text="商城" />
+
+                    <TextView
+                        style="@style/user_title_right_text"
+                        android:text="商城、全球购、一乡一物、购物中心"
+                        android:textColor="@color/more_text"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <View style="@style/comm_line_horizontal" />
+
+                <LinearLayout style="@style/linearlayout_horizontal">
+
+                    <TextView
+                        android:id="@+id/my_order"
+                        style="@style/user_title_top_text"
+                        android:drawableTop="@mipmap/user_shopping_order"
+                        android:text="我的订单" />
+
+                    <TextView
+                        android:id="@+id/user_shopping_collection"
+                        style="@style/user_title_top_text"
+                        android:drawableTop="@mipmap/user_shopping_collection"
+                        android:text="我的收藏" />
+
+                    <TextView
+                        android:id="@+id/order_theme"
+                        style="@style/user_title_top_text"
+                        android:drawableTop="@mipmap/user_theme"
+                        android:text="我的主题"
+                        android:visibility="invisible" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearlayout_vertical">
+
+                <RelativeLayout style="@style/relativeLayout">
+
+                    <TextView
+                        style="@style/user_title_left_text"
+                        android:drawableLeft="@mipmap/user_one"
+                        android:text="一元乐购" />
+
+                    <TextView style="@style/user_title_right_text" />
+                </RelativeLayout>
+
+                <View style="@style/comm_line_horizontal" />
+
+                <LinearLayout style="@style/linearlayout_horizontal">
+
+                    <TextView
+                        android:id="@+id/user_one_record"
+                        style="@style/user_title_top_text"
+                        android:drawableTop="@mipmap/user_one_record"
+                        android:text="我的记录" />
+
+                    <TextView
+                        android:id="@+id/user_one_prize"
+                        style="@style/user_title_top_text"
+                        android:drawableTop="@mipmap/user_one_prize"
+                        android:text="获得的奖品" />
+
+                    <TextView
+                        android:id="@+id/user_one_the_sun"
+                        style="@style/user_title_top_text"
+                        android:drawableTop="@mipmap/user_one_the_sun"
+                        android:text="我的晒单" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linearlayout_vertical"
+                android:visibility="visible">
+
+                <RelativeLayout style="@style/relativeLayout">
+
+                    <TextView
+                        style="@style/user_title_left_text"
+                        android:drawableLeft="@mipmap/integral_mall"
+                        android:text="积分商城" />
+
+                    <TextView
+                        style="@style/user_title_right_text"
+                        android:text=""
+                        android:textColor="@color/more_text"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <View style="@style/comm_line_horizontal" />
+
+                <LinearLayout style="@style/linearlayout_horizontal">
+
+                    <TextView
+                        android:id="@+id/my_integral_order"
+                        style="@style/user_title_top_text"
+                        android:drawableTop="@mipmap/user_shopping_order"
+                        android:text="我的订单" />
+
+                    <TextView
+                        android:id="@+id/integral_order_evaluate"
+                        style="@style/user_title_top_text"
+                        android:drawableTop="@mipmap/user_one_record"
+                        android:text="我的点评"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/user_integral_collection"
+                        style="@style/user_title_top_text"
+                        android:drawableTop="@mipmap/user_shopping_collection"
+                        android:text="我的收藏"
+                        android:visibility="invisible" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linearlayout_vertical"
+                android:visibility="gone">
+
+                <RelativeLayout style="@style/relativeLayout">
+
+                    <TextView
+                        style="@style/user_title_left_text"
+                        android:drawableLeft="@mipmap/user_discount"
+                        android:text="团购优惠" />
+
+                    <TextView style="@style/user_title_right_text" />
+                </RelativeLayout>
+
+                <View style="@style/comm_line_horizontal" />
+
+                <LinearLayout style="@style/linearlayout_horizontal">
+
+                    <TextView
+                        style="@style/user_title_top_text"
+                        android:drawableTop="@mipmap/user_discount_order"
+                        android:text="我的订单" />
+
+                    <TextView
+                        style="@style/user_title_top_text"
+                        android:drawableTop="@mipmap/user_discount_comment"
+                        android:text="我的点评" />
+
+                    <TextView
+                        style="@style/user_title_top_text"
+                        android:drawableTop="@mipmap/user_discount_collection"
+                        android:text="我的收藏" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linearlayout_vertical"
+                android:visibility="gone">
+
+                <RelativeLayout style="@style/relativeLayout">
+
+                    <TextView
+                        style="@style/user_title_left_text"
+                        android:drawableLeft="@mipmap/user_city"
+                        android:text="同城信息" />
+
+                    <TextView style="@style/user_title_right_text" />
+                </RelativeLayout>
+
+                <View style="@style/comm_line_horizontal" />
+
+                <LinearLayout style="@style/linearlayout_horizontal">
+
+                    <TextView
+                        style="@style/user_title_top_text"
+                        android:drawableTop="@mipmap/user_city_release"
+                        android:text="我的发布" />
+
+                    <TextView
+                        style="@style/user_title_top_text"
+                        android:drawableTop="@mipmap/user_city_collection"
+                        android:text="我的收藏" />
+
+                    <TextView
+                        style="@style/user_title_top_text"
+                        android:drawableTop="@mipmap/user_city_appointment"
+                        android:text="我的预约" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linearlayout_vertical"
+                android:visibility="gone">
+
+                <RelativeLayout style="@style/relativeLayout">
+
+                    <TextView
+                        style="@style/user_title_left_text"
+                        android:drawableLeft="@mipmap/user_forshare"
+                        android:text="我要纷享" />
+
+                    <TextView style="@style/user_title_right_text" />
+                </RelativeLayout>
+
+                <View style="@style/comm_line_horizontal" />
+
+                <LinearLayout style="@style/linearlayout_horizontal">
+
+                    <TextView
+                        style="@style/user_title_top_text"
+                        android:drawableTop="@mipmap/user_forshare_see"
+                        android:text="我的订单" />
+
+                    <TextView
+                        style="@style/user_title_top_text"
+                        android:drawableTop="@mipmap/user_forshare_set"
+                        android:text="我的收藏" />
+
+                    <TextView
+                        style="@style/user_title_top_text"
+                        android:drawableTop="@mipmap/user_forshare_distribution"
+                        android:text="我的主题" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearlayout_vertical">
+
+                <RelativeLayout
+                    android:id="@+id/address_Management"
+                    style="@style/relativeLayout"
+                    android:layout_height="@dimen/good_type_image_widht">
+
+                    <TextView
+                        style="@style/user_title_left_text"
+                        android:drawableLeft="@mipmap/user_address"
+                        android:text="地址管理" />
+
+                    <TextView
+                        style="@style/user_title_right_text"
+                        android:text="" />
+                </RelativeLayout>
+
+                <View style="@style/comm_line_horizontal" />
+
+                <RelativeLayout
+                    android:id="@+id/setting"
+                    style="@style/relativeLayout"
+                    android:layout_height="@dimen/good_type_image_widht">
+
+                    <TextView
+                        style="@style/user_title_left_text"
+                        android:drawableLeft="@mipmap/seting"
+                        android:text="设置" />
+
+                    <TextView
+                        style="@style/user_title_right_text"
+                        android:text="" />
+                </RelativeLayout>
+
+                <View style="@style/comm_line_horizontal" />
+
+                <RelativeLayout
+                    android:id="@+id/customer_service_r"
+                    style="@style/relativeLayout"
+                    android:layout_height="@dimen/good_type_image_widht">
+
+                    <TextView
+                        android:id="@+id/customer_service"
+                        style="@style/user_title_left_text"
+                        android:drawableLeft="@mipmap/user_phone"
+                        android:text="客服电话：400-036-7887" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

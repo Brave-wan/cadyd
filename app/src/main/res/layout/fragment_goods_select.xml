@@ -1,0 +1,151 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/big_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_height"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_extra_samll">
+
+        <ImageView
+            android:id="@+id/select_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/black_back" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="@dimen/vertical_margin"
+            android:layout_weight="1"
+            android:background="@drawable/round_gray_untransparent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/check_baby"
+                style="@style/comm_text"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/padding_extra_samll"
+                android:drawableRight="@mipmap/lower_triangle"
+                android:text="宝贝" />
+
+            <EditText
+                android:id="@+id/search_content"
+                style="@style/comm_text"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="@dimen/padding_extra_samll"
+                android:background="@null"
+                android:hint="搜索商品/店铺"
+                android:text="" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/content_cancel"
+            style="@style/comm_text"
+            android:padding="@dimen/padding_extra_samll"
+            android:text="搜索"
+            android:textColor="@color/text_primary_gray" />
+
+    </LinearLayout>
+
+    <View style="@style/comm_line_horizontal" />
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/good_type_image_widht"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/select_new"
+                style="@style/comm_text"
+                android:layout_height="wrap_content"
+                android:drawableRight="@mipmap/rad_arrow_down"
+                android:gravity="center"
+                android:text="综合"
+                android:textColor="@color/red" />
+        </LinearLayout>
+
+        <View style="@style/comm_line_vertical" />
+
+        <TextView
+            android:id="@+id/sales_volume"
+            style="@style/comm_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="销量" />
+
+        <View style="@style/comm_line_vertical" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/sales_price"
+                style="@style/comm_text"
+                android:layout_height="match_parent"
+                android:drawableRight="@mipmap/doulbe_arrows_ico"
+                android:gravity="center"
+                android:text="价格" />
+        </LinearLayout>
+
+
+        <View style="@style/comm_line_vertical" />
+
+        <TextView
+            android:id="@+id/sales_screen"
+            style="@style/comm_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="筛选" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/fragment_goods_selecter_pop"
+        style="@style/comm_line_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/select_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/light_transparent"
+            android:dividerHeight="@dimen/line_height" />
+
+        <include
+            android:id="@+id/empty_layout"
+            layout="@layout/listview_empty" />
+
+    </LinearLayout>
+</LinearLayout>

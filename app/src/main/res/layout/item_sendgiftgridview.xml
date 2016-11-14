@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e0000000"
+    android:gravity="center_horizontal|center_vertical"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <ImageView
+            android:id="@+id/item_sendgift_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/item_sendgift_checked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/item_sendgift_image"
+            android:layout_alignRight="@+id/item_sendgift_image"
+            android:src="@mipmap/live_bus_check_icon"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/item_sendgift_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_sendgift_image"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="礼物"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/item_sendgift_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_sendgift_name"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="3dp"
+            android:text="10金币"
+            android:textColor="@color/purchase_pressed"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@color/transparent"
+              android:paddingRight="@dimen/horizontal_margin"
+              android:paddingBottom="@dimen/horizontal_margin">
+    <CheckBox
+            style="@style/comm_text"
+            android:id="@+id/checkbox"
+            android:background="@drawable/checkbox_selector"
+            android:paddingLeft="@dimen/vertical_margin"
+            android:paddingRight="@dimen/vertical_margin"
+            android:paddingTop="@dimen/horizontal_margin_small"
+            android:paddingBottom="@dimen/horizontal_margin_small"
+            android:textColor="@drawable/checkbox_text_selector"
+            android:button="@null"
+            android:gravity="center">
+    </CheckBox>
+</LinearLayout>

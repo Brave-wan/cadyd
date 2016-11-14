@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.cadyd.app.widget.PercentLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3f3f3"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.cadyd.app.ui.view.CircleImageView
+            android:id="@+id/loginBinding_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@mipmap/user_default"
+            app:layout_heightPercent="19%"
+            app:layout_marginTopPercent="6%"
+            app:layout_widthPercent="30%"/>
+
+        <TextView
+            android:id="@+id/loginBinding_nickName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loginBinding_head"
+            android:text="亲爱的QQ用户:"
+            android:textColor="#999999"
+            app:layout_marginTopPercent="2%"/>
+
+        <TextView
+            android:id="@+id/loginBinding_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/loginBinding_nickName"
+            android:layout_below="@+id/loginBinding_head"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/loginBinding_nickName"
+            android:gravity="bottom"
+            android:text="逗逼人做逗事"
+            android:textColor="@color/black"
+            app:layout_marginTopPercent="1%"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loginBinding_Name"
+            android:layout_marginTop="10dp"
+            android:text="为了给您更好的服务，请关联一个第一点帐号"
+            android:textColor="@color/black"/>
+
+    </android.support.percent.PercentRelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loginBinding_Name"
+        android:layout_marginTop="40dp"
+        android:text="还没有第一点帐号 ?"
+        android:textColor="#999999"/>
+
+    <Button
+        android:id="@+id/loginBinding_regist"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_loginbinding_btn"
+        android:gravity="center"
+        android:text="快速注册"
+        android:textColor="@color/white"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loginBinding_Name"
+        android:layout_marginTop="50dp"
+        android:text="已有第一点帐号"
+        android:textColor="#999999"/>
+
+    <Button
+        android:id="@+id/loginBinding_associate"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_loginbinding_withe"
+        android:gravity="center"
+        android:text="立即关联"
+        android:textColor="#666666"/>
+
+
+</com.cadyd.app.widget.PercentLinearLayout>

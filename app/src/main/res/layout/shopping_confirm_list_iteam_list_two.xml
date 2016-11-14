@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:background="@color/white">
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:layout_marginLeft="@dimen/horizontal_margin"
+                  android:layout_marginBottom="@dimen/vertical_margin">
+        <TextView style="@style/favorable_btn"
+                  android:text="套装"
+                  android:textSize="@dimen/font_tiny"/>
+        <TextView style="@style/comm_text_black"
+                  android:id="@+id/good_name"
+                  android:layout_height="wrap_content"
+                  android:text="sadfasdf"
+                  android:paddingLeft="@dimen/horizontal_margin_small"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F2F2F2"/>
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/horizontal_margin"
+                    android:layout_marginTop="@dimen/vertical_margin"
+                    android:paddingLeft="@dimen/horizontal_margin"
+                    android:layout_marginBottom="@dimen/vertical_margin">
+        <TextView style="@style/comm_text"
+                  android:id="@+id/price"
+                  android:text="套装价：￥0.00"
+                  android:textColor="@color/goods_detail_red"/>
+        <TextView
+                style="@style/comm_text"
+                android:id="@+id/number"
+                android:layout_alignParentRight="true"
+                android:text="X3"/>
+    </RelativeLayout>
+    <View style="@style/comm_line_horizontal"
+          android:id="@+id/line_one"
+          android:visibility="gone"/>
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="@dimen/edit_height"
+                    android:paddingLeft="@dimen/horizontal_margin"
+                    android:id="@+id/goodsPrefer_layout"
+                    android:visibility="gone">
+        <TextView style="@style/comm_text_black"
+                  android:text="是否使用优惠卷"
+                  android:layout_alignParentLeft="true"
+                  android:layout_centerVertical="true"/>
+        <CheckBox
+                android:id="@+id/goodsPrefer_checkbox"
+                style="@style/shopping_cart_checkbox"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="false"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="@dimen/edit_height"
+                    android:paddingLeft="@dimen/horizontal_margin"
+                    android:id="@+id/luckCode_layout"
+                    android:visibility="gone"
+                    android:background="@drawable/orthogonal_vertical">
+        <TextView style="@style/comm_text_black"
+                  android:text="是否使用乐购码"
+                  android:layout_alignParentLeft="true"
+                  android:layout_centerVertical="true"/>
+        <CheckBox
+                android:id="@+id/luckCode_checkbox"
+                style="@style/shopping_cart_checkbox"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="false"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="@dimen/edit_height"
+                    android:paddingLeft="@dimen/horizontal_margin"
+                    android:id="@+id/reabte_layout"
+                    android:visibility="gone"
+                    android:background="@color/white">
+        <TextView style="@style/comm_text"
+                  android:id="@+id/rebateAmount"
+                  android:layout_alignParentLeft="true"
+                  android:layout_centerVertical="true"/>
+        <CheckBox
+                android:id="@+id/reabte_checkbox"
+                style="@style/shopping_cart_checkbox"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="false"/>
+    </RelativeLayout>
+</LinearLayout>

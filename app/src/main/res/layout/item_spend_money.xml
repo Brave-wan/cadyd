@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <TextView
+            android:id="@+id/item_spend_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="10花币"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_title" />
+
+        <TextView
+            android:id="@+id/item_spend_money_rmb"
+            android:layout_width="72dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/corners_btn_orange_line"
+            android:gravity="center"
+            android:text="10元"
+            android:textColor="@color/Orange"
+            android:textSize="@dimen/font_title" />
+    </RelativeLayout>
+</LinearLayout>

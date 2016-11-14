@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/LinearLayout"
+    android:background="@color/hui"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/vertical_margin" />
+
+    <TextView
+        android:id="@+id/report_object"
+        style="@style/user_title_left_text"
+        android:layout_marginLeft="@dimen/vertical_margin"
+        android:drawableLeft="@mipmap/money_image"
+        android:text="物美超市—北影小区店"
+        android:visibility="gone" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/vertical_margin" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"></Spinner>
+
+    <EditText
+        android:id="@+id/content_editText"
+        style="@style/comm_text"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/vertical_margin"
+        android:background="@color/white"
+        android:gravity="left"
+        android:hint="请编写投诉或者建议内容"
+        android:minHeight="120dp" />
+
+    <Button
+        android:id="@+id/send"
+        style="@style/button_style"
+        android:layout_marginLeft="@dimen/horizontal_margin"
+        android:layout_marginRight="@dimen/horizontal_margin"
+        android:layout_marginTop="42dp"
+        android:text="发出投诉/建议" />
+
+</LinearLayout>

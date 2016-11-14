@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/background"
+        tools:context=".ui.fragment.unitary.OneYuanDetailsFragment">
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView android:layout_width="match_parent"
+                                                                android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:orientation="vertical"
+                      android:background="@color/background">
+
+
+            <com.cadyd.app.ui.view.guide.ImageCycleView
+                    android:id="@+id/ui_one_yuan_details_cycview"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dip"/>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:padding="@dimen/horizontal_margin"
+                          android:background="@color/white"
+                          android:orientation="horizontal">
+                <TextView style="@style/comm_text"
+                          android:paddingLeft="@dimen/horizontal_margin_small"
+                          android:paddingRight="@dimen/horizontal_margin_small"
+                          android:background="@drawable/round_red_untransparent"
+                          android:layout_gravity="center_vertical"
+                          android:textColor="@color/white"
+                          android:text="进行中"/>
+                <TextView android:id="@+id/ui_one_yuan_details_title"
+                          style="@style/comm_text"
+                          android:text="（第九期）啊发送发发阿凡达发发企鹅青蛙萨芬打啊发发啊啊发发"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:background="@color/white">
+
+                <ProgressBar android:id="@+id/ui_one_yuan_details_bar"
+                             android:layout_width="match_parent"
+                             android:layout_height="5dp"
+                             android:max="100"
+                             android:progress="50"
+                             android:paddingLeft="@dimen/horizontal_margin"
+                             android:paddingRight="@dimen/horizontal_margin"
+                             android:progressDrawable="@drawable/progressbar"
+                             style="?android:attr/progressBarStyleHorizontal"/>
+
+            </LinearLayout>
+
+
+            <RelativeLayout android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:paddingLeft="@dimen/horizontal_margin"
+                            android:paddingRight="@dimen/horizontal_margin"
+                            android:orientation="horizontal">
+
+                <LinearLayout android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:orientation="horizontal">
+                    <TextView style="@style/comm_text"
+                              android:textSize="12sp"
+                              android:text="共需"/>
+                    <TextView android:id="@+id/ui_one_yuan_details_all_man"
+                              style="@style/comm_text"
+                              android:textColor="@color/red"
+                              android:textSize="12sp"
+                              android:text="进行中"/>
+                    <TextView style="@style/comm_text"
+                              android:textSize="12sp"
+                              android:text="人次"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_alignParentRight="true"
+                              android:orientation="horizontal">
+                    <TextView style="@style/comm_text"
+                              android:textSize="12sp"
+                              android:text="剩余"/>
+                    <TextView android:id="@+id/ui_one_yuan_details_lost_man"
+                              style="@style/comm_text"
+                              android:textColor="@color/red"
+                              android:textSize="12sp"
+                              android:text="进行中"/>
+                    <TextView style="@style/comm_text"
+                              android:textSize="12sp"
+                              android:text="人次"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout android:id="@+id/ui_one_yuan_details_business_isshow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/vertical_margin"
+                            android:paddingLeft="@dimen/horizontal_margin"
+                            android:paddingRight="@dimen/horizontal_margin"
+                            android:background="@color/white">
+
+                <TextView style="@style/comm_text"
+                          android:id="@+id/sjdi"
+                          android:textSize="12sp"
+                          android:layout_marginTop="12dp"
+                          android:textColor="@color/red"
+                          android:text="商家地址："/>
+
+                <TextView style="@style/comm_text"
+                          android:id="@+id/ui_one_yuan_details_business"
+                          android:textSize="12sp"
+                          android:layout_marginTop="12dp"
+                          android:textColor="@color/red"
+                          android:layout_toRightOf="@id/sjdi"
+                          android:layout_marginRight="70dp"
+                          android:text="进行中(第9期)话费充值卡（中国联通/中国移动/中国电信均可)面值100元"/>
+
+                <ImageView android:id="@+id/ui_one_yuan_details_business_image"
+                           android:layout_width="60dp"
+                           android:layout_height="50dp"
+                           android:layout_marginTop="@dimen/vertical_margin"
+                           android:layout_marginBottom="@dimen/vertical_margin"
+                           android:layout_alignParentRight="true"
+                           android:layout_centerVertical="true"
+                           android:background="@mipmap/user_account"/>
+            </RelativeLayout>
+
+            <TextView style="@style/comm_text"
+                      android:background="@color/white"
+                      android:textSize="12sp"
+                      android:textColor="@color/red"
+                      android:paddingLeft="@dimen/horizontal_margin"
+                      android:paddingRight="@dimen/horizontal_margin"
+                      android:layout_marginTop="@dimen/vertical_margin"
+                      android:text="乐购码使用：本商品商家线上商城/实体店铺享受优惠乐购码优惠详情"/>
+
+            <RelativeLayout android:layout_width="match_parent"
+                            android:background="@color/white"
+                            android:layout_marginTop="1px"
+                            android:layout_height="@dimen/edit_height">
+                <TextView
+                        android:drawableLeft="@mipmap/image"
+                        android:text="图文详情"
+                        android:padding="@dimen/vertical_margin"
+                        style="@style/user_title_left_text"/>
+                <TextView
+                        style="@style/user_title_right_text"
+                        android:text="建议在wifi下使用"/>
+            </RelativeLayout>
+
+            <RelativeLayout android:layout_width="match_parent"
+                            android:background="@color/white"
+                            android:layout_marginTop="1px"
+                            android:layout_height="@dimen/edit_height">
+                <TextView
+                        android:drawableLeft="@mipmap/crown"
+                        android:text="往期揭晓"
+                        android:padding="@dimen/vertical_margin"
+                        style="@style/user_title_left_text"/>
+                <TextView
+                        style="@style/user_title_right_text"
+                        android:text=""/>
+            </RelativeLayout>
+
+            <RelativeLayout android:layout_width="match_parent"
+                            android:background="@color/white"
+                            android:layout_marginTop="1px"
+                            android:layout_height="@dimen/edit_height">
+                <TextView
+                        android:drawableLeft="@mipmap/camera"
+                        android:text="晒单分享"
+                        android:padding="@dimen/vertical_margin"
+                        style="@style/user_title_left_text"/>
+                <TextView
+                        style="@style/user_title_right_text"
+                        android:text=""/>
+            </RelativeLayout>
+
+            <RelativeLayout android:layout_width="match_parent"
+                            android:background="@color/white"
+                            android:layout_marginTop="1px"
+                            android:layout_height="@dimen/edit_height">
+                <TextView
+                        android:drawableLeft="@mipmap/test"
+                        android:text="所有乐购记录"
+                        android:padding="@dimen/vertical_margin"
+                        style="@style/user_title_left_text"/>
+                <TextView
+                        style="@style/user_title_right_text"
+                        android:text=""/>
+            </RelativeLayout>
+
+            <org.wcy.android.widget.MyListView android:id="@+id/ui_one_yuang_details_record"
+                                               android:layout_marginTop="1px"
+                                               android:background="@color/white"
+                                               android:layout_width="match_parent"
+                                               android:layout_height="wrap_content">
+
+            </org.wcy.android.widget.MyListView>
+
+        </LinearLayout>
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+</LinearLayout>

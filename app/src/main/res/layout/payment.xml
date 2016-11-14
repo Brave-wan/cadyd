@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background">
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="@dimen/title_heigh"
+                    android:id="@+id/relative_layout"
+                    android:background="@color/white"
+                    android:layout_alignParentBottom="true">
+
+        <TextView style="@style/comm_text"
+                  android:id="@+id/payment_all_goods"
+                  android:layout_centerVertical="true"
+                  android:layout_marginLeft="@dimen/horizontal_margin"
+                  android:textSize="15sp"
+                  android:text="共111件商品"/>
+
+        <TextView style="@style/comm_text"
+                  android:id="@+id/payment_all_monet"
+                  android:layout_centerVertical="true"
+                  android:layout_marginLeft="@dimen/horizontal_margin"
+                  android:layout_toRightOf="@id/payment_all_goods"
+                  android:textSize="15sp"
+                  android:text="合计：1花币"/>
+
+
+        <Button style="@style/button_wrap_read_style"
+                android:id="@+id/payment_send"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_height="30dp"
+                android:layout_width="60dp"
+                android:text="支付"/>
+    </RelativeLayout>
+
+    <ScrollView android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/relative_layout">
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_marginBottom="@dimen/edit_height"
+                      android:orientation="vertical">
+
+            <org.wcy.android.widget.MyListView android:id="@+id/payment_list"
+                                               android:dividerHeight="@dimen/vertical_margin"
+                                               android:divider="@color/transparent"
+                                               android:layout_width="match_parent"
+                                               android:layout_height="wrap_content">
+            </org.wcy.android.widget.MyListView>
+
+            <RelativeLayout style="@style/item_relativeLayout"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/vertical_margin">
+                <TextView style="@style/user_title_left_text"
+                          android:drawableLeft="@mipmap/spend_image"
+                          android:id="@+id/payment_money"
+                          android:text="花币支付（花币余额：1花币）"/>
+
+                <CheckBox android:id="@+id/one_pay_hua"
+                          android:layout_width="20dp"
+                          android:layout_height="20dp"
+                          android:layout_centerVertical="true"
+                          android:button="@null"
+                          android:background="@drawable/orange_checked"
+                          android:layout_marginRight="@dimen/horizontal_margin"
+                          android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+
+            <View style="@style/comm_line_horizontal"
+                  android:visibility="gone"/>
+
+            <RelativeLayout style="@style/item_relativeLayout"
+                            android:visibility="gone">
+                <TextView style="@style/user_title_left_text"
+                          android:drawableLeft="@mipmap/wx"
+                          android:text="微信支付"/>
+                <CheckBox android:id="@+id/one_pay_wx"
+                          android:layout_width="20dp"
+                          android:layout_height="20dp"
+                          android:button="@null"
+                          android:layout_centerVertical="true"
+                          android:background="@drawable/orange_checked"
+                          android:layout_marginRight="@dimen/horizontal_margin"
+                          android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+            <View style="@style/comm_line_horizontal"
+                  android:visibility="gone"/>
+
+            <RelativeLayout style="@style/item_relativeLayout"
+                            android:visibility="gone">
+                <TextView style="@style/user_title_left_text"
+                          android:drawableLeft="@mipmap/zfp"
+                          android:text="支付宝支付"/>
+                <CheckBox android:id="@+id/one_pay_zfb"
+                          android:layout_width="20dp"
+                          android:layout_height="20dp"
+                          android:button="@null"
+                          android:layout_centerVertical="true"
+                          android:background="@drawable/orange_checked"
+                          android:layout_marginRight="@dimen/horizontal_margin"
+                          android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+            <View style="@style/comm_line_horizontal"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/BtnPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:onClick="onClickPlay"
+        android:text="@string/btn_start"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/BtnPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:onClick="onClickPause"
+        android:src="@mipmap/video_zanting"/>
+
+    <ImageView
+        android:id="@+id/BtnResume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:onClick="onClickResume"
+        android:src="@mipmap/video_start"/>
+
+    <ImageView
+        android:id="@+id/BtnStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:onClick="onClickStop"
+        android:src="@mipmap/video_stop"
+        android:text="@string/btn_stop"/>
+
+</LinearLayout>

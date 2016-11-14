@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/balance_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/horizontal_margin"
+        android:background="@mipmap/round_money" />
+
+    <TextView
+        android:id="@+id/balance_title"
+        style="@style/comm_text"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/horizontal_margin"
+        android:text="我的余额"
+        android:textSize="@dimen/font_submit" />
+
+    <TextView
+        android:id="@+id/balance_number"
+        style="@style/comm_text"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/horizontal_margin"
+        android:text="￥0.00"
+        android:textSize="@dimen/font_big" />
+
+    <RelativeLayout
+        android:id="@+id/balance_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/horizontal_margin"
+        android:paddingLeft="@dimen/horizontal_margin"
+        android:paddingRight="@dimen/horizontal_margin"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/balance_cash"
+            style="@style/button_style"
+            android:layout_width="110dp"
+            android:layout_height="@dimen/edit_height"
+            android:text="提现" />
+
+        <Button
+            android:id="@+id/balance_recharge"
+            style="@style/button_style"
+            android:layout_width="110dp"
+            android:layout_height="@dimen/edit_height"
+            android:layout_alignParentRight="true"
+            android:enabled="false"
+            android:text="充值" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/balance_recharge2"
+        style="@style/button_style"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_height"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/horizontal_margin"
+        android:text="充值"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="@dimen/vertical_margin">
+
+    <LinearLayout android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+        <CheckBox style="@style/gradCheckBoxStyle"
+                  android:id="@+id/user_shopping_collection_check"
+                  android:background="@null"
+                  android:visibility="gone"
+                  android:layout_gravity="center"/>
+
+
+        <ImageView android:id="@+id/user_shopping_collection_image"
+                   android:scaleType="fitXY"
+                   android:layout_width="80dp"
+                   android:layout_height="90dp"/>
+
+        <LinearLayout android:orientation="vertical"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent">
+
+            <TextView android:id="@+id/user_shopping_collection_title"
+                      android:layout_marginTop="@dimen/horizontal_margin_small"
+                      style="@style/comm_text"
+                      android:gravity="left"
+                      android:layout_height="0dp"
+                      android:layout_weight="1"
+                      android:paddingRight="12dp"
+                      android:paddingLeft="12dp"
+                      android:singleLine="false"
+                      android:maxLines="2"
+                      android:text=""/>
+
+            <TextView android:id="@+id/user_shopping_collection_money"
+                      android:layout_marginBottom="@dimen/horizontal_margin_small"
+                      style="@style/comm_text"
+                      android:paddingLeft="12dp"
+                      android:textColor="@color/red"
+                      android:text="￥0.00"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View style="@style/comm_line_horizontal"
+          android:layout_marginTop="@dimen/vertical_margin"/>
+</LinearLayout>

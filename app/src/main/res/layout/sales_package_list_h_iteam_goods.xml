@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:paddingTop="@dimen/vertical_margin"
+              android:paddingBottom="@dimen/vertical_margin">
+    <ImageView
+            android:id="@+id/goods_image"
+            android:layout_width="60dip"
+            android:layout_height="60dip"
+            android:scaleType="fitXY"
+            android:padding="1dip"
+            android:background="@drawable/orthogonal"/>
+    <TextView style="@style/comm_text"
+              android:id="@+id/good_name"
+              android:singleLine="false"
+              android:layout_width="match_parent"
+              android:layout_gravity="center_vertical"
+              android:layout_marginLeft="@dimen/vertical_margin"
+              android:layout_marginRight="@dimen/vertical_margin"/>
+</LinearLayout>

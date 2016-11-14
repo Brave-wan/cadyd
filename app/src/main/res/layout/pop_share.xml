@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#40000000"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#E6000000"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:id="@+id/pop_share_sina"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="16dp"
+                android:drawableTop="@mipmap/icon_share_xinglang"
+                android:gravity="center"
+                android:text="微博"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_tiny" />
+
+            <TextView
+                android:id="@+id/pop_share_wechat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="16dp"
+                android:drawableTop="@mipmap/icon_share_weixin"
+                android:gravity="center"
+                android:text="微信"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_tiny" />
+
+            <TextView
+                android:id="@+id/pop_share_friend"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="16dp"
+                android:drawableTop="@mipmap/icon_share_pengyouquan"
+                android:gravity="center"
+                android:text="朋友圈"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_tiny" />
+
+            <TextView
+                android:id="@+id/pop_share_qq"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="16dp"
+                android:drawableTop="@mipmap/icon_share_qq"
+                android:gravity="center"
+                android:text="QQ"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_tiny" />
+
+            <TextView
+                android:id="@+id/pop_share_qzone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="16dp"
+                android:drawableTop="@mipmap/icon_share_kongjian"
+                android:gravity="center"
+                android:text="QQ空间"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_tiny" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:background="@color/gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5"
+            android:padding="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:id="@+id/pop_share_link"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="16dp"
+                android:drawableTop="@mipmap/icon_share_link"
+                android:gravity="center"
+                android:text="复制链接"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_tiny" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:background="@color/gray" />
+
+        <TextView
+            android:id="@+id/pop_share_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_submit" />
+    </LinearLayout>
+</RelativeLayout>

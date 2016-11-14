@@ -1,0 +1,42 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/header_footer_top_bottom_padding"
+            android:text="请选择金额"
+            android:textSize="@dimen/font_submit" />
+
+        <org.wcy.android.widget.NoScrollGridView
+            android:id="@+id/recharge_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:listSelector="@color/transparent"
+            android:numColumns="3"></org.wcy.android.widget.NoScrollGridView>
+
+        <Button
+            android:id="@+id/send"
+            style="@style/button_wrap_read_style"
+            android:layout_width="match_parent"
+            android:layout_marginTop="24dp"
+            android:text="确认充值"
+            android:textSize="@dimen/font_submit" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/chong" />
+
+    </LinearLayout>
+</ScrollView>

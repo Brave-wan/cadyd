@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/video_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shap_video_bg"
+            android:paddingBottom="6dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="6dp"
+            android:text="0观看"
+            android:textColor="@color/white"/>
+
+        <LinearLayout
+            android:id="@+id/media_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/video_number">
+
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:background="@mipmap/individualstores_cha"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/video_personCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shap_video_bg">
+
+        <ImageView
+            android:id="@+id/video_headImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@mipmap/user_default"
+            />
+
+        <TextView
+            android:id="@+id/video_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/video_headImage"
+            android:text="name"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/video_liveNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/video_name"
+            android:layout_below="@+id/video_name"
+            android:layout_marginTop="3dp"
+            android:text="0人"
+            android:textColor="@color/white"
+            android:textSize="10sp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/stream_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/video_personCenter"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="@dimen/pldroid_streaming_streaming_status_padding"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/cd_tv_stream_status"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white"
+        android:textSize="12sp"/>
+
+    <ListView
+        android:id="@+id/chat_list"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_above="@+id/input_text"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:divider="@color/transparent">
+
+    </ListView>
+
+    <SeekBar
+        android:id="@+id/beautyLevel_seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:max="100"
+        android:progress="100"
+        />
+
+    <RelativeLayout
+        android:id="@+id/input_text"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+
+        <CheckBox
+            android:id="@+id/include_canerming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:button="@null"
+            android:drawableLeft="@drawable/shap_canerming_check"/>
+
+        <CheckBox
+            android:id="@+id/include_meiyan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_centerHorizontal="true"
+            android:button="@null"
+            android:drawableLeft="@drawable/shap_meiyan_check"/>
+
+        <CheckBox
+            android:id="@+id/include_live"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:button="@null"
+            android:drawableLeft="@drawable/shap_live_check"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

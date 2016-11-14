@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:id="@+id/LinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_extra_samll">
+
+        <Button
+            android:id="@+id/ui_one_yuan_details_buy"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:layout_weight="4"
+            android:background="@drawable/round_red_untransparent"
+            android:text="立即一元购"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/ui_one_yuan_details_AddCar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:layout_weight="4"
+            android:background="@drawable/round_blue_untransparent"
+            android:text="+购物车"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/ui_one_yuan_details_goToShoppingCar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:layout_weight="2"
+            android:src="@mipmap/shopping_cart_nor"
+            android:text="立即" />
+    </LinearLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/ui_one_yuan_details_PullToRefreshScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/LinearLayout"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            android:orientation="vertical">
+
+            <com.cadyd.app.ui.view.guide.ImageCycleView
+                android:id="@+id/ui_one_yuan_details_cycview"
+                android:layout_width="match_parent"
+                android:layout_height="300dip"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/horizontal_margin">
+
+                <TextView
+                    android:id="@+id/ui_one_yuan_details_isDoing"
+                    style="@style/comm_text"
+                    android:background="@drawable/round_red_untransparent"
+                    android:paddingLeft="@dimen/horizontal_margin_small"
+                    android:paddingRight="@dimen/horizontal_margin_small"
+                    android:text="进行中"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/ui_one_yuan_details_title"
+                    style="@style/comm_text"
+                    android:text=""
+                    android:textSize="@dimen/font_title" />
+            </LinearLayout>
+
+            <!--主要是为了进度条两边的白色底-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <ProgressBar
+                    android:id="@+id/ui_one_yuan_details_bar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:paddingLeft="@dimen/horizontal_margin"
+                    android:paddingRight="@dimen/horizontal_margin"
+                    android:progressDrawable="@drawable/progressbar" />
+
+            </LinearLayout>
+
+            <!--进度条描述-->
+            <RelativeLayout
+                android:id="@+id/ui_one_yuan_details_bar_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/horizontal_margin"
+                android:paddingRight="@dimen/horizontal_margin">
+
+                <TextView
+                    android:id="@+id/ui_one_yuan_details_all_man"
+                    style="@style/comm_text"
+                    android:layout_alignParentLeft="true" />
+
+                <TextView
+                    android:id="@+id/ui_one_yuan_details_lost_man"
+                    style="@style/comm_text"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ui_one_yuan_details_business_isshow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/vertical_margin"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/horizontal_margin"
+                android:paddingRight="@dimen/horizontal_margin">
+
+                <TextView
+                    android:id="@+id/sjdi"
+                    style="@style/comm_text"
+                    android:layout_marginTop="12dp"
+                    android:text=""
+                    android:textColor="@color/red" />
+
+                <TextView
+                    android:id="@+id/ui_one_yuan_details_business"
+                    style="@style/comm_text"
+                    android:layout_marginRight="70dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_toRightOf="@id/sjdi"
+                    android:text=""
+                    android:textColor="@color/red" />
+
+                <ImageView
+                    android:id="@+id/ui_one_yuan_details_business_image"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/vertical_margin"
+                    android:layout_marginTop="@dimen/vertical_margin" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ui_one_yuan_details_business_is_winning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/vertical_margin"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/horizontal_margin"
+                android:paddingRight="@dimen/horizontal_margin"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:id="@+id/ui_one_yuan_details_business_winning_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY" />
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="20dp"
+                        android:background="@mipmap/winning_image" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/comm_text"
+                            android:layout_width="60dp"
+                            android:gravity="right"
+                            android:text="获得者:"
+                            android:textSize="@dimen/font_tiny" />
+
+                        <TextView
+                            android:id="@+id/ui_one_yuan_details_business_winning_name"
+                            style="@style/comm_text"
+                            android:text="获得者："
+                            android:textSize="@dimen/font_tiny" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/comm_text"
+                            android:layout_width="60dp"
+                            android:gravity="right"
+                            android:text="用户IP:"
+                            android:textSize="@dimen/font_tiny" />
+
+                        <TextView
+                            android:id="@+id/ui_one_yuan_details_business_winning_ip"
+                            style="@style/comm_text"
+                            android:text="用户IP"
+                            android:textSize="@dimen/font_tiny" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/comm_text"
+                            android:layout_width="60dp"
+                            android:gravity="right"
+                            android:text="本期参与:"
+                            android:textSize="@dimen/font_tiny" />
+
+                        <TextView
+                            android:id="@+id/ui_one_yuan_details_business_winning_number"
+                            style="@style/comm_text"
+                            android:text="本期参与"
+                            android:textSize="@dimen/font_tiny" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="揭晓时间:"
+                            android:textSize="@dimen/font_tiny" />
+
+                        <TextView
+                            android:id="@+id/ui_one_yuan_details_business_winning_time"
+                            style="@style/comm_text"
+                            android:text=""
+                            android:textSize="@dimen/font_tiny" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/ui_one_yuan_details_look_luck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/vertical_margin"
+                android:background="@color/red"
+                android:padding="@dimen/padding_extra_samll"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/ui_one_yuan_details_luck_number"
+                    style="@style/comm_text"
+                    android:layout_centerVertical="true"
+                    android:text="幸运乐购码："
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_big" />
+
+                <TextView
+                    style="@style/comm_text"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/corners_more"
+                    android:text="计算详情"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_small" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/comm_text"
+                android:layout_marginTop="@dimen/vertical_margin"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/horizontal_margin"
+                android:paddingRight="@dimen/horizontal_margin"
+                android:text="乐购码使用：本商品商家线上商城/实体店铺享受优惠乐购码优惠详情"
+                android:textColor="@color/red" />
+
+            <RelativeLayout
+                android:id="@+id/ui_one_yuan_details_Graphic_details"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_height"
+                android:layout_marginTop="1px"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/user_title_left_text"
+                    android:drawableLeft="@mipmap/image"
+                    android:padding="@dimen/vertical_margin"
+                    android:text="图文详情"
+                    android:textSize="@dimen/font_title" />
+
+                <TextView
+                    style="@style/user_title_right_text"
+                    android:text="建议在wifi下使用" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ui_one_yuan_details_ToAnnounce"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_height"
+                android:layout_marginTop="1px"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/user_title_left_text"
+                    android:drawableLeft="@mipmap/crown"
+                    android:padding="@dimen/vertical_margin"
+                    android:text="往期揭晓"
+                    android:textSize="@dimen/font_title" />
+
+                <TextView
+                    style="@style/user_title_right_text"
+                    android:text="" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ui_one_yuan_details_sun"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_height"
+                android:layout_marginTop="1px"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/user_title_left_text"
+                    android:drawableLeft="@mipmap/camera"
+                    android:padding="@dimen/vertical_margin"
+                    android:text="晒单分享"
+                    android:textSize="@dimen/font_title" />
+
+                <TextView
+                    style="@style/user_title_right_text"
+                    android:text="" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_height"
+                android:layout_marginTop="1px"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/user_title_left_text"
+                    android:drawableLeft="@mipmap/test"
+                    android:padding="@dimen/vertical_margin"
+                    android:text="所有乐购记录"
+                    android:textSize="@dimen/font_title" />
+
+                <TextView
+                    style="@style/user_title_right_text"
+                    android:text="" />
+            </RelativeLayout>
+
+            <org.wcy.android.widget.MyListView
+                android:id="@+id/ui_one_yuang_details_record"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="1dp"
+                android:background="@color/white">
+
+            </org.wcy.android.widget.MyListView>
+
+
+        </LinearLayout>
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_heigh"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="top"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/horizontal_margin"
+        android:paddingRight="@dimen/horizontal_margin">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_circle"
+            android:drawablePadding="5dip"
+            android:gravity="center"
+            android:padding="@dimen/vertical_margin"
+            android:src="@mipmap/back_left_ico" />
+
+        <EditText
+            android:id="@+id/title"
+            style="@style/comm_text"
+            android:layout_centerInParent="true"
+            android:background="@color/transparent"
+            android:editable="false"
+            android:text="商品详情"
+            android:textColor="@color/text_primary_gray"
+            android:textSize="@dimen/font_big" />
+
+
+        <ImageView
+            android:id="@+id/shopping_cart"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_circle"
+            android:gravity="center"
+            android:padding="@dimen/vertical_margin"
+            android:paddingRight="@dimen/vertical_margin"
+            android:src="@mipmap/shoppingcar_image_ico_writh"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

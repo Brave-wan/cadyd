@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+    <!--头提示信息-->
+    <TextView
+            android:id="@+id/alpha"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#F5F1F0"
+            android:paddingBottom="5dip"
+            android:paddingLeft="5dip"
+            android:paddingTop="5dip"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/title_bg"
+            android:textSize="@dimen/font_small"
+            android:visibility="gone"/>
+
+    <!--右边选择去的描述-->
+    <TextView style="@style/comm_text"
+              android:id="@+id/right_name"
+              android:layout_below="@id/alpha"
+              android:layout_alignParentRight="true"
+              android:layout_marginTop="6.0dip"
+              android:paddingRight="@dimen/horizontal_margin"
+              android:paddingLeft="@dimen/horizontal_margin"
+              android:paddingTop="5dp"
+              android:layout_centerVertical="true"
+              android:gravity="center"
+              android:drawableRight="@mipmap/arrow_right"
+              android:visibility="gone"
+              android:text="选择区县"/>
+
+    <!--一般城市-->
+    <TextView
+              android:id="@+id/name"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/alpha"
+              android:layout_marginRight="5.0dip"
+              android:layout_marginLeft="@dimen/horizontal_margin"
+              android:layout_toRightOf="@+id/image_view"
+              android:paddingRight="@dimen/horizontal_margin"
+              android:paddingTop="@dimen/vertical_margin"
+              android:paddingBottom="@dimen/vertical_margin"
+              android:singleLine="true"
+              android:textAppearance="?android:textAppearanceMedium"
+              android:textColor="@color/black"
+              android:layout_centerVertical="true"
+    android:text="asdf"/>
+
+    <!--热门城市列表-->
+    <org.wcy.android.widget.NoScrollGridView android:id="@+id/names"
+                                             android:layout_below="@id/alpha"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content"
+                                             android:numColumns="3"
+                                             android:layout_marginRight="30dip"
+                                             android:padding="@dimen/horizontal_margin_small"
+                                             android:visibility="gone">
+    </org.wcy.android.widget.NoScrollGridView>
+
+</RelativeLayout>

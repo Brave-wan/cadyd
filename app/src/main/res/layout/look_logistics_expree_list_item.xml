@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingRight="@dimen/horizontal_margin_small">
+
+    <LinearLayout android:layout_centerVertical="true"
+                  android:layout_toRightOf="@+id/LinearLayout"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="@dimen/vertical_margin"
+                  android:layout_marginBottom="@dimen/vertical_margin"
+                  android:orientation="vertical">
+        <TextView
+                android:id="@+id/look_logistics_list_item_time"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:textColor="#868686"
+                android:ellipsize="end"
+                android:textSize="12sp"
+                android:text="2016-08-19 18:12:00"
+                android:layout_height="wrap_content"/>
+        <TextView
+                android:id="@+id/look_logistics_list_item_path"
+                android:layout_width="match_parent"
+                android:textColor="#868686"
+                android:layout_marginTop="5dp"
+                android:text="[重庆市]重庆分吧中心已出发"
+                android:textSize="14sp"
+                android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/LinearLayout"
+                  android:layout_width="wrap_content"
+                  android:layout_height="match_parent"
+                  android:layout_marginLeft="@dimen/vertical_margin"
+                  android:layout_marginRight="@dimen/vertical_margin"
+                  android:orientation="vertical">
+
+        <TextView android:id="@+id/look_logistics_list_item_up"
+                  android:layout_width="@dimen/line_height"
+                  android:layout_height="0dp"
+                  android:layout_weight="1"
+                  android:layout_gravity="center_horizontal"
+                  android:visibility="visible"
+                  android:background="@color/line_bg"/>
+
+
+        <ImageView android:id="@+id/imageView"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:background="@mipmap/look_logistics_expree_list_item_mark"/>
+
+
+        <TextView android:id="@+id/look_logistics_list_item_down"
+                  android:layout_width="@dimen/line_height"
+                  android:layout_height="0dp"
+                  android:layout_weight="1"
+                  android:layout_gravity="center_horizontal"
+                  android:visibility="visible"
+                  android:background="@color/line_bg"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

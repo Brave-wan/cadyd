@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:background="@color/background">
+
+    <RadioGroup android:id="@+id/global_doing_group"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/good_type_image_widht"
+                android:layout_margin="@dimen/horizontal_margin"
+                android:background="@drawable/round_yellow_transparent"
+                android:orientation="horizontal">
+
+        <RadioButton style="@style/ridaus_left_radio_button"
+                     android:id="@+id/radio_button_follow"
+                     android:text="关注"/>
+
+        <TextView style="@style/comm_line_vertical"
+                  android:background="@color/Orange"/>
+
+        <RadioButton style="@style/ridaus_center_radio_button"
+                     android:id="@+id/radio_button_new"
+                     android:text="最新"/>
+
+        <TextView style="@style/comm_line_vertical"
+                  android:background="@color/Orange"/>
+
+        <RadioButton style="@style/ridaus_right_radio_button"
+                     android:id="@+id/radio_button_want_bay"
+                     android:text="求购"/>
+    </RadioGroup>
+
+
+</LinearLayout>
+

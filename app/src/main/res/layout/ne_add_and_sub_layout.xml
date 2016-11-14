@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:minWidth="100dip"
+              android:minHeight="40dip"
+              android:padding="@dimen/line_height"
+              android:orientation="horizontal"
+              android:gravity="center_vertical"
+              android:weightSum="7"
+              android:background="@drawable/square_gray_transparent">
+
+    <TextView style="@style/comm_text"
+              android:id="@+id/sub"
+              android:layout_height="match_parent"
+              android:layout_weight="2"
+              android:layout_width="0dip"
+              android:gravity="center"
+              android:textSize="18sp"
+              android:text="-"/>
+
+    <View style="@style/comm_line_vertical"
+          android:background="@color/gray"/>
+
+    <TextView style="@style/comm_text"
+              android:background="@null"
+              android:id="@+id/number"
+              android:numeric="integer"
+              android:gravity="center"
+              android:layout_height="match_parent"
+              android:layout_weight="3"
+              android:layout_width="0dip"
+              android:text="1"
+              android:inputType="number"
+              android:maxLength="9"/>
+
+    <View style="@style/comm_line_vertical"
+          android:background="@color/gray"/>
+
+    <TextView style="@style/comm_text"
+              android:id="@+id/add"
+              android:layout_height="match_parent"
+              android:layout_weight="2"
+              android:layout_width="0dip"
+              android:gravity="center"
+              android:textSize="18sp"
+              android:text="+"/>
+
+</LinearLayout>

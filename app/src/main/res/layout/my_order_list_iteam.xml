@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View style="@style/comm_line_horizontal" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/horizontal_margin">
+
+        <CheckBox
+            android:id="@+id/shop_name"
+            style="@style/comm_text_black"
+            android:layout_height="@dimen/edit_height"
+            android:button="@null"
+            android:drawablePadding="@dimen/vertical_margin"
+            android:drawableRight="@mipmap/arrow_right"
+            android:paddingLeft="@dimen/horizontal_margin" />
+
+        <TextView
+            android:id="@+id/status_name"
+            style="@style/comm_text"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/goods_detail_red" />
+    </RelativeLayout>
+
+    <View style="@style/comm_line_horizontal" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/goods_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical" />
+
+    <TextView
+        android:id="@+id/subtotal"
+        style="@style/comm_text_black"
+        android:layout_width="match_parent"
+        android:layout_marginRight="@dimen/horizontal_margin"
+        android:gravity="right|center_vertical"
+        android:paddingBottom="@dimen/horizontal_margin"
+        android:paddingTop="@dimen/horizontal_margin_small" />
+
+    <View
+        android:id="@+id/line_view"
+        style="@style/comm_line_horizontal"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/operate_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/title_heigh"
+        android:layout_gravity="right"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/vertical_margin"
+        android:paddingTop="@dimen/vertical_margin"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/contact_shop"
+            style="@style/comm_operate_btn"
+            android:text="联系卖家"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/cancel_order"
+            style="@style/comm_operate_btn"
+            android:text="取消订单"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/delete_order"
+            style="@style/comm_operate_btn"
+            android:text="删除订单"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/evaluate_order"
+            style="@style/comm_operate_btn"
+            android:text="晒单评价"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/look_evaluate_order"
+            style="@style/comm_operate_btn"
+            android:text="查看评价"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/look_logistics"
+            style="@style/comm_operate_btn"
+            android:text="查看物流"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/receipt_order"
+            style="@style/comm_operate_btn"
+            android:text="确认收货"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/pay_order"
+            style="@style/comm_operate_btn"
+            android:background="@drawable/corners_delete_btn_selector"
+            android:text="付款"
+            android:textColor="@color/goods_detail_red"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/denial_reason"
+            style="@style/comm_operate_btn"
+            android:background="@drawable/corners_delete_btn_selector"
+            android:text="拒绝原因"
+            android:textColor="@color/goods_detail_red"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/Refund"
+            style="@style/comm_operate_btn"
+            android:background="@drawable/corners_delete_btn_selector"
+            android:text="申请退款"
+            android:textColor="@color/goods_detail_red"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <View style="@style/comm_line_horizontal" />
+</LinearLayout>

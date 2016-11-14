@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white_light_transparent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/messageCenter_system"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@mipmap/icon_msg_xitongxiaoxi"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text="系统消息"
+            android:textColor="@color/text_black"/>
+
+        <ImageView
+            android:id="@+id/system_arrow_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/arrow_right"/>
+
+        <View
+            android:id="@+id/system_badgeView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_toLeftOf="@id/system_arrow_right"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/messageCenter_order"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@mipmap/icon_msg_diangdanxiaoxi"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text="订单消息"
+            android:textColor="@color/text_black"/>
+
+        <ImageView
+            android:id="@+id/order_arrow_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/arrow_right"/>
+
+        <View
+            android:id="@+id/order_badgeView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_toLeftOf="@id/order_arrow_right"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/messageCenter_yidian"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@mipmap/icon_msg_yidianxiaoxi"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text="一点消息"
+            android:textColor="@color/text_black"/>
+
+        <ImageView
+            android:id="@+id/yidian_arrow_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/arrow_right"/>
+
+        <View
+            android:id="@+id/yidian_badgeView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_toLeftOf="@id/yidian_arrow_right"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/messageCenter_service"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@mipmap/icon_msg_fuwuxiaoxi"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text="服务消息"
+            android:textColor="@color/text_black"/>
+
+        <ImageView
+            android:id="@+id/service_arrow_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/arrow_right"/>
+
+        <View
+            android:id="@+id/service_badgeView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_toLeftOf="@id/service_arrow_right"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp" />
+    </RelativeLayout>
+
+</LinearLayout>

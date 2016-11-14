@@ -1,0 +1,100 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:padding="@dimen/vertical_margin"
+                  android:orientation="vertical">
+
+
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+            <ImageView android:id="@+id/goods_image"
+                       android:layout_width="90dp"
+                       android:layout_height="90dp"
+                       android:scaleType="fitXY"/>
+
+            <LinearLayout android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentRight="true"
+                          android:layout_centerVertical="true">
+
+                <TextView style="@style/comm_text"
+                          android:text="评价:"/>
+
+                <RatingBar
+                        android:id="@+id/room_ratingbar"
+                        style="@style/roomRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <com.cadyd.app.ui.view.SelectFixGridLayout android:id="@+id/add_label"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_marginTop="@dimen/vertical_margin"
+                                                   android:layout_height="wrap_content">
+        </com.cadyd.app.ui.view.SelectFixGridLayout>
+
+        <View style="@style/comm_line_horizontal"
+              android:layout_marginTop="@dimen/vertical_margin"/>
+
+        <EditText style="@style/comm_text"
+                  android:layout_marginTop="@dimen/vertical_margin"
+                  android:id="@+id/libe"
+                  android:gravity="left"
+                  android:padding="@dimen/padding_extra_samll"
+                  android:layout_width="match_parent"
+                  android:maxLength="80"
+                  android:minHeight="20dp"
+                  android:maxLines="3"
+                  android:hint="添加标签"
+                  android:visibility="gone"
+                  android:background="@color/transparent"/>
+
+        <View android:id="@+id/libe_line"
+              style="@style/comm_line_horizontal"
+              android:visibility="gone"
+              android:layout_marginTop="@dimen/vertical_margin"/>
+
+        <EditText style="@style/comm_text"
+                  android:layout_marginTop="@dimen/vertical_margin"
+                  android:id="@+id/content"
+                  android:gravity="left"
+                  android:padding="@dimen/padding_extra_samll"
+                  android:layout_width="match_parent"
+                  android:maxLength="80"
+                  android:minHeight="100dp"
+                  android:maxLines="3"
+                  android:hint="添加评论"
+                  android:background="@color/transparent"/>
+
+        <View style="@style/comm_line_horizontal"
+              android:layout_marginTop="@dimen/vertical_margin"/>
+
+        <org.wcy.android.widget.NoScrollGridView android:id="@+id/add_image_grid"
+                                                 android:layout_marginTop="@dimen/vertical_margin"
+                                                 android:verticalSpacing="@dimen/vertical_margin"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="wrap_content"
+                                                 android:background="@color/white"
+                                                 android:paddingLeft="@dimen/horizontal_margin_small"
+                                                 android:paddingRight="@dimen/horizontal_margin_small"
+                                                 android:paddingBottom="@dimen/horizontal_margin_small"
+                                                 android:numColumns="3">
+        </org.wcy.android.widget.NoScrollGridView>
+
+        <Button style="@style/button_style"
+                android:id="@+id/send"
+                android:text="提交"
+                android:layout_margin="@dimen/vertical_margin"/>
+
+    </LinearLayout>
+</ScrollView>

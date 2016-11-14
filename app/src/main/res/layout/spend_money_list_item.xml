@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:padding="@dimen/padding_extra_samll">
+
+    <TextView style="@style/comm_text"
+              android:textSize="@dimen/font_submit"
+              android:layout_marginLeft="@dimen/vertical_margin"
+              android:layout_gravity="center"
+              android:text="花币"/>
+
+    <View style="@style/comm_line_vertical"
+          android:layout_marginLeft="@dimen/vertical_margin"/>
+
+    <LinearLayout android:layout_width="0dp"
+                  android:layout_weight="1"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:layout_marginLeft="@dimen/padding_extra_samll">
+
+        <TextView style="@style/comm_text"
+                  android:gravity="center"
+                  android:text="2015.10.26 24.24"/>
+
+        <TextView style="@style/comm_text"
+                  android:gravity="center"
+                  android:singleLine="true"
+                  android:text="据啊激发了世界吉sfasfsfasfasfafa拉斯警方"/>
+
+    </LinearLayout>
+
+
+    <TextView style="@style/comm_text"
+              android:layout_gravity="center"
+              android:text=""/>
+
+
+    <TextView style="@style/comm_text"
+              android:id="@+id/integral_number"
+              android:layout_width="wrap_content"
+              android:layout_gravity="center"
+              android:gravity="right"
+              android:layout_marginRight="@dimen/vertical_margin"
+              android:layout_marginLeft="@dimen/vertical_margin"
+              android:text="-1000"/>
+
+</LinearLayout>

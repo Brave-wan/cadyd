@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:paddingLeft="@dimen/vertical_margin"
+              android:paddingRight="@dimen/vertical_margin"
+              android:paddingTop="@dimen/horizontal_margin_small"
+              android:paddingBottom="@dimen/horizontal_margin_small"
+              android:orientation="vertical">
+    <ImageView android:id="@+id/image"
+               android:layout_width="80dip"
+               android:layout_height="80dip"
+               android:scaleType="fitXY"
+               android:src="@drawable/goods_image_default"
+               android:layout_gravity="center_horizontal"/>
+    <TextView
+            android:id="@+id/name"
+            style="@style/comm_text_black"
+            android:text="与重庆“宋仲基”在westin酒店共进晚餐"
+            android:layout_width="match_parent"
+            android:lines="1"
+            android:ellipsize="end"
+            android:layout_marginTop="@dimen/horizontal_margin_small"/>
+    <com.cadyd.app.ui.view.countdown.CountdownView
+            android:id="@+id/timeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            app:timeBgDivisionLineSize="1dp"
+            app:timeBgSize="25dp"
+            app:isShowDay="false"
+            app:isShowHour="false"
+            app:isShowMinute="true"
+            app:isShowSecond="true"
+            app:isShowMillisecond="true"
+            app:suffixGravity="center"
+            app:suffixTextColor="@color/black"
+            app:suffixTextSize="14sp"
+            app:timeBgColor="@color/goods_detail_red"
+            app:timeTextColor="#FFFFFF"
+            app:timeTextSize="14sp"
+            app:isHideTimeBackground="false"
+            app:timeBgRadius="3dp"/>
+    <TextView style="@style/comm_text_black"
+              android:id="@+id/countdown_toast"
+              android:textColor="@color/goods_detail_red"
+              android:text="正在计算...."
+              android:visibility="gone"/>
+</LinearLayout>

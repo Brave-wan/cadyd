@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:background="@color/white"
+              android:layout_height="wrap_content">
+
+    <com.cadyd.app.ui.view.CircleImageView android:id="@+id/image"
+                                           android:layout_width="56dp"
+                                           android:layout_height="56dp"
+                                           android:layout_margin="12dp"
+                                           android:layout_gravity="center_vertical"
+                                           android:layout_marginLeft="@dimen/horizontal_margin"/>
+
+    <LinearLayout android:layout_width="wrap_content"
+                  android:layout_height="match_parent"
+                  android:layout_marginLeft="@dimen/horizontal_margin"
+                  android:orientation="vertical">
+
+        <TextView android:id="@+id/top_text"
+                  style="@style/comm_text"
+                  android:layout_weight="1"
+                  android:layout_height="0dp"
+                  android:singleLine="true"
+                  android:gravity="center_vertical"
+                  android:text="(镇江市 61.132.31.***)"/>
+
+        <TextView android:id="@+id/center_text"
+                  style="@style/comm_text"
+                  android:layout_weight="1"
+                  android:layout_height="0dp"
+                  android:singleLine="true"
+                  android:gravity="center_vertical"
+                  android:text="参与5人次"/>
+
+        <TextView android:id="@+id/down_text"
+                  style="@style/comm_text"
+                  android:layout_weight="1"
+                  android:layout_height="0dp"
+                  android:singleLine="true"
+                  android:gravity="center_vertical"
+                  android:text="参与5人次 2016-05-11 10:09:02:096"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background"
+                android:id="@+id/empty_layout">
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/background">
+        <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+                android:id="@+id/pullListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:scrollbars="none"
+                android:layout_alignParentTop="true"
+                android:layout_above="@+id/bottom_layout">
+            <org.wcy.android.widget.MyListView
+                    android:id="@+id/list_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:dividerHeight="@dimen/vertical_margin"
+                    android:listSelector="@color/transparent"
+                    android:divider="@color/transparent"
+                    android:layout_marginTop="@dimen/vertical_margin"
+                    android:paddingBottom="@dimen/horizontal_margin"/>
+        </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+        <RelativeLayout
+                android:id="@+id/bottom_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray"
+                android:layout_alignParentBottom="true"
+                android:visibility="invisible">
+            <CheckBox
+                    android:id="@+id/all_checkbox"
+                    style="@style/shopping_cart_checkbox"
+                    android:layout_height="wrap_content"
+                    android:text="全选"
+                    android:layout_alignParentLeft="true"/>
+            <Button
+                    android:id="@+id/delete_goods"
+                    style="@style/button_more"
+                    android:text="删除"
+                    android:textColor="@color/goods_detail_red"
+                    android:background="@drawable/corners_delete_btn_selector"
+                    android:visibility="gone"
+                    android:layout_alignParentRight="true"/>
+            <LinearLayout
+                    android:id="@+id/money_total_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toLeftOf="@+id/purchase"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/horizontal_margin">
+                <TextView style="@style/comm_text_black"
+                          android:text="合计：0.00"
+                          android:id="@+id/total_money"
+                          android:layout_width="match_parent"
+                          android:gravity="right"/>
+                <TextView style="@style/comm_text"
+                          android:text="不含运费"
+                          android:textSize="12sp"
+                          android:layout_marginTop="@dimen/horizontal_margin_small"
+                          android:layout_gravity="right"/>
+            </LinearLayout>
+
+            <Button android:layout_width="120dip"
+                    android:id="@+id/purchase"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/purchase_button_selector"
+                    style="@style/comm_text"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:text="去结算(0)"
+                    android:layout_alignParentRight="true"
+                    android:visibility="visible"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

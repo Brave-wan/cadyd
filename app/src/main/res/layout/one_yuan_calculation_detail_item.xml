@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="@dimen/vertical_margin">
+
+    <TextView
+        android:id="@+id/time"
+        style="@style/comm_text"
+        android:text="乐购时间" />
+
+    <TextView
+        android:id="@+id/number"
+        style="@style/comm_text"
+        android:text=" "
+        android:textColor="@color/red" />
+
+    <TextView
+        android:id="@+id/phone"
+        style="@style/comm_text"
+        android:layout_width="match_parent"
+        android:gravity="right"
+        android:text="用户帐号" />
+
+
+</LinearLayout>

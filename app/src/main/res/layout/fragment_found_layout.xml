@@ -1,0 +1,49 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadeScrollbars="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/btn_found_shopping"
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/btn_found_onedollar"
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/btn_found_integral"
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/btn_found_globalbuy"
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/btn_found_ovot"
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/btn_found_ef"
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/found_ef" />
+    </LinearLayout>
+
+</ScrollView>

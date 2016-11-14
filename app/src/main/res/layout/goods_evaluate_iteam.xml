@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:paddingTop="@dimen/vertical_margin"
+                android:paddingBottom="@dimen/vertical_margin"
+                android:paddingLeft="@dimen/horizontal_margin"
+                android:paddingRight="@dimen/horizontal_margin">
+    <ImageView android:id="@+id/image_view"
+               android:layout_width="90dip"
+               android:layout_height="90dip"
+               android:layout_gravity="center_horizontal"
+               android:layout_alignParentLeft="true"
+               android:layout_marginRight="@dimen/vertical_margin"
+               android:scaleType="fitXY"/>
+    <TextView
+            android:id="@+id/name"
+            style="@style/comm_text"
+            android:layout_width="match_parent"
+            android:textColor="@color/black"
+            android:singleLine="false"
+            android:lines="2"
+            android:ellipsize="end"
+            android:text="雷柏（Rapoo）V500S 背光机械游戏键盘 机械黑轴 黑色版"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/image_view"
+            android:layout_toLeftOf="@+id/right_layout"/>
+
+    <TextView
+            android:id="@+id/evaluate"
+            style="@style/comm_operate_btn"
+            android:text=""
+            android:layout_height="30dip"
+            android:background="@drawable/corners_delete_btn_selector"
+            android:textColor="@color/goods_detail_red"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"/>
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/white">
+
+    <RadioGroup android:id="@+id/user_shopping_collection_group"
+                android:layout_width="200dp"
+                android:layout_height="@dimen/good_type_image_widht"
+                android:layout_marginTop="@dimen/horizontal_margin"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/round_yellow_transparent">
+
+        <RadioButton style="@style/ridaus_left_radio_button"
+                     android:id="@+id/user_shopping_collection_baby"
+                     android:text="宝贝"/>
+
+        <TextView style="@style/comm_line_vertical"
+                  android:background="@color/Orange"/>
+
+        <RadioButton style="@style/ridaus_right_radio_button"
+                     android:id="@+id/user_shopping_collection_shop"
+                     android:text="店铺"/>
+
+    </RadioGroup>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentBottom="true"
+                  android:id="@+id/check_layout">
+
+        <Button style="@style/button_style"
+                android:id="@+id/user_shopping_collection_check_all"
+                android:layout_height="@dimen/edit_height"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/horizontal_margin_small"
+                android:text="全选"/>
+
+        <Button style="@style/button_style"
+                android:id="@+id/user_shopping_collection_delete"
+                android:layout_height="@dimen/edit_height"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/horizontal_margin_small"
+                android:text="删除"/>
+    </LinearLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView android:id="@+id/user_shopping_collection_list"
+                                                              android:layout_above="@id/check_layout"
+                                                              android:layout_below="@id/user_shopping_collection_group"
+                                                              android:layout_width="match_parent"
+                                                              android:layout_marginTop="@dimen/vertical_margin"
+                                                              android:layout_height="match_parent"
+                                                              android:background="@color/transparent"
+                                                              android:divider="@color/transparent"
+                                                              android:listSelector="@color/transparent">
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+</RelativeLayout>

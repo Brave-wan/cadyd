@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/vertical_margin">
+
+    <ImageView android:id="@+id/shop_image"
+               android:layout_width="100dp"
+               android:layout_height="80dp"
+               android:scaleType="fitXY"
+               android:layout_marginRight="@dimen/vertical_margin"/>
+
+    <TextView android:id="@+id/shop_title"
+              style="@style/comm_text_black"
+              android:layout_toRightOf="@id/shop_image"
+              android:text="title  title"/>
+
+    <TextView android:id="@+id/shop_distance"
+              style="@style/comm_text"
+              android:layout_alignParentRight="true"
+              android:text="100km"/>
+
+    <TextView android:id="@+id/shop_content"
+              style="@style/comm_text"
+              android:gravity="left"
+              android:layout_toRightOf="@id/shop_image"
+              android:layout_below="@id/shop_title"
+              android:layout_marginTop="@dimen/vertical_margin"
+              android:lines="3"
+              android:text="10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000km"/>
+
+</RelativeLayout>

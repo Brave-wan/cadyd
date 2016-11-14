@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@color/white">
+    <View style="@style/comm_line_horizontal"/>
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="@dimen/edit_height">
+        <CheckBox
+                android:id="@+id/shop_checkbox"
+                style="@style/shopping_cart_checkbox"/>
+        <TextView style="@style/comm_text_black"
+                  android:id="@+id/shop_name"
+                  android:layout_height="@dimen/edit_height"
+                  android:layout_toRightOf="@+id/shop_checkbox"/>
+        <TextView style="@style/comm_text_black"
+                  android:id="@+id/coupons_btn"
+                  android:background="@drawable/corners_shopping_cart_coupons_btn_select"
+                  android:text="领劵"
+                  android:layout_alignParentRight="true"
+                  android:layout_centerVertical="true"
+                  android:padding="5dip"
+                  android:layout_marginRight="@dimen/horizontal_margin"/>
+
+    </RelativeLayout>
+    <View style="@style/comm_line_horizontal"/>
+    <org.wcy.android.widget.MyListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:dividerHeight="@dimen/line_height"
+            android:listSelector="@color/transparent"
+            android:divider="@color/light_gray"/>
+    <View style="@style/comm_line_horizontal"/>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="@dimen/edit_height">
+        <CheckBox style="@style/shopping_cart_checkbox"
+                  android:visibility="invisible"/>
+        <TextView style="@style/comm_text"
+                  android:id="@+id/subtotal"
+                  android:layout_width="match_parent"
+                  android:layout_height="@dimen/edit_height"
+                  android:text="小计 ￥0.00"
+                  android:textColor="@color/goods_detail_red"/>
+    </LinearLayout>
+    <View style="@style/comm_line_horizontal"/>
+</LinearLayout>

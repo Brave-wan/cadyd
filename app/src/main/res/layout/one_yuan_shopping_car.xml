@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background"
+                android:id="@+id/empty_layout">
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/line_height"
+                    android:id="@+id/one_car_all_re"
+                    android:layout_height="@dimen/title_heigh"
+                    android:background="@color/background"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="bottom">
+
+
+        <CheckBox android:id="@+id/one_car_all_check"
+                  android:layout_width="wrap_content"
+                  android:layout_height="20dp"
+                  android:button="@null"
+                  android:layout_centerVertical="true"
+                  android:drawablePadding="@dimen/padding_extra_samll"
+                  android:drawableLeft="@drawable/orange_checked"
+                  android:layout_marginLeft="@dimen/horizontal_margin"
+                  android:textColor="@color/text_primary_gray"
+                  android:background="@null"
+                  android:text="全选"/>
+
+        <TextView style="@style/comm_text"
+                  android:id="@+id/one_car_money"
+                  android:layout_centerVertical="true"
+                  android:layout_marginLeft="@dimen/horizontal_margin"
+                  android:layout_toRightOf="@id/one_car_all_check"
+                  android:textSize="15sp"
+                  android:text="合计：1花币"/>
+
+
+        <Button android:id="@+id/one_car_send"
+                android:layout_height="match_parent"
+                android:layout_width="120dp"
+                android:background="@color/red"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:text="结算"/>
+    </RelativeLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView android:id="@+id/one_shopping_car_list"
+                                                              android:layout_above="@id/one_car_all_re"
+                                                              android:layout_width="match_parent"
+                                                              android:layout_height="match_parent"
+                                                              android:divider="@color/transparent"
+                                                              android:background="@color/white">
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+</RelativeLayout>

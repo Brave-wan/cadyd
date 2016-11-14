@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background"
+                android:id="@+id/empty_layout">
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView android:id="@+id/pulltorefreshlistview"
+                                                              android:layout_above="@id/bottom_layout"
+                                                              android:layout_width="match_parent"
+                                                              android:layout_height="match_parent">
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+    <View style="@style/comm_line_horizontal"
+
+          android:layout_above="@id/bottom_layout"/>
+
+
+    <RelativeLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cart_bottom_layout_height"
+            android:background="@color/light_gray"
+            android:layout_alignParentBottom="true">
+
+        <CheckBox
+                android:id="@+id/all_checkbox"
+                style="@style/shopping_cart_checkbox"
+                android:layout_height="match_parent"
+                android:text="全选"
+                android:layout_alignParentLeft="true"/>
+
+        <LinearLayout
+                android:layout_toRightOf="@id/all_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/vertical_margin">
+            <TextView android:id="@+id/total_integral"
+                      style="@style/comm_text_black"
+                      android:drawableLeft="@mipmap/penny"
+                      android:text="0"
+                      android:gravity="right"/>
+            <TextView android:id="@+id/total_price"
+                      style="@style/comm_text_black"
+                      android:text="￥   0.00"
+                      android:layout_marginTop="@dimen/horizontal_margin_small"/>
+        </LinearLayout>
+
+        <Button
+                android:id="@+id/delete_goods"
+                style="@style/button_more"
+                android:text="删除"
+                android:textColor="@color/goods_detail_red"
+                android:background="@drawable/corners_delete_btn_selector"
+                android:visibility="gone"
+                android:layout_alignParentRight="true"/>
+        <Button android:id="@+id/purchase"
+                android:layout_width="120dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/purchase_button_selector"
+                style="@style/comm_text"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:text="去结算(0)"
+                android:layout_alignParentRight="true"
+                android:visibility="visible"/>
+
+        <TextView   android:id="@+id/no_freight"
+                style="@style/comm_text_black"
+                  android:layout_toLeftOf="@id/purchase"
+                  android:layout_marginRight="@dimen/horizontal_margin"
+                  android:layout_centerVertical="true"
+                  android:text="不含运费"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

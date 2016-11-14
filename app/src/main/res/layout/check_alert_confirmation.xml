@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip">
+
+    <LinearLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:padding="20dip">
+
+        <TextView
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/alert_top_bg"
+                android:gravity="center"
+                android:text="选择性别"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_small"/>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:background="@color/background"
+                      android:orientation="vertical">
+            <RadioGroup
+                    android:id="@+id/radio_group"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="25dip"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="15dip"
+                    android:paddingTop="25dip"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                <RadioButton style="@style/comm_text"
+                             android:id="@+id/radio_left_button"
+                             android:button="@null"
+                             android:drawableLeft="@drawable/orange_checked"
+                             android:text="男"/>
+
+                <RadioButton style="@style/comm_text"
+                             android:id="@+id/radio_right_button"
+                             android:layout_marginLeft="@dimen/edit_height"
+                             android:button="@null"
+                             android:drawableLeft="@drawable/orange_checked"
+                             android:text="女"/>
+            </RadioGroup>
+        </LinearLayout>
+
+
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/edit_height"
+                android:background="@color/background"
+                android:paddingBottom="10dip"
+                android:paddingLeft="@dimen/horizontal_margin"
+                android:paddingRight="@dimen/horizontal_margin"
+                android:weightSum="2">
+
+            <Button
+                    android:id="@+id/cancel"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="10dip"
+                    android:layout_weight="1"
+                    style="@style/warning_buton"
+                    android:text="取消"/>
+
+            <Button
+                    android:id="@+id/confirm"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dip"
+                    android:layout_weight="1"
+                    android:text="确定"
+                    style="@style/normal_buton"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

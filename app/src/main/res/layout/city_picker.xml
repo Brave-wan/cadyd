@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:su="http://schemas.android.com/apk/res-auto"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center_horizontal"
+              android:orientation="horizontal">
+
+    <com.cadyd.app.ui.view.city.ScrollerNumberPicker
+            android:id="@+id/province"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1.3"
+            su:itemNumber="3"
+            su:lineColor="#ffff6000"
+            su:maskHight="25dip"
+            su:noEmpty="true"
+            su:normalTextColor="#777"
+            su:normalTextSize="@dimen/city_default"
+            su:selecredTextColor="@color/black"
+            su:selecredTextSize="@dimen/city_select"
+            su:unitHight="40dp"/>
+
+    <com.cadyd.app.ui.view.city.ScrollerNumberPicker
+            android:id="@+id/city"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_weight="0.9"
+            su:itemNumber="3"
+            su:lineColor="#ffff6000"
+            su:maskHight="25dip"
+            su:noEmpty="true"
+            su:normalTextColor="#777"
+            su:normalTextSize="@dimen/city_default"
+            su:selecredTextColor="@color/black"
+            su:selecredTextSize="@dimen/city_select"
+            su:unitHight="40dip"/>
+
+    <com.cadyd.app.ui.view.city.ScrollerNumberPicker
+            android:id="@+id/couny"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_weight="0.8"
+            su:itemNumber="3"
+            su:lineColor="#ffff6000"
+            su:maskHight="25dip"
+            su:noEmpty="true"
+            su:normalTextColor="#777"
+            su:normalTextSize="@dimen/city_default"
+            su:selecredTextColor="@color/black"
+            su:selecredTextSize="@dimen/city_select"
+            su:unitHight="40dip"/>
+
+</LinearLayout>

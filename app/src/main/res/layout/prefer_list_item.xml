@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/vertical_margin">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+        <TextView
+                android:id="@+id/money"
+                style="@style/comm_text"
+                android:text="15元"
+                android:textColor="@color/goods_detail_red"/>
+        <TextView
+                android:id="@+id/condition"
+                style="@style/comm_text_black"
+                android:text="订单满198使用不含邮费"
+                android:textSize="13sp"
+                android:layout_marginTop="@dimen/horizontal_margin_small"
+                android:layout_marginBottom="@dimen/horizontal_margin_small"/>
+        <TextView
+                android:id="@+id/valid"
+                style="@style/comm_text"
+                android:text="试用期限2012.12.14-2015.12.12"
+                android:textSize="12sp"/>
+    </LinearLayout>
+    <Button
+            android:id="@+id/get_btn"
+            style="@style/button_more"
+            android:text="领取"
+            android:textColor="@color/goods_detail_red"
+            android:background="@drawable/corners_delete_btn_selector"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="0dip"/>
+</RelativeLayout>

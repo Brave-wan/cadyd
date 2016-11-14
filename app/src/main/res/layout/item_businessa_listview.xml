@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:paddingLeft="15dp"
+              android:paddingRight="15dp"
+              android:paddingTop="20dp">
+
+    <TextView
+        android:id="@+id/business_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_livedetail_text_bg"
+        android:lineSpacingExtra="3dp"
+        android:padding="3dp"
+        android:text="无论怎样的花朵，总会藏有芬芳，无论是什么季节，都会有阳光，我把自己隐藏在秋色里，赏遍落叶上的月光，心也不会荒凉，夏有盛放，秋有萧瑟，季节的每一次辗转，都有不同的含义，又何必在意，哪一朵花儿，能代表春天，哪一片叶子，即将在秋天凋零，缠绕的藤蔓，浮动着暗香，希望就在转角。"/>
+</LinearLayout>

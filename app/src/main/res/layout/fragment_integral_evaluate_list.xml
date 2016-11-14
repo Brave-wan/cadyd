@@ -1,0 +1,13 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/relative"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView android:id="@+id/pull_to_refresh_list_view"
+                                                              android:layout_width="match_parent"
+                                                              android:layout_height="match_parent"
+                                                              android:divider="@color/transparent">
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+</RelativeLayout>

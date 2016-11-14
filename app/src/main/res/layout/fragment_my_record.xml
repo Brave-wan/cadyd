@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+
+    <RadioGroup android:id="@+id/user_one_radio"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/good_type_image_widht"
+                android:layout_margin="@dimen/horizontal_margin"
+                android:background="@drawable/round_yellow_transparent"
+                android:orientation="horizontal">
+
+        <RadioButton style="@style/ridaus_left_radio_button"
+                     android:id="@+id/user_one_all"
+                     android:text="全部"/>
+
+        <TextView style="@style/comm_line_vertical"
+                  android:background="@color/Orange"/>
+
+        <RadioButton style="@style/ridaus_center_radio_button"
+                     android:id="@+id/user_one_ing"
+                     android:text="进行中"/>
+
+        <TextView style="@style/comm_line_vertical"
+                  android:background="@color/Orange"/>
+
+        <RadioButton style="@style/ridaus_right_radio_button"
+                     android:id="@+id/user_one_end"
+                     android:text="已揭晓"/>
+    </RadioGroup>
+
+    <RelativeLayout android:id="@+id/relative"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView android:id="@+id/user_one_record_list"
+                                                                  android:listSelector="#00000000"
+                                                                  android:divider="@color/transparent"
+                                                                  android:layout_width="match_parent"
+                                                                  android:layout_height="match_parent">
+        </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

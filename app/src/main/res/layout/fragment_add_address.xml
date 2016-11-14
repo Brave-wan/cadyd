@@ -1,0 +1,110 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_alignParentBottom="true"
+                  android:orientation="vertical">
+
+        <RelativeLayout style="@style/linearlayout_horizontal">
+            <TextView style="@style/comm_text"
+                      android:layout_width="80dp"
+                      android:text="收货人:"
+                      android:layout_alignParentLeft="true"
+                      android:layout_centerVertical="true"/>
+            <EditText style="@style/comm_text"
+                      android:padding="@dimen/padding_extra_samll"
+                      android:id="@+id/add_address_name"
+                      android:background="@null"
+                      android:hint="请输入收货人姓名"
+                      android:text=""
+                      android:layout_alignParentRight="true"
+                      android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+        <View style="@style/comm_line_horizontal"/>
+
+        <RelativeLayout style="@style/linearlayout_horizontal">
+            <TextView style="@style/comm_text"
+                      android:layout_width="80dp"
+                      android:text="联系方式:"
+                      android:layout_alignParentLeft="true"
+                      android:layout_centerVertical="true"/>
+            <EditText style="@style/comm_text"
+                      android:padding="@dimen/padding_extra_samll"
+                      android:id="@+id/add_address_phone"
+                      android:phoneNumber="true"
+                      android:background="@null"
+                      android:hint="请输入联系方式"
+                      android:text=""
+                      android:layout_alignParentRight="true"
+                      android:layout_centerVertical="true"/>
+        </RelativeLayout>
+        <View style="@style/comm_line_horizontal"/>
+
+        <RelativeLayout style="@style/linearlayout_horizontal">
+            <TextView style="@style/comm_text"
+                      android:layout_width="80dp"
+                      android:text="所在地区:"
+                      android:layout_alignParentLeft="true"
+                      android:layout_centerVertical="true"/>
+            <TextView style="@style/comm_text"
+                      android:padding="@dimen/padding_extra_samll"
+                      android:id="@+id/add_address_ssq"
+                      android:layout_width="match_parent"
+                      android:text=""
+                      android:layout_marginLeft="80dp"
+                      android:layout_alignParentRight="true"
+                      android:layout_centerVertical="true"
+                      android:drawableRight="@mipmap/arrow_right"
+                      android:hint="请选择地区"
+                      android:gravity="right"/>
+        </RelativeLayout>
+
+
+        <View style="@style/comm_line_horizontal"/>
+        <RelativeLayout style="@style/linearlayout_horizontal">
+            <TextView style="@style/comm_text"
+                      android:layout_width="80dp"
+                      android:text="详细地址:"
+                      android:layout_alignParentLeft="true"
+                      android:layout_centerVertical="true"/>
+            <EditText style="@style/comm_text"
+                      android:padding="@dimen/padding_extra_samll"
+                      android:id="@+id/add_address_address"
+                      android:background="@null"
+                      android:hint="请输入详细地址"
+                      android:text=""
+                      android:layout_alignParentRight="true"
+                      android:layout_centerVertical="true"/>
+        </RelativeLayout>
+        <View style="@style/comm_line_horizontal"/>
+        <RelativeLayout style="@style/linearlayout_horizontal">
+            <TextView style="@style/comm_text"
+                      android:layout_width="80dp"
+                      android:text="邮政编码:"
+                      android:layout_alignParentLeft="true"
+                      android:layout_centerVertical="true"/>
+            <EditText style="@style/comm_text"
+                      android:padding="@dimen/padding_extra_samll"
+                      android:id="@+id/add_address_code"
+                      android:background="@null"
+                      android:numeric="integer"
+                      android:hint="请输入邮政编码"
+                      android:text=""
+                      android:layout_alignParentRight="true"
+                      android:layout_centerVertical="true"/>
+        </RelativeLayout>
+        <View style="@style/comm_line_horizontal"/>
+
+        <Button style="@style/button_style"
+                android:id="@+id/save"
+                android:layout_marginTop="@dimen/title_heigh"
+                android:text="保存"
+                android:layout_marginRight="@dimen/horizontal_margin"
+                android:layout_marginLeft="@dimen/horizontal_margin"
+                android:layout_marginBottom="@dimen/horizontal_margin"/>
+    </LinearLayout>
+</ScrollView>

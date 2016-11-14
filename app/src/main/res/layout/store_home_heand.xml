@@ -1,0 +1,233 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 优惠券布局-->
+        <LinearLayout
+            android:id="@+id/coupon_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="@dimen/horizontal_margin_small">
+
+            <RelativeLayout
+                android:id="@+id/coupon_relative1"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="4"
+                android:background="@mipmap/coupon_background_1"
+                android:paddingLeft="@dimen/horizontal_margin">
+
+                <TextView
+                    android:id="@+id/coupon_price"
+                    style="@style/comm_text"
+                    android:layout_marginTop="@dimen/horizontal_margin_small"
+                    android:text="￥1000元"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_tiny" />
+
+                <TextView
+                    android:id="@+id/coupon_receive"
+                    style="@style/comm_text"
+                    android:layout_width="16dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/horizontal_margin_small"
+                    android:text="立即领取"
+                    android:textColor="@color/white" />
+
+                <ImageView
+                    android:id="@+id/line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/horizontal_margin_small"
+                    android:layout_marginRight="@dimen/horizontal_margin_small"
+                    android:layout_toLeftOf="@+id/coupon_receive"
+                    android:src="@mipmap/league_prefer_line" />
+
+                <TextView
+                    android:id="@+id/coupon_content"
+                    style="@style/comm_text"
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/coupon_price"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/line"
+                    android:lines="2"
+                    android:text="满100元可使用"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_tiny" />
+
+                <TextView
+                    android:id="@+id/coupon_create"
+                    style="@style/comm_text"
+                    android:layout_width="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@id/coupon_content"
+                    android:layout_toLeftOf="@id/line"
+                    android:lines="2"
+                    android:text="2013.11.28至2014.06.03"
+                    android:textSize="@dimen/font_tiny" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/coupon_relative2"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="@dimen/vertical_margin"
+                android:layout_weight="4"
+                android:background="@mipmap/coupon_background_1"
+                android:paddingLeft="@dimen/horizontal_margin">
+
+
+                <TextView
+                    android:id="@+id/coupon_price2"
+                    style="@style/comm_text"
+                    android:layout_marginTop="@dimen/horizontal_margin_small"
+                    android:text="￥1000元"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_tiny" />
+
+                <TextView
+                    android:id="@+id/coupon_receive2"
+                    style="@style/comm_text"
+                    android:layout_width="16dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/horizontal_margin_small"
+                    android:text="立即领取"
+                    android:textColor="@color/white" />
+
+                <ImageView
+                    android:id="@+id/line2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/horizontal_margin_small"
+                    android:layout_marginRight="@dimen/horizontal_margin_small"
+                    android:layout_toLeftOf="@+id/coupon_receive2"
+                    android:src="@mipmap/league_prefer_line" />
+
+                <TextView
+                    android:id="@+id/coupon_content2"
+                    style="@style/comm_text"
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/coupon_price2"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/line2"
+                    android:lines="2"
+                    android:text="满100元可使用"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_tiny" />
+
+
+                <TextView
+                    android:id="@+id/coupon_create2"
+                    style="@style/comm_text"
+                    android:layout_width="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@id/coupon_content2"
+                    android:layout_toLeftOf="@id/line2"
+                    android:text="2013.11.28至2014.06.03"
+                    android:textSize="@dimen/font_tiny" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:src="@mipmap/circular_arrow"></ImageView>
+        </LinearLayout>
+
+        <com.cadyd.app.ui.view.guide.ZImageCycleView
+            android:id="@+id/ZImageCycleView"
+            android:layout_width="match_parent"
+            android:layout_height="170dip" />
+
+        <org.wcy.android.widget.NoScrollGridView
+            android:id="@+id/advertising_gridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="2">
+
+        </org.wcy.android.widget.NoScrollGridView>
+
+    </LinearLayout>
+
+    <!--zjh热销品牌-->
+    <LinearLayout
+        android:id="@+id/brands_recyclerView_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_heigh"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <View
+            style="@style/comm_line_horizontal"
+            android:layout_width="0dp"
+            android:layout_marginLeft="@dimen/vertical_margin"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="热销品牌"
+            android:textSize="@dimen/font_submit" />
+
+        <View
+            style="@style/comm_line_horizontal"
+            android:layout_width="0dp"
+            android:layout_marginRight="@dimen/vertical_margin"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <org.wcy.android.widget.NoScrollGridView
+        android:id="@+id/brands_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:numColumns="3" />
+
+    <!--zjh热销商品-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_heigh"
+        android:background="@color/background"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <View
+            style="@style/comm_line_horizontal"
+            android:layout_width="0dp"
+            android:layout_marginLeft="@dimen/vertical_margin"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="精品分类"
+            android:textSize="@dimen/font_submit" />
+
+        <View
+            style="@style/comm_line_horizontal"
+            android:layout_width="0dp"
+            android:layout_marginRight="@dimen/vertical_margin"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</LinearLayout>

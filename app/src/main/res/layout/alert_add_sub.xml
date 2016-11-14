@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip">
+
+    <LinearLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:padding="20dip">
+
+        <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/alert_top_bg"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_title"
+                android:text="修改商品数量"/>
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/background">
+            <com.cadyd.app.ui.view.AddAndSubView
+                    android:id="@+id/add_sub_view"
+                    android:layout_width="150dip"
+                    android:layout_height="50dip"
+                    android:orientation="horizontal"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="40dip"
+                    android:layout_marginBottom="40dip"/>
+        </RelativeLayout>
+
+
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/edit_height"
+                android:background="@color/background"
+                android:paddingBottom="10dip"
+                android:paddingLeft="@dimen/horizontal_margin"
+                android:paddingRight="@dimen/horizontal_margin"
+                android:weightSum="2">
+
+            <Button
+                    android:id="@+id/cancel"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="10dip"
+                    android:layout_weight="1"
+                    style="@style/warning_buton"
+                    android:text="取消"/>
+
+            <Button
+                    android:id="@+id/confirm"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dip"
+                    android:layout_weight="1"
+                    android:text="确定"
+                    style="@style/normal_buton"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/rootView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/voido_persont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shap_video_bg"
+        android:paddingTop="5dp">
+
+        <com.cadyd.app.ui.view.CircleImageView
+            android:id="@+id/video_headImage"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:background="@mipmap/user_default"
+            app:border_color="@color/white"/>
+
+        <TextView
+            android:id="@+id/video_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/video_headImage"
+            android:text="直播中"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/video_attentionNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/video_name"
+            android:layout_below="@+id/video_name"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="10sp"/>
+
+
+        <TextView
+            android:id="@+id/voideo_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/video_name"
+            android:background="@drawable/shap_video_acttion"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="8dp"
+            android:text="+ 关注"
+            android:textColor="@color/black"
+            android:textSize="12sp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/look_root"
+        android:layout_toRightOf="@+id/look_root">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/gg_list"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/vertical_margin"
+            android:background="@drawable/gg_list_bg"
+            android:scrollbars="none"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/media_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:padding="10dp"
+        android:src="@mipmap/live_close_icon"/>
+
+    <RelativeLayout
+        android:id="@+id/look_root"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/voido_persont"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shap_video_bg"
+        android:paddingBottom="5dp"
+        android:paddingRight="8dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@+id/lookNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/video_number"
+            android:text="0"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/video_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="观看人数"
+            android:textColor="@color/A110"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/look_root"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shap_video_bg"
+        android:paddingBottom="5dp"
+        android:paddingRight="8dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@+id/live_lookroom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="房间"
+            android:textColor="@color/A110"/>
+
+        <TextView
+            android:id="@+id/Plvideo_roomNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/live_lookroom"
+            android:text="0"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/chat_list"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_above="@+id/about_us"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:divider="@color/transparent">
+
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/input_text"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/msg_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/message_back_icon"/>
+
+        <EditText
+            android:id="@+id/void_content"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="3.6"
+            android:background="@drawable/shap_include_mediaplayer_editext"
+            android:hint="跟主播聊什么?"
+            android:paddingLeft="8dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="14sp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0.9"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/voide_send"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/shap_live_close_image"
+                android:gravity="center"
+                android:text="发送"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </LinearLayout>
+
+ <View
+     android:id="@id/about_us"
+     android:layout_width="match_parent"
+     android:layout_alignParentBottom="true"
+     android:layout_height="48dp"/>
+
+</RelativeLayout>

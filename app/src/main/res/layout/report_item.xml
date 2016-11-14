@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="10dp">
+
+    <TextView
+        android:id="@+id/report_text"
+        style="@style/comm_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_height"
+        android:paddingRight="10dp"
+        android:text="全部"
+        android:textColor="@color/black" />
+
+    <View style="@style/comm_line_horizontal" />
+
+</LinearLayout>

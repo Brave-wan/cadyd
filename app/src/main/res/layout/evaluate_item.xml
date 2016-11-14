@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/f5f5f5">
+
+
+    <LinearLayout android:layout_marginTop="@dimen/vertical_margin"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@color/white"
+                  android:padding="@dimen/vertical_margin"
+                  android:orientation="vertical">
+
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+            <ImageView android:id="@+id/image"
+                       android:layout_width="80dp"
+                       android:layout_height="80dp"
+                       android:layout_marginRight="@dimen/horizontal_margin_small"
+                       android:background="@color/blue"/>
+
+            <TextView android:id="@+id/number"
+                      android:layout_marginTop="@dimen/vertical_margin"
+                      style="@style/comm_text"
+                      android:layout_alignParentRight="true"
+                      android:layout_marginLeft="@dimen/vertical_margin"
+                      android:text="X100"/>
+
+            <TextView android:id="@+id/title"
+                      style="@style/comm_text"
+                      android:layout_marginTop="@dimen/vertical_margin"
+                      android:layout_toRightOf="@id/image"
+                      android:layout_toLeftOf="@id/number"
+                      android:gravity="left"
+                      android:text="苏联空军发几个i啊离开那算了快接啊三个你噶快乐难过轧空那个卡阿哥克拉"
+                      android:lines="2"/>
+
+            <RatingBar android:id="@+id/goods_ratingBar"
+                       style="@style/roomRatingBar"
+                       android:layout_toRightOf="@id/image"
+                       android:layout_below="@id/title"
+                       android:layout_marginTop="@dimen/vertical_margin"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:numStars="5"
+                       android:stepSize="1"
+                       android:layout_gravity="center_vertical"/>
+
+        </RelativeLayout>
+
+        <EditText android:id="@+id/content"
+                  style="@style/comm_text"
+                  android:gravity="left"
+                  android:layout_marginTop="@dimen/vertical_margin"
+                  android:lines="5"
+                  android:layout_width="match_parent"
+                  android:hint="请输入商品评价"
+                  android:background="@color/f5f5f5"/>
+
+        <android.support.v7.widget.RecyclerView android:id="@+id/recyclerView"
+                                                android:layout_marginTop="@dimen/horizontal_margin_small"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+</LinearLayout>

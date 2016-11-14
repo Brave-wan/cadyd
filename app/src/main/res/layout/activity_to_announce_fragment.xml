@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/horizontal_margin"
+        android:background="@color/background"
+        tools:context=".ui.fragment.unitary.ToAnnounceFragment">
+
+    <GridView android:id="@+id/ui_announce_grid"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:verticalSpacing="@dimen/line_height"
+              android:horizontalSpacing="@dimen/line_height"
+              android:numColumns="3">
+
+    </GridView>
+
+</RelativeLayout>

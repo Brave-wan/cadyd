@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/common_frame"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0" />
+
+    <View style="@style/comm_line_horizontal" />
+
+    <RadioGroup
+        android:id="@+id/rgs"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#EDEDED"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <RadioButton
+            android:id="@+id/home"
+            style="@style/main_radio_btn"
+            android:checked="true"
+            android:drawableTop="@drawable/main_radio_home_selector"
+            android:text="@string/home" />
+
+        <RadioButton
+            android:id="@+id/type"
+            style="@style/main_radio_btn"
+            android:drawableTop="@drawable/mall_main_type_radio_selector"
+            android:text="分类" />
+
+
+        <RadioButton
+            android:id="@+id/shopping_cart"
+            style="@style/main_radio_btn"
+            android:drawableTop="@drawable/main_radio_shopping_cart_selector"
+            android:text="@string/shopping_cart" />
+
+        <RadioButton
+            android:id="@+id/user_centent"
+            style="@style/main_radio_btn"
+            android:drawableTop="@drawable/main_radio_user_centent_selector"
+            android:text="@string/user_centent" />
+    </RadioGroup>
+
+</LinearLayout>

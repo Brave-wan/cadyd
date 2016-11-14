@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_report"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_heigh"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="top"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/vertical_margin"
+        android:paddingRight="@dimen/vertical_margin">
+
+        <TextView
+            android:id="@+id/back"
+            style="@style/comm_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:drawablePadding="5dip"
+            android:gravity="center"
+            android:padding="@dimen/vertical_margin"
+            android:text="关闭"
+            android:textSize="@dimen/font_title" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/comm_text"
+            android:layout_centerInParent="true"
+            android:text="用户举报"
+            android:textSize="@dimen/font_big" />
+
+    </RelativeLayout>
+
+    <View style="@style/comm_line_horizontal" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/light_gray"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/comm_text"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/vertical_margin"
+                android:padding="@dimen/vertical_margin"
+                android:text="请选择举报原因" />
+
+            <org.wcy.android.widget.MyListView
+                android:id="@+id/reason_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/fffaf5"
+                android:divider="@null"></org.wcy.android.widget.MyListView>
+
+            <TextView
+                style="@style/comm_text"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/vertical_margin"
+                android:padding="@dimen/vertical_margin"
+                android:text="请选择输入举报内容" />
+
+            <EditText
+                android:id="@+id/report_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/fffaf5"
+                android:gravity="left"
+                android:hint="在此输入举报内容"
+                android:minHeight="100dp"
+                android:padding="@dimen/horizontal_margin_small"
+                android:textSize="@dimen/font_small" />
+
+            <Button
+                android:id="@+id/send"
+                style="@style/comm_button"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="24dp"
+                android:text="举报"
+                android:textSize="@dimen/font_submit" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

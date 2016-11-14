@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <HorizontalScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/ui_all_goods_horizontal_scroll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/light_gray"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <View
+        android:id="@+id/top_line"
+        style="@style/comm_line_horizontal"
+        android:layout_below="@id/scrollview" />
+
+    <ScrollView
+        android:id="@+id/scroview"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_line"
+        android:background="@color/light_gray"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/lift_text_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"></LinearLayout>
+    </ScrollView>
+
+
+    <View
+        android:id="@+id/center_line"
+        style="@style/comm_line_vertical"
+        android:layout_below="@id/top_line"
+        android:layout_toRightOf="@id/scroview" />
+
+
+    <com.cadyd.app.comm.HorseTextView
+        android:id="@+id/horse_text"
+        style="@style/comm_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_line"
+        android:layout_toRightOf="@id/center_line"
+        android:ellipsize="marquee"
+        android:enabled="false"
+        android:singleLine="true"
+        android:text="十元专区：每参与1人次需花费10个花币，系统随机分配一个乐购码"
+        android:visibility="gone" />
+
+    <View style="@style/comm_line_horizontal" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshGridView
+        android:id="@+id/ui_all_goods_content_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/horse_text"
+        android:layout_toRightOf="@id/center_line"
+        android:background="@color/light_gray"
+        android:horizontalSpacing="@dimen/line_height"
+        android:numColumns="2"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="@dimen/line_height" />
+
+    <RelativeLayout
+        android:id="@+id/all_goods_relative"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/horse_text"
+        android:layout_toRightOf="@id/center_line"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ic_empty" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

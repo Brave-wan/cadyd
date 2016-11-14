@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <View style="@style/comm_line_vertical"/>
+
+    <TextView style="@style/main_radio_btn"
+              android:layout_weight="0"
+              android:layout_width="70dp"
+              android:paddingTop="@dimen/vertical_margin"
+              android:paddingBottom="@dimen/vertical_margin"
+              android:id="@+id/text_view"
+              android:text="最新"/>
+
+
+</LinearLayout>

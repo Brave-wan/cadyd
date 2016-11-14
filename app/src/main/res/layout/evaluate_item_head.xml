@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/vertical_margin">
+
+    <TextView android:id="@+id/create"
+              style="@style/comm_text"
+              android:layout_alignParentRight="true"
+              android:text="2013.22.23  11.23"/>
+
+    <TextView android:id="@+id/order_number"
+              android:layout_toLeftOf="@id/create"
+              style="@style/comm_text_black"
+              android:layout_width="match_parent"
+              android:singleLine="true"
+              android:textSize="@dimen/font_title"
+              android:text="订单号："/>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:paddingLeft="15dp"
+              android:paddingRight="15dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="关联已有第一点帐号"
+        android:textColor="#666666"/>
+
+    <EditText
+        android:id="@+id/loginBInding_ed_userName"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_registbinding_edtext"
+        android:hint="请输入用户名/已验证手机号"
+        android:paddingLeft="10dp"
+        android:inputType="phone"
+        android:textColorHint="#c8c7cd"
+        android:textSize="14sp"/>
+
+    <EditText
+        android:id="@+id/loginBInding_ed_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_registbinding_edtext"
+        android:hint="请输入密码"
+        android:paddingLeft="10dp"
+        android:inputType="numberPassword"
+        android:textColorHint="#c8c7cd"
+        android:textSize="14sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_registbinding_edtext"
+            android:hint="请输入验证码"
+            android:paddingLeft="10dp"
+            android:textColorHint="#c8c7cd"
+            android:textSize="14sp"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:src="@mipmap/yanzhengma"
+            android:text="获取短信验证码"
+            android:textColor="@color/white"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="关联后，您的QQ帐号跟第一点帐号都可以登录"
+        android:textColor="#999999"/>
+
+
+    <Button
+        android:id="@+id/loginBInding_ed_loginBtn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape_registbinding_btn"
+        android:gravity="center"
+        android:text="登录"
+        android:textColor="#fc7f47"/>
+
+    <TextView
+        android:id="@+id/loginBInding_getBackPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="right|center"
+        android:text="找回密码"
+        android:textColor="#666666"/>
+</LinearLayout>

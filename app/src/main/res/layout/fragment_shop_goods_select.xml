@@ -1,0 +1,167 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/big_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_light_transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_heigh"
+        android:background="@color/title_bg"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_extra_samll">
+
+        <ImageView
+            android:id="@+id/select_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_left" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/horizontal_margin_small"
+            android:layout_marginLeft="@dimen/vertical_margin"
+            android:layout_marginTop="@dimen/horizontal_margin_small"
+            android:layout_weight="1"
+            android:background="@drawable/round_gray_untransparent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/check_baby"
+                style="@style/comm_text"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/padding_extra_samll"
+                android:drawableRight="@drawable/search_button_selector"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/search_content"
+                style="@style/comm_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/padding_extra_samll"
+                android:background="@null"
+                android:text="" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/content_cancel"
+            style="@style/comm_text"
+            android:padding="@dimen/padding_extra_samll"
+            android:text="搜索"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <View style="@style/comm_line_horizontal" />
+
+    <LinearLayout
+        android:id="@+id/check_linear"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/good_type_image_widht"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/select_new"
+                style="@style/comm_text"
+                android:layout_height="match_parent"
+                android:drawableRight="@mipmap/rad_arrow_down"
+                android:gravity="center"
+                android:text="综合"
+                android:textColor="@color/red" />
+        </LinearLayout>
+
+        <View style="@style/comm_line_vertical" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/sales_volume"
+                style="@style/comm_text"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:drawableRight="@mipmap/doulbe_arrows_ico"
+                android:gravity="center"
+                android:text="销量" />
+        </LinearLayout>
+
+        <View style="@style/comm_line_vertical" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/sales_price"
+                style="@style/comm_text"
+                android:layout_height="match_parent"
+                android:drawableRight="@mipmap/doulbe_arrows_ico"
+                android:gravity="center"
+                android:text="价格" />
+        </LinearLayout>
+
+
+        <View style="@style/comm_line_vertical" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/sales_screen"
+                style="@style/comm_text"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:drawableRight="@mipmap/arrow_down"
+                android:gravity="center"
+                android:text="筛选" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View style="@style/comm_line_horizontal" />
+
+    <RelativeLayout
+        android:id="@+id/empty_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/select_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:divider="@color/light_gray"
+            android:dividerHeight="@dimen/line_height"
+            android:listSelector="@color/transparent">
+
+        </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+    </RelativeLayout>
+
+</LinearLayout>

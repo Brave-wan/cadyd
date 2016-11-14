@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_one_yuan_calculation_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purchase_pressed"
+        android:orientation="vertical"
+        android:padding="@dimen/vertical_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="计算公式"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_small" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[(数值A+数值B)除以商品总需人次]取余数+10000001"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_submit" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/vertical_margin"
+        android:layout_marginRight="@dimen/vertical_margin"
+        android:layout_marginTop="@dimen/horizontal_margin_small"
+        android:text="数值A"
+        android:textSize="@dimen/font_small" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/vertical_margin"
+        android:layout_marginRight="@dimen/vertical_margin"
+        android:layout_marginTop="@dimen/horizontal_margin_small"
+        android:text="= 截止该商品开奖时间点前最后100条全站参与记录"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_title" />
+
+    <View
+        style="@style/comm_line_horizontal"
+        android:layout_marginTop="@dimen/horizontal_margin_small" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/a_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/vertical_margin"
+            android:layout_marginRight="@dimen/vertical_margin"
+            android:text=""
+            android:textColor="@color/red"
+            android:textSize="@dimen/font_title" />
+
+        <TextView
+            android:id="@+id/text_oo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/vertical_margin"
+            android:layout_marginRight="@dimen/vertical_margin"
+            android:drawableLeft="@mipmap/arrow_down_read"
+            android:text="展开"
+            android:textColor="@color/red"
+            android:textSize="@dimen/font_title" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/line_bg"
+            android:visibility="gone"></ListView>
+
+        <LinearLayout
+            android:id="@+id/LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/vertical_margin"
+                android:layout_marginRight="@dimen/vertical_margin"
+                android:layout_marginTop="@dimen/horizontal_margin_small"
+                android:text="数值B"
+                android:textSize="@dimen/font_small" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/vertical_margin"
+                android:layout_marginRight="@dimen/vertical_margin"
+                android:layout_marginTop="@dimen/horizontal_margin_small"
+                android:text="= 最近一期中国福利彩票'老时时彩'的开奖结果"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_title" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/b_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/vertical_margin"
+                    android:layout_marginRight="@dimen/vertical_margin"
+                    android:layout_marginTop="@dimen/horizontal_margin_small"
+                    android:text=""
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/font_title" />
+
+                <TextView
+                    android:id="@+id/look"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/vertical_margin"
+                    android:layout_marginRight="@dimen/vertical_margin"
+                    android:text="开奖查询"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/font_title" />
+            </RelativeLayout>
+
+            <View
+                style="@style/comm_line_horizontal"
+                android:layout_marginBottom="@dimen/vertical_margin"
+                android:layout_marginTop="@dimen/vertical_margin" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/vertical_margin"
+                android:layout_marginRight="@dimen/vertical_margin"
+                android:text="计算结果"
+                android:textSize="@dimen/font_small" />
+
+            <TextView
+                android:id="@+id/number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/vertical_margin"
+                android:gravity="center"
+                android:text="幸运号码："
+                android:textColor="@color/red"
+                android:textSize="@dimen/font_big" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

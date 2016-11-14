@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:background="@color/transparent">
+    <RelativeLayout
+            android:layout_marginTop="@dimen/vertical_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/horizontal_margin">
+        <ImageView android:id="@+id/image_ico"
+                   android:layout_alignParentLeft="true"
+                   android:layout_width="@dimen/good_type_image_widht"
+                   android:layout_height="@dimen/good_type_image_widht"
+                   android:scaleType="fitXY"
+                   android:src="@mipmap/goods_type_ico"
+                   android:layout_centerVertical="true"/>
+        <TextView
+                android:id="@+id/type_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/vertical_margin"
+                android:text="化妆品"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/image_ico"/>
+        <TextView android:id="@+id/btn_more"
+                  style="@style/button_more"
+                  android:layout_alignParentRight="true"
+                  android:layout_marginRight="@dimen/horizontal_margin"/>
+    </RelativeLayout>
+    <View
+            style="@style/comm_line_horizontal"
+            android:layout_marginTop="@dimen/vertical_margin"/>
+    <com.cadyd.app.ui.view.AutoLoadRecyclerView
+            android:id="@+id/grid_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/horizontal_margin"/>
+</LinearLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background"
+                android:id="@+id/empty_layout">
+    <ScrollView android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"
+                android:layout_above="@+id/bottom_layout">
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical">
+            <RelativeLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@color/white"
+                            android:padding="@dimen/horizontal_margin"
+                            android:id="@+id/top_layout">
+                <TextView style="@style/comm_text"
+                          android:id="@+id/name"
+                          android:layout_alignParentTop="true"
+                          android:layout_toRightOf="@+id/gps_image"
+                          android:layout_alignTop="@+id/gps_image"/>
+                <TextView style="@style/comm_text"
+                          android:id="@+id/phone"
+                          android:layout_alignParentTop="true"
+                          android:layout_toLeftOf="@+id/arrow_image"/>
+                <ImageView android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:background="@mipmap/gps_ico"
+                           android:id="@+id/gps_image"
+                           android:layout_alignParentLeft="true"
+                           android:visibility="visible"
+                           android:layout_centerVertical="true"
+                           android:layout_marginRight="@dimen/horizontal_margin"/>
+                <TextView style="@style/comm_text_black"
+                          android:id="@+id/address"
+                          android:layout_toLeftOf="@+id/arrow_image"
+                          android:layout_below="@+id/name"
+                          android:layout_toRightOf="@+id/gps_image"
+                          android:layout_marginTop="@dimen/horizontal_margin"/>
+                <ImageView
+                        android:id="@+id/arrow_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/arrow_right"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+            <View style="@style/comm_line_horizontal"/>
+
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/list_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background"
+                    android:layout_marginTop="@dimen/vertical_margin"
+                    android:visibility="gone"
+                    android:paddingBottom="@dimen/horizontal_margin"/>
+
+            <org.wcy.android.widget.MyListView
+                    android:id="@+id/my_list_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/vertical_margin"
+                    android:paddingBottom="@dimen/horizontal_margin"/>
+
+            <RelativeLayout android:layout_width="match_parent"
+                            android:layout_height="@dimen/edit_height"
+                            android:paddingLeft="@dimen/horizontal_margin"
+                            android:id="@+id/luckCode_layout"
+                            android:visibility="visible"
+                            android:background="@drawable/orthogonal_vertical">
+                <TextView
+                        android:id="@+id/integral_toast"
+                        style="@style/comm_text_black"
+                        android:text="是否使用积分"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"/>
+                <TextView
+                        android:id="@+id/integral_toast2"
+                        style="@style/comm_text"
+                        android:text="  "
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dip"
+                        android:layout_toRightOf="@+id/integral_toast"/>
+                <TextView
+                        android:id="@+id/integral"
+                        style="@style/comm_text"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@mipmap/integral_ico"
+                        android:layout_toRightOf="@+id/integral_toast2"/>
+                <CheckBox
+                        android:id="@+id/integral_checkbox"
+                        style="@style/shopping_cart_checkbox"
+                        android:drawableRight="@null"
+                        android:drawableLeft="@drawable/integral_checked_selector"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentLeft="false"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cart_bottom_layout_height"
+            android:background="@color/light_gray"
+            android:layout_alignParentBottom="true">
+
+        <Button android:layout_width="120dip"
+                android:id="@+id/purchase"
+                android:layout_height="match_parent"
+                android:background="@drawable/purchase_button_selector"
+                style="@style/comm_text"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:text="去结算"
+                android:layout_alignParentRight="true"
+                android:visibility="visible"/>
+        <TextView style="@style/comm_text_black"
+                  android:text="合计：0.00"
+                  android:id="@+id/total_money"
+                  android:layout_height="match_parent"
+                  android:layout_width="match_parent"
+                  android:gravity="center"
+                  android:layout_toLeftOf="@+id/purchase"
+                  android:layout_alignParentLeft="true"/>
+    </RelativeLayout>
+</RelativeLayout>

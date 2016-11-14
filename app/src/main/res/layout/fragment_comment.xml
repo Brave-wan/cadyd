@@ -1,0 +1,66 @@
+<com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/pullListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:scrollbars="none"
+        android:background="@color/background">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white">
+        <com.cadyd.app.ui.view.CommentFixGridLayout
+                android:id="@+id/certification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginTop="@dimen/horizontal_margin"
+                android:layout_marginLeft="@dimen/horizontal_margin"
+                android:layout_marginRight="@dimen/horizontal_margin"/>
+        <View style="@style/comm_line_horizontal"/>
+        <RadioGroup
+                android:id="@+id/detail_rg"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/title_heigh"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:weightSum="5"
+                android:clickable="true"
+                android:layout_alignParentTop="true">
+            <RadioButton
+                    android:id="@+id/all"
+                    style="@style/goods_detail_radio_btn"
+                    android:text="全部"
+                    android:checked="true"/>
+
+            <RadioButton
+                    android:id="@+id/good"
+                    style="@style/goods_detail_radio_btn"
+                    android:text="好评"/>
+
+            <RadioButton
+                    android:id="@+id/conetent"
+                    style="@style/goods_detail_radio_btn"
+                    android:text="中评"/>
+            <RadioButton
+                    android:id="@+id/bad"
+                    style="@style/goods_detail_radio_btn"
+                    android:text="差评"/>
+            <RadioButton
+                    android:id="@+id/image"
+                    style="@style/goods_detail_radio_btn"
+                    android:text="有图"/>
+        </RadioGroup>
+        <org.wcy.android.widget.MyListView
+                android:id="@+id/list_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background"
+                android:dividerHeight="@dimen/vertical_margin"
+                android:listSelector="@color/transparent"
+                android:divider="@color/light_gray"
+                android:paddingBottom="@dimen/horizontal_margin"/>
+    </LinearLayout>
+</com.handmark.pulltorefresh.library.PullToRefreshScrollView>

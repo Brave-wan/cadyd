@@ -1,0 +1,65 @@
+<com.handmark.pulltorefresh.library.PullToRefreshScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pullscrollview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <com.cadyd.app.ui.view.guide.ZImageCycleView
+            android:id="@+id/ui_tesco_head"
+            android:layout_width="match_parent"
+            android:layout_height="240dip" />
+
+        <RadioGroup
+            android:id="@+id/group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/vertical_margin"
+            android:paddingTop="@dimen/vertical_margin">
+
+            <RadioButton
+                android:id="@+id/nearby"
+                style="@style/main_radio_btn"
+                android:text="附近"
+                android:textSize="@dimen/font_title" />
+
+            <View style="@style/comm_line_vertical" />
+
+            <RadioButton
+                android:id="@+id/popular"
+                style="@style/main_radio_btn"
+                android:text="人气"
+                android:textSize="@dimen/font_title" />
+
+            <View style="@style/comm_line_vertical" />
+
+            <RadioButton
+                android:id="@+id/sales"
+                style="@style/main_radio_btn"
+                android:text="销量"
+                android:textSize="@dimen/font_title" />
+        </RadioGroup>
+
+        <View style="@style/comm_line_horizontal" />
+
+        <org.wcy.android.widget.NoScrollGridView
+            android:id="@+id/flagship_store"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:horizontalSpacing="@dimen/line_height"
+            android:numColumns="2"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="@dimen/line_height" />
+    </LinearLayout>
+
+</com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+

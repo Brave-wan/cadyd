@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/vertical_margin">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+
+    <TextView
+        android:id="@+id/name_text"
+        style="@style/comm_text"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/vertical_margin"
+        android:layout_toRightOf="@id/image"
+        android:text="微信号" />
+
+    <TextView
+        android:id="@+id/bind_text"
+        style="@style/comm_text"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/round_yellow_untransparent"
+        android:paddingBottom="@dimen/horizontal_margin_small"
+        android:paddingLeft="@dimen/vertical_margin"
+        android:paddingRight="@dimen/vertical_margin"
+        android:paddingTop="@dimen/horizontal_margin_small"
+        android:text="绑定"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

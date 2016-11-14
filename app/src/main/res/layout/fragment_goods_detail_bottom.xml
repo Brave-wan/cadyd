@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_heigh"
+        android:background="#eeeeee" />
+
+    <RadioGroup
+        android:id="@+id/detail_rg"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_heigh"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <RadioButton
+            android:id="@+id/goods_image_info_rb"
+            style="@style/goods_detail_radio_btn"
+            android:checked="true"
+            android:text="图文详情" />
+
+        <RadioButton
+            android:id="@+id/goods_standard_info_rb"
+            style="@style/goods_detail_radio_btn"
+            android:text="规格参数" />
+
+        <RadioButton
+            android:id="@+id/goods_pack_info_rb"
+            style="@style/goods_detail_radio_btn"
+            android:text="包装及售后" />
+    </RadioGroup>
+
+    <com.cadyd.app.ui.view.CustWebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/detail_rg"
+        android:background="@color/white"
+        android:scrollbars="vertical" />
+
+    <org.wcy.android.widget.MyListView
+        android:id="@+id/findetailgoods_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/detail_rg"
+        android:background="@color/white"
+        android:divider="@color/light_gray"
+        android:dividerHeight="@dimen/line_height"
+        android:listSelector="@color/transparent"
+        android:paddingLeft="@dimen/horizontal_margin"
+        android:paddingRight="@dimen/horizontal_margin"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/pack_info"
+        style="@style/comm_text_black"
+        android:layout_width="match_parent"
+        android:padding="@dimen/horizontal_margin" />
+</LinearLayout>

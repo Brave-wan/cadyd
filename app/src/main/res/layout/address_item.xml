@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:focusable="true"
+              android:clickable="true">
+    <View style="@style/comm_line_horizontal"/>
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/horizontal_margin"
+                    android:layout_marginBottom="@dimen/vertical_margin"
+                    android:layout_marginLeft="@dimen/horizontal_margin"
+                    android:layout_marginRight="@dimen/horizontal_margin">
+        <TextView style="@style/comm_text"
+                  android:id="@+id/address_user_name"
+                  android:text="name"/>
+        <TextView style="@style/comm_text"
+                  android:id="@+id/address_phone"
+                  android:layout_alignParentRight="true"
+                  android:text="13896161388"/>
+    </RelativeLayout>
+
+    <TextView style="@style/comm_text"
+              android:id="@+id/address_address"
+              android:layout_alignParentRight="true"
+              android:layout_marginTop="@dimen/vertical_margin"
+              android:text="afafafafaf"
+              android:layout_marginLeft="@dimen/horizontal_margin"
+              android:layout_marginRight="@dimen/horizontal_margin"/>
+
+    <View style="@style/comm_line_horizontal"
+          android:layout_marginTop="@dimen/vertical_margin"
+          android:layout_marginBottom="@dimen/vertical_margin"/>
+
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/horizontal_margin"
+                    android:layout_marginRight="@dimen/horizontal_margin">
+
+        <CheckBox style="@style/gradCheckBoxStyle"
+                  android:id="@+id/address_is_default"
+                  android:background="@color/white"
+                  android:textColor="@drawable/text_gred_and_yelloy"
+                  android:text="设为默认"/>
+
+        <TextView android:id="@+id/address_delete"
+                  style="@style/comm_text"
+                  android:drawableLeft="@mipmap/delete_image"
+                  android:layout_alignParentRight="true"
+                  android:text="删除"/>
+
+        <TextView style="@style/comm_text"
+                  android:id="@+id/address_setting"
+                  android:layout_toLeftOf="@id/address_delete"
+                  android:drawableLeft="@mipmap/edit_image"
+                  android:layout_marginRight="@dimen/horizontal_margin_small"
+                  android:text="编辑"/>
+    </RelativeLayout>
+    <View style="@style/comm_line_horizontal"
+          android:layout_marginTop="@dimen/vertical_margin"/>
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:paddingTop="@dimen/vertical_margin"
+                android:paddingBottom="@dimen/vertical_margin">
+    <CheckBox
+            android:id="@+id/goods_checkbox"
+            style="@style/shopping_cart_checkbox"/>
+    <ImageView
+            android:id="@+id/goods_image"
+            android:layout_width="80dip"
+            android:layout_height="80dip"
+            android:scaleType="fitXY"
+            android:background="@drawable/corners"
+            android:layout_toRightOf="@+id/goods_checkbox"/>
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="80dip"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@+id/goods_image"
+                    android:layout_marginLeft="@dimen/vertical_margin"
+                    android:layout_marginRight="@dimen/horizontal_margin">
+        <TextView style="@style/comm_text_black"
+                  android:id="@+id/good_name"
+                  android:layout_height="wrap_content"
+                  android:text="运动鞋专卖"
+                  android:ellipsize="end"
+                  android:lines="2"
+                  android:singleLine="false"
+                  android:layout_toRightOf="@+id/shop_checkbox"
+                  android:layout_alignParentTop="true"/>
+        <TextView style="@style/comm_text"
+                  android:id="@+id/salemix"
+                  android:layout_height="wrap_content"
+                  android:text="颜色:浅蓝色,尺寸:38"
+                  android:layout_toRightOf="@+id/shop_checkbox"
+                  android:layout_centerVertical="true"/>
+        <RelativeLayout android:layout_width="100dip"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true">
+            <com.cadyd.app.ui.view.AddAndSubView
+                    android:id="@+id/add_sub_view"
+                    android:layout_width="100dip"
+                    android:layout_height="25dip"
+                    android:layout_alignParentRight="true"
+                    android:orientation="horizontal"/>
+        </RelativeLayout>
+        <TextView style="@style/comm_text"
+                  android:id="@+id/price"
+                  android:text="￥36.00"
+                  android:textColor="@color/goods_detail_red"
+                  android:layout_alignParentBottom="true"
+                  android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <RadioGroup android:id="@+id/rgs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#EDEDED"
+                android:layout_alignParentBottom="true">
+
+        <RadioButton style="@style/one__radio_btn"
+                     android:id="@+id/ui_tesco_navigation_radio_button_home"
+                     android:drawableTop="@drawable/one_home"
+                     android:checked="true"
+                     android:text="首页"/>
+
+        <RadioButton style="@style/one__radio_btn"
+                     android:id="@+id/ui_tesco_navigation_radio_button_allGoods"
+                     android:drawableTop="@drawable/one_all_goods"
+                     android:text="所有商品"/>
+
+        <RadioButton style="@style/one__radio_btn"
+                     android:id="@+id/ui_tesco_navigation_radio_button_new"
+                     android:drawableTop="@drawable/one_new"
+                     android:text="最新揭晓"/>
+
+        <RadioButton style="@style/one__radio_btn"
+                     android:id="@+id/ui_tesco_navigation_radio_button_car"
+                     android:drawableTop="@drawable/one_car"
+                     android:text="购物车"/>
+
+        <RadioButton style="@style/one__radio_btn"
+                     android:id="@+id/ui_tesco_navigation_radio_button_my"
+                     android:drawableTop="@drawable/one_my"
+                     android:text="我的"/>
+    </RadioGroup>
+
+    <FrameLayout android:id="@+id/common_frame"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_above="@id/rgs">
+    </FrameLayout>
+
+</RelativeLayout>

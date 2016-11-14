@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/base_hot_title"
+        style="@style/comm_text_black"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/vertical_margin"
+        android:drawableLeft="@mipmap/re"
+        android:drawablePadding="@dimen/vertical_margin"
+        android:text="最热推荐"
+        android:textSize="@dimen/font_title" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/hot_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/base_hot_title"
+        android:layout_marginLeft="@dimen/vertical_margin"></android.support.v7.widget.RecyclerView>
+
+    <View
+        android:id="@+id/ten_line"
+        style="@style/comm_line_horizontal"
+        android:layout_height="@dimen/vertical_margin"
+        android:layout_below="@id/hot_recyclerView" />
+
+    <TextView
+        android:id="@+id/all_baby_number"
+        style="@style/comm_text_black"
+        android:layout_below="@id/ten_line"
+        android:layout_margin="@dimen/vertical_margin"
+        android:drawableLeft="@mipmap/baobeix"
+        android:drawablePadding="@dimen/vertical_margin"
+        android:text="全部宝贝  20"
+        android:textSize="@dimen/font_title" />
+
+    <View
+        style="@style/comm_line_horizontal"
+        android:layout_below="@id/all_baby_number" />
+
+</RelativeLayout>

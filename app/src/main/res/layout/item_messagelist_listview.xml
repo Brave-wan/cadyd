@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/horizontal_margin">
+
+    <TextView
+        android:id="@+id/item_messageList_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="3dp"
+        android:text="生活不需要无谓的执著，一切随缘。时间，会沉淀最真的情感；风雨，会考验最暖的陪伴。"
+        android:textColor="@color/text_black" />
+
+    <TextView
+        android:id="@+id/item_messageList_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/item_messageList_name"
+        android:layout_marginTop="5dp"
+        android:text="2016-10-11  14:00" />
+
+
+</RelativeLayout>

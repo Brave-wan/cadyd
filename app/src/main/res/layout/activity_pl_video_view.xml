@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/void_rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <SurfaceView
+            android:id="@+id/SurfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:id="@+id/LoadingView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/buffering"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+
+        <include
+            layout="@layout/incudle_media_player_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            />
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/input_text"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/msg_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/message_back_icon"/>
+
+        <EditText
+            android:id="@+id/void_content"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="3.6"
+            android:background="@drawable/shap_include_mediaplayer_editext"
+            android:hint="跟主播聊什么?"
+            android:paddingLeft="8dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="14sp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0.9"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/voide_send"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/shap_live_close_image"
+                android:gravity="center"
+                android:text="发送"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/live_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/chat_list"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/chat_list"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <RadioButton
+            android:id="@+id/live_radio_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radiobtn_live_msg"
+            android:button="@null"/>
+
+        <RadioButton
+            android:id="@+id/live_radio_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/radiobtn_live_share"
+            android:button="@null"/>
+
+        <RadioButton
+            android:id="@+id/live_radio_merchandise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/radiobtn_live_merchandise"
+            android:button="@null"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:enabled="false"/>
+
+        <RadioButton
+            android:id="@+id/live_radio_gift"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/radiobtn_live_gift"
+            android:button="@null"/>
+
+        <RadioButton
+            android:id="@+id/live_radio_Rproducts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/radiobtn_live_products"
+            android:button="@null"/>
+    </RadioGroup>
+
+    <include
+        android:id="@+id/live_empty"
+        layout="@layout/live_empte_view"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>

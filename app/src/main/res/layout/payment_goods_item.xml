@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:orientation="vertical"
+              android:layout_height="match_parent">
+
+    <LinearLayout style="@style/linearlayout_horizontal"
+                  android:layout_height="wrap_content">
+
+        <TextView style="@style/comm_text"
+                  android:id="@+id/math_tow_lift"
+                  android:layout_width="0dp"
+                  android:layout_weight="9"
+                  android:singleLine="true"
+                  android:layout_centerVertical="true"
+                  android:text="title"/>
+
+        <TextView style="@style/comm_text"
+                  android:visibility="gone"
+                  android:id="@+id/math_tow_delete"
+                  android:layout_width="0dp"
+                  android:layout_weight="1"
+                  android:gravity="center"
+                  android:layout_marginLeft="@dimen/horizontal_margin"
+                  android:text="删除"/>
+
+    </LinearLayout>
+
+    <View style="@style/comm_line_horizontal"
+          android:layout_marginLeft="@dimen/vertical_margin"
+          android:layout_marginRight="@dimen/vertical_margin"/>
+
+
+    <LinearLayout style="@style/linearlayout_horizontal"
+                  android:layout_height="wrap_content">
+
+        <ImageView android:id="@+id/math_tow_image"
+                   android:layout_width="70dp"
+                   android:layout_height="95dp"
+                   android:scaleType="fitXY"/>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_marginLeft="@dimen/horizontal_margin"
+                      android:orientation="vertical">
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal">
+
+                <TextView style="@style/comm_text"
+                          android:id="@+id/math_tow_all_number"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:text="总需123人次"/>
+
+                <TextView android:id="@+id/math_tow_surplus_number"
+                          style="@style/comm_text"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:text="剩余111人次"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:gravity="center_vertical"
+                          android:layout_marginTop="6dp">
+
+                <TextView style="@style/comm_text"
+                          android:layout_width="wrap_content"
+                          android:text="乐购人次:"/>
+
+                <LinearLayout android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:padding="@dimen/line_height"
+                              android:orientation="horizontal"
+                              android:gravity="center_vertical"
+                              android:layout_marginLeft="@dimen/horizontal_margin_small"
+                              android:background="@drawable/square_gray_transparent">
+
+                    <TextView style="@style/comm_text"
+                              android:id="@+id/math_tow_reduce_people"
+                              android:layout_height="30dp"
+                              android:layout_width="30dp"
+                              android:gravity="center"
+                              android:textSize="18sp"
+                              android:text="-"/>
+
+                    <View style="@style/comm_line_vertical"
+                          android:background="@color/gray"/>
+
+                    <EditText style="@style/comm_text"
+                              android:background="@null"
+                              android:id="@+id/math_tow_number_people"
+                              android:numeric="integer"
+                              android:gravity="center"
+                              android:layout_height="match_parent"
+                              android:layout_width="50dp"
+                              android:text="1"/>
+
+                    <View style="@style/comm_line_vertical"
+                          android:background="@color/gray"/>
+
+                    <TextView style="@style/comm_text"
+                              android:id="@+id/math_tow_add_people"
+                              android:layout_height="30dp"
+                              android:layout_width="30dp"
+                              android:gravity="center"
+                              android:textSize="18sp"
+                              android:text="+"/>
+
+                </LinearLayout>
+
+                <Button style="@style/button_wrap_read_style"
+                        android:id="@+id/math_tow_other_people"
+                        android:layout_height="25dp"
+                        android:layout_width="50dp"
+                        android:text="包尾"/>
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:gravity="center_vertical"
+                          android:layout_marginTop="6dp">
+
+                <TextView style="@style/comm_text"
+                          android:layout_width="wrap_content"
+                          android:text="参与期数:"/>
+
+                <LinearLayout android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:padding="@dimen/line_height"
+                              android:orientation="horizontal"
+                              android:gravity="center_vertical"
+                              android:layout_marginLeft="@dimen/horizontal_margin_small"
+                              android:background="@drawable/square_gray_transparent">
+
+                    <TextView style="@style/comm_text"
+                              android:id="@+id/math_tow_reduce_period"
+                              android:layout_height="30dp"
+                              android:layout_width="30dp"
+                              android:gravity="center"
+                              android:textSize="18sp"
+                              android:textColor="@color/gray"
+                              android:text="-"/>
+
+                    <View style="@style/comm_line_vertical"
+                          android:background="@color/gray"/>
+
+                    <TextView style="@style/comm_text"
+                              android:id="@+id/math_tow_number_period"
+                              android:gravity="center"
+                              android:layout_height="match_parent"
+                              android:layout_width="50dp"
+                              android:text="1"/>
+
+                    <View style="@style/comm_line_vertical"
+                          android:background="@color/gray"/>
+
+                    <TextView style="@style/comm_text"
+                              android:id="@+id/math_tow_add_period"
+                              android:layout_height="30dp"
+                              android:layout_width="30dp"
+                              android:gravity="center"
+                              android:textSize="18sp"
+                              android:textColor="@color/gray"
+                              android:text="+"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

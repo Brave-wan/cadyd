@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/pullListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background"
+            android:orientation="vertical">
+
+            <com.cadyd.app.ui.view.guide.ZImageCycleView
+                android:id="@+id/guid_top_view"
+                android:layout_width="match_parent"
+                android:layout_height="260dip"
+                android:background="@mipmap/adv_top" />
+
+            <org.wcy.android.widget.NoScrollGridView
+                android:id="@+id/topMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:numColumns="3"
+                android:paddingBottom="@dimen/horizontal_margin"
+                android:stretchMode="columnWidth" />
+
+            <View style="@style/comm_line_horizontal" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/vertical_margin"
+                android:paddingTop="@dimen/vertical_margin"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/new_vertical_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/vertical_margin"
+                        android:layout_marginRight="@dimen/vertical_margin"
+                        android:src="@mipmap/number_info_image" />
+
+                    <View style="@style/comm_line_vertical" />
+
+                </LinearLayout>
+
+
+                <ViewFlipper
+                    android:id="@+id/viewflipper"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toRightOf="@id/new_vertical_line"
+                    android:orientation="vertical" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/new_announce_title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/title_heigh"
+                android:layout_marginTop="@dimen/vertical_margin"
+                android:background="@color/white"
+                android:gravity="center"
+                android:paddingBottom="@dimen/vertical_margin"
+                android:paddingTop="@dimen/vertical_margin"
+                android:text="最新揭晓"
+                android:textColor="#FB861E"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/new_announce_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <View style="@style/comm_line_horizontal" />
+
+                <com.cadyd.app.ui.view.WrapContentHeightViewPager
+                    android:id="@+id/new_announce_viewpage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/light_gray"
+                    android:scaleType="fitXY" />
+
+                <View
+                    android:id="@+id/new_announce_line"
+                    style="@style/comm_line_horizontal" />
+
+                <LinearLayout
+                    android:id="@+id/new_announceviewpage_control"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/vertical_margin"
+                    android:background="@color/white"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal" />
+            </LinearLayout>
+
+            <!--三张广告-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dip"
+                android:layout_marginTop="@dimen/vertical_margin"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="10">
+
+                <ImageView
+                    android:id="@+id/bargain_price"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:background="@mipmap/adv_left_right"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:id="@+id/favorable"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:background="@mipmap/adv_left_right"
+                    android:scaleType="fitXY" />
+            </LinearLayout>
+
+            <com.cadyd.app.ui.view.guide.ZImageCycleView
+                android:id="@+id/guid_brand_view"
+                android:layout_width="match_parent"
+                android:layout_height="110dip"
+                android:background="@mipmap/adv_centen"
+                android:visibility="gone" />
+
+            <!--zjh为你推荐的一点直播-->
+
+            <RelativeLayout
+                android:id="@+id/live_relative"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/title_heigh"
+                android:layout_marginTop="@dimen/vertical_margin"
+                android:background="@color/background">
+
+                <TextView
+                    android:id="@+id/live_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="为您 推荐的一点直播"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/font_submit" />
+
+                <TextView
+                    android:id="@+id/live_more"
+                    style="@style/button_more"
+                    android:layout_marginBottom="@dimen/vertical_margin"
+                    android:layout_marginTop="@dimen/vertical_margin" />
+            </RelativeLayout>
+
+            <org.wcy.android.widget.NoScrollGridView
+                android:id="@+id/live_grid_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:numColumns="3"></org.wcy.android.widget.NoScrollGridView>
+
+
+            <!-- 为你推荐的旗舰店-->
+            <RelativeLayout
+                android:id="@+id/flagship_store_relative"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/title_heigh"
+                android:layout_marginTop="@dimen/vertical_margin"
+                android:background="@color/background">
+
+                <TextView
+                    android:id="@+id/flagship_store_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/font_submit" />
+
+            </RelativeLayout>
+
+            <org.wcy.android.widget.NoScrollGridView
+                android:id="@+id/flagship_store"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray"
+                android:horizontalSpacing="@dimen/line_height"
+                android:numColumns="2"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="@dimen/line_height" />
+
+            <!--zjh为你推荐的店铺-->
+            <RelativeLayout
+                android:id="@+id/recommended_shops_relative"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/title_heigh"
+                android:layout_marginTop="@dimen/vertical_margin"
+                android:background="@color/background">
+
+                <TextView
+                    android:id="@+id/recommended_shops_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="为您 推荐的店铺"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/font_submit" />
+
+                <TextView
+                    android:id="@+id/flagship_more"
+                    style="@style/button_more"
+                    android:layout_marginBottom="@dimen/vertical_margin"
+                    android:layout_marginTop="@dimen/vertical_margin" />
+            </RelativeLayout>
+
+            <org.wcy.android.widget.MyListView
+                android:id="@+id/recommended_shops"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+            </org.wcy.android.widget.MyListView>
+
+
+            <TextView
+                android:id="@+id/goods_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/horizontal_margin"
+                android:gravity="center"
+                android:textColor="@color/red"
+                android:textSize="@dimen/font_submit" />
+
+            <com.cadyd.app.ui.view.AutoLoadRecyclerView
+                android:id="@+id/goods_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent" />
+        </LinearLayout>
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+    <RelativeLayout
+        android:id="@+id/sousuo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_heigh"
+        android:layout_gravity="top"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/region"
+            style="@style/comm_text"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:drawablePadding="5dip"
+            android:drawableRight="@mipmap/arrow_down"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxWidth="100dip"
+            android:paddingLeft="@dimen/horizontal_margin"
+            android:paddingRight="@dimen/vertical_margin"
+            android:text="全国"
+            android:textColor="@color/text_primary_gray" />
+
+        <ImageView
+            android:id="@+id/search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/message"
+            android:paddingRight="@dimen/vertical_margin"
+            android:src="@mipmap/home_search_gray"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="@dimen/vertical_margin"
+            android:src="@mipmap/ico_message_gray"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/address"
+            style="@style/comm_text"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/search_btn"
+            android:layout_toRightOf="@+id/region"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:paddingRight="@dimen/vertical_margin"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="@color/text_primary_gray"
+            android:textSize="@dimen/font_tiny"
+            android:visibility="gone" />
+
+        <EditText
+            android:layout_width="0dip"
+            android:layout_height="0dip"
+            android:editable="false"
+            android:enabled="false" />
+    </RelativeLayout>
+</FrameLayout>

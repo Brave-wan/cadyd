@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@color/white"
+              android:paddingTop="@dimen/vertical_margin">
+    <ImageView android:id="@+id/image_view"
+               android:layout_width="120dip"
+               android:layout_height="120dip"
+               android:layout_gravity="center_horizontal"
+               android:scaleType="fitXY"/>
+    <TextView
+            android:id="@+id/name"
+            style="@style/comm_text"
+            android:layout_width="match_parent"
+            android:textColor="@color/black"
+            android:singleLine="false"
+            android:lines="2"
+            android:ellipsize="end"
+            android:text="雷柏（Rapoo）V500S 背光机械游戏键盘 机械黑轴 黑色版"/>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView
+                android:id="@+id/price"
+                style="@style/comm_text"
+                android:layout_width="match_parent"
+                android:textColor="@color/red"
+                android:singleLine="false"
+                android:lines="2"
+                android:ellipsize="end"
+                android:text="￥23.56"
+                android:layout_marginLeft="0dip"
+                android:layout_gravity="center_horizontal"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"/>
+        <TextView
+                android:id="@+id/bought"
+                style="@style/comm_text"
+                android:textSize="12sp"
+                android:text="已有12人购买"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+</LinearLayout>

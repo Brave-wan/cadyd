@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:id="@+id/layout"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <View style="@style/comm_line_horizontal"
+          android:id="@+id/view"
+          android:layout_height="@dimen/vertical_margin"
+          android:background="@color/background"/>
+
+    <LinearLayout android:orientation="vertical"
+                  android:padding="@dimen/vertical_margin"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@color/white">
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal">
+            <com.cadyd.app.ui.view.CircleImageView
+                    android:id="@+id/the_sun_item_head"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+            <TextView style="@style/comm_text"
+                      android:layout_gravity="center_vertical"
+                      android:id="@+id/the_sun_item_name"
+                      android:layout_marginLeft="@dimen/horizontal_margin"
+                      android:text="name"/>
+
+        </LinearLayout>
+
+        <View style="@style/comm_line_horizontal"
+              android:layout_marginTop="@dimen/vertical_margin"/>
+
+        <TextView style="@style/comm_text"
+                  android:id="@+id/the_sun_item_title"
+                  android:layout_marginLeft="@dimen/horizontal_margin"
+                  android:layout_marginTop="@dimen/vertical_margin"
+                  android:layout_marginBottom="@dimen/vertical_margin"
+                  android:drawablePadding="0dip"/>
+
+        <TextView android:id="@+id/the_sun_item_content"
+                  style="@style/comm_text"
+                  android:drawablePadding="0dip"
+                  android:visibility="gone"/>
+
+        <HorizontalScrollView android:id="@+id/the_sun_item_images"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:layout_marginBottom="@dimen/vertical_margin">
+
+            <LinearLayout android:id="@+id/the_sun_list_image"
+                          android:orientation="horizontal"
+                          android:layout_width="wrap_content"
+                          android:layout_height="match_parent"/>
+
+        </HorizontalScrollView>
+
+        <View style="@style/comm_line_horizontal"
+              android:id="@+id/horizontal_line"/>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="@dimen/vertical_margin">
+
+            <LinearLayout android:id="@+id/the_sun_item_xin"
+                          android:layout_width="0dp"
+                          android:layout_weight="4"
+                          android:layout_height="match_parent">
+
+                <TextView style="@style/comm_text"
+                          android:id="@+id/the_sun_item_time"
+                          android:singleLine="true"
+                          android:drawablePadding="@dimen/horizontal_margin"
+                          android:drawableLeft="@mipmap/time"
+                          android:layout_width="wrap_content"
+                          android:text="2016.12.31"/>
+
+            </LinearLayout>
+
+            <RelativeLayout android:layout_width="0dp"
+                            android:layout_weight="4"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                <TextView style="@style/comm_text"
+                          android:id="@+id/the_sun_share"
+                          android:visibility="gone"
+                          android:drawablePadding="@dimen/horizontal_margin_small"
+                          android:drawableLeft="@mipmap/guanxin"
+                          android:layout_width="wrap_content"
+                          android:text=""/>
+
+                <TextView style="@style/comm_text"
+                          android:id="@+id/the_sun_comment"
+                          android:layout_alignParentRight="true"
+                          android:drawablePadding="@dimen/horizontal_margin_small"
+                          android:drawableLeft="@mipmap/pinglun"
+                          android:layout_width="wrap_content"
+                          android:text="5"/>
+
+                <TextView style="@style/comm_text"
+                          android:id="@+id/the_sun_zambia"
+                          android:layout_centerHorizontal="true"
+                          android:drawablePadding="@dimen/horizontal_margin_small"
+                          android:drawableLeft="@mipmap/guanxin"
+                          android:layout_width="wrap_content"
+                          android:text="14"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

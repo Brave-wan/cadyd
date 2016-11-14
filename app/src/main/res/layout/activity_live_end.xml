@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="#000000"
+    tools:context="com.cadyd.app.ui.activity.LiveEndActivity">
+
+    <com.cadyd.app.utils.CircleImageView
+        android:id="@+id/live_end_header"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        app:border_color="@color/white"
+        app:border_width="2dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:background="#33FFFFFF" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:text="直播结束"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_big" />
+
+    <TextView
+        android:id="@+id/liveEnde_liveMinutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:textColor="@color/font_gray"
+        android:textSize="@dimen/font_submit" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:background="#33FFFFFF" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="@dimen/activity_horizontal_margin">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/live_end_personal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_submit" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="观看人数"
+                android:textColor="@color/font_gray"
+                android:textSize="@dimen/font_submit" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/live_end_spend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_submit" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收到花币"
+                android:textColor="@color/font_gray"
+                android:textSize="@dimen/font_submit" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/corners_btn_withe"
+        android:gravity="center"
+        android:text="返回首页"
+        android:clickable="true"
+        android:onClick="BackHomeClick"
+        android:textColor="@color/font_black"
+        android:textSize="@dimen/font_submit" />
+</LinearLayout>

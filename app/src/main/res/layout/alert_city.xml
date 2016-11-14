@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:padding="20dip">
+
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/edit_height"
+                android:background="@mipmap/alert_top_bg"
+                android:gravity="center"
+                android:text="收货地区"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_small"/>
+
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background"
+                android:orientation="vertical">
+
+            <com.cadyd.app.ui.view.city.CityPicker
+                    android:id="@+id/citypicker"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/horizontal_margin"
+                    android:layout_marginRight="@dimen/horizontal_margin"
+                    android:gravity="center"
+                    android:paddingBottom="10dip"
+                    android:paddingTop="10dip"/>
+
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/edit_height"
+                    android:layout_marginTop="@dimen/vertical_margin"
+                    android:background="@color/background"
+                    android:paddingBottom="@dimen/vertical_margin"
+                    android:paddingLeft="@dimen/horizontal_margin"
+                    android:paddingRight="@dimen/horizontal_margin"
+                    android:weightSum="2">
+
+                <Button
+                        android:id="@+id/cancel"
+                        android:background="@drawable/add_card_button_selector"
+                        style="@style/comm_text"
+                        android:layout_width="0dip"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="@dimen/horizontal_margin"
+                        android:layout_weight="1"
+                        android:text="取消"/>
+
+                <Button
+                        android:id="@+id/confirm"
+                        android:background="@drawable/purchase_button_selector"
+                        style="@style/comm_text"
+                        android:layout_width="0dip"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="@dimen/horizontal_margin"
+                        android:layout_weight="1"
+                        android:text="确定"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

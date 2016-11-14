@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:padding="@dimen/padding_extra_samll">
+
+    <ImageView
+        android:id="@+id/item_live_new_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/chong"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/item_live_new_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="@dimen/horizontal_margin"
+        android:text="我是小可爱"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_title" />
+
+    <ImageView
+        android:id="@+id/item_live_new_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/horizontal_margin"
+        android:background="@mipmap/note_porfile_zhibo" />
+</RelativeLayout>

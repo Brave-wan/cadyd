@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:background="@color/white">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_gray"
+            android:paddingTop="@dimen/vertical_margin"
+            android:paddingBottom="@dimen/vertical_margin"
+            android:paddingLeft="@dimen/horizontal_margin"
+            android:paddingRight="@dimen/horizontal_margin">
+        <ImageView android:id="@+id/goods_image"
+                   android:layout_width="90dip"
+                   android:layout_height="90dip"
+                   android:layout_gravity="center_horizontal"
+                   android:layout_alignParentLeft="true"
+                   android:layout_marginRight="@dimen/vertical_margin"
+                   android:scaleType="fitXY"
+                   android:src="@mipmap/detail_show_1"/>
+        <TextView
+                android:id="@+id/good_name"
+                style="@style/comm_text"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:singleLine="false"
+                android:lines="2"
+                android:ellipsize="end"
+                android:text="雷柏（Rapoo）V500S 背光机械游戏键盘 机械黑轴 黑色版"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/goods_image"
+                android:layout_toLeftOf="@+id/right_layout"
+                android:layout_marginTop="@dimen/horizontal_margin_small"
+                android:layout_marginRight="@dimen/horizontal_margin_small"/>
+        <TextView
+                android:id="@+id/salemix"
+                style="@style/comm_text"
+                android:text="颜色:粉红"
+                android:layout_alignBottom="@+id/goods_image"
+                android:layout_toRightOf="@+id/goods_image"
+                android:layout_marginBottom="@dimen/horizontal_margin_small"/>
+        <LinearLayout
+                android:id="@+id/right_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentRight="true">
+            <TextView
+                    android:id="@+id/price"
+                    style="@style/comm_text_black"
+                    android:text="￥23.56"/>
+            <TextView
+                    android:id="@+id/number"
+                    style="@style/comm_text"
+                    android:text="X1"
+                    android:layout_gravity="right"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <View style="@style/comm_line_horizontal"
+          android:id="@+id/line_one"
+          android:visibility="gone"/>
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="@dimen/edit_height"
+                    android:paddingLeft="@dimen/horizontal_margin"
+                    android:id="@+id/goodsPrefer_layout"
+                    android:visibility="gone">
+        <TextView style="@style/comm_text_black"
+                  android:text="是否使用优惠卷"
+                  android:layout_alignParentLeft="true"
+                  android:layout_centerVertical="true"/>
+        <CheckBox
+                android:id="@+id/goodsPrefer_checkbox"
+                style="@style/shopping_cart_checkbox"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="false"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="@dimen/edit_height"
+                    android:paddingLeft="@dimen/horizontal_margin"
+                    android:id="@+id/luckCode_layout"
+                    android:visibility="gone"
+                    android:background="@drawable/orthogonal_vertical">
+        <TextView style="@style/comm_text_black"
+                  android:id="@+id/luckCode_number"
+                  android:text="是否使用乐购码"
+                  android:layout_alignParentLeft="true"
+                  android:layout_centerVertical="true"/>
+        <CheckBox
+                android:id="@+id/luckCode_checkbox"
+                style="@style/shopping_cart_checkbox"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="false"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="@dimen/edit_height"
+                    android:paddingLeft="@dimen/horizontal_margin"
+                    android:id="@+id/reabte_layout"
+                    android:visibility="gone">
+        <TextView
+                android:id="@+id/rebateAmount"
+                style="@style/comm_text"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"/>
+        <CheckBox
+                android:id="@+id/reabte_checkbox"
+                style="@style/shopping_cart_checkbox"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="false"/>
+    </RelativeLayout>
+</LinearLayout>

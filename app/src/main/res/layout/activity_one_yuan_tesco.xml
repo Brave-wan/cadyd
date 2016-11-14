@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coprdinator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:fitsSystemWindows="true">
+
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentInsetStart="0dp"
+                app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <com.cadyd.app.ui.view.guide.ImageCycleView
+                        android:id="@+id/ui_tesco_head"
+                        android:layout_width="match_parent"
+                        android:layout_height="240dip" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/vertical_margin"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:paddingTop="12dp">
+
+                        <TextView
+                            android:id="@+id/ui_tesco_all_class"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="@dimen/padding_extra_samll"
+                            android:drawableTop="@mipmap/classification_image"
+                            android:gravity="center_horizontal"
+                            android:text="分类" />
+
+                        <TextView
+                            android:id="@+id/ui_tesco_ten_yuan"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="@dimen/padding_extra_samll"
+                            android:drawableTop="@mipmap/image10yuan"
+                            android:gravity="center_horizontal"
+                            android:text="十元专区" />
+
+                        <TextView
+                            android:id="@+id/ui_tesco_enjoy"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="@dimen/padding_extra_samll"
+                            android:drawableTop="@mipmap/backtoenjoy_image"
+                            android:gravity="center_horizontal"
+                            android:text="返享" />
+
+                        <TextView
+                            android:id="@+id/ui_tesco_the_sun"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="@dimen/padding_extra_samll"
+                            android:drawableTop="@mipmap/sun_image"
+                            android:gravity="center_horizontal"
+                            android:text="晒单" />
+
+                        <TextView
+                            android:id="@+id/ui_tesco_common_problem"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="@dimen/padding_extra_samll"
+                            android:drawableTop="@mipmap/question_image"
+                            android:gravity="center_horizontal"
+                            android:text="常见问题" />
+                    </LinearLayout>
+
+                    <!--添加最新揭晓 -->
+                    <TextView
+                        android:id="@+id/new_announce_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/title_heigh"
+                        android:layout_marginTop="@dimen/vertical_margin"
+                        android:background="@color/white"
+                        android:gravity="left|center_vertical"
+                        android:paddingBottom="@dimen/vertical_margin"
+                        android:paddingLeft="@dimen/horizontal_margin"
+                        android:paddingTop="@dimen/vertical_margin"
+                        android:text="最新揭晓"
+                        android:textColor="#FB861E"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/new_announce_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <View style="@style/comm_line_horizontal" />
+
+                        <com.cadyd.app.ui.view.WrapContentHeightViewPager
+                            android:id="@+id/new_announce_viewpage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/light_gray"
+                            android:scaleType="fitXY" />
+
+                        <View
+                            android:id="@+id/new_announce_line"
+                            style="@style/comm_line_horizontal" />
+
+                        <LinearLayout
+                            android:id="@+id/new_announceviewpage_control"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/vertical_margin"
+                            android:background="@color/white"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal"></LinearLayout>
+
+                    </LinearLayout>
+                    <!--添加最新揭晓 -->
+                    <RadioGroup
+                        android:id="@+id/ui_tesco_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/ui_tesco_rq"
+                            style="@style/main_radio_btn"
+                            android:text="人气"
+                            android:textColor="@drawable/text_gred_and_yelloy" />
+
+                        <RadioButton
+                            android:id="@+id/ui_tesco_jd"
+                            style="@style/main_radio_btn"
+                            android:text="进度"
+                            android:textColor="@drawable/text_gred_and_yelloy" />
+
+                        <RadioButton
+                            android:id="@+id/ui_tesco_zx"
+                            style="@style/main_radio_btn"
+                            android:text="最新"
+                            android:textColor="@drawable/text_gred_and_yelloy" />
+
+                        <RadioButton
+                            android:id="@+id/ui_tesco_zxrc"
+                            style="@style/main_radio_btn"
+                            android:text="总需人次"
+                            android:textColor="@drawable/text_gred_and_yelloy" />
+                    </RadioGroup>
+
+                    <View style="@style/comm_line_horizontal" />
+                </LinearLayout>
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/ui_tesco_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/light_gray"
+                android:horizontalSpacing="@dimen/line_height"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="@dimen/line_height" />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <RelativeLayout
+            android:id="@+id/title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_heigh"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/vertical_margin"
+            android:paddingRight="@dimen/vertical_margin"
+            app:layout_behavior="com.cadyd.app.comm.MyBehavior">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_circle"
+                android:drawablePadding="5dip"
+                android:gravity="center"
+                android:padding="@dimen/horizontal_margin_small"
+                android:src="@mipmap/back_left_ico" />
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/comm_text"
+                android:layout_centerInParent="true"
+                android:text="一元乐购"
+                android:textColor="@color/text_primary_gray"
+                android:textSize="@dimen/font_big" />
+
+            <ImageView
+                android:id="@+id/shopping_cart"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_circle"
+                android:gravity="center"
+                android:padding="@dimen/vertical_margin"
+                android:paddingRight="@dimen/vertical_margin"
+                android:src="@mipmap/shoppingcar_image_ico_writh"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/topedit"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:editable="false"
+                android:enabled="false" />
+        </RelativeLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+
+    <com.qiniu.pili.droid.streaming.widget.AspectFrameLayout
+        android:id="@+id/cameraPreview_afl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <com.cadyd.app.ui.push.gles.CameraPreviewFrameView
+            android:id="@+id/cameraPreview_surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"/>
+
+        <include
+            layout="@layout/focus_indicator"/>
+
+    </com.qiniu.pili.droid.streaming.widget.AspectFrameLayout>
+
+    <TextView
+        android:id="@+id/log_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/cd_tv_log_info"/>
+
+
+    <include layout="@layout/status"/>
+
+    <include layout="@layout/camera_button_holder"/>
+
+    <include
+        layout="@layout/include_live_push_stream_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"/>
+
+
+    <RelativeLayout
+        android:id="@+id/include_beauty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#bc000000"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+        <SeekBar
+            android:id="@+id/beautyLevel_seekBar"
+            style="@style/Widget.SeekBar.Normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/liveBeauty_sure"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="35dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginRight="14dp"
+            android:max="100"
+            android:progress="100"/>
+
+        <TextView
+            android:id="@+id/liveBeauty_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/shape_livebeauty_sure_bg"
+            android:text="完成"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/input_text"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/msg_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/message_back_icon"/>
+
+        <EditText
+            android:id="@+id/void_content"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="3.6"
+            android:background="@drawable/shap_include_mediaplayer_editext"
+            android:hint="跟主播聊什么?"
+            android:paddingLeft="8dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="14sp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0.9"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/voide_send"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/shap_live_close_image"
+                android:gravity="center"
+                android:text="发送"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/live_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/chat_list"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/chat_list"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <RadioButton
+            android:id="@+id/live_radio_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radiobtn_live_msg"
+            android:button="@null"/>
+
+        <RadioButton
+            android:id="@+id/live_radio_canerming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/shap_canerming_check"
+            android:button="@null"/>
+
+        <RadioButton
+            android:id="@+id/live_radio_merchandise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/shap_meiyan_check"
+            android:button="@null"/>
+
+    </RadioGroup>
+
+    <include
+        android:id="@+id/steaming_live_empty"
+        layout="@layout/live_empte_view"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

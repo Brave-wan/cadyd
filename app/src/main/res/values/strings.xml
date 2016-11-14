@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">第一点</string>
+    <string name="no_internet">无网络连接~！</string>
+    <string name="generic_server_down">连接服务器失败~！</string>
+    <string name="generic_error">网络异常,请稍后再试~！</string>
+    <string name="main_press_again_exit">再按一次退出应用程序</string>
+    <string name="home">首页</string>
+    <string name="shopping">商城</string>
+    <string name="live">直播</string>
+    <string name="found">找店</string>
+    <string name="shopping_cart">一点</string>
+    <string name="user_centent">我的</string>
+    <string name="recomment_more">查看更多为你推荐</string>
+    <string name="rank_more">查看完整排行榜</string>
+    <string name="pay_result">支付结果</string>
+    <string name="pay_succeed">支付成功</string>
+    <string name="pay_error">支付失败</string>
+    <string name="order_detail">订单详情</string>
+    <string name="no_result">对不起，没有搜索到相关数据！</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_global_manager">GlobalManagerActivity</string>
+    <string name="about_us_title">关于我们</string>
+    <string name="about_us_str">\u0020\u0020\u0020\u0020香港山茶花国际集团有限公司HK Camellia International Group
+        Limited(简称山茶花国际集团)，集互联网服务和实业投资于一体，主要经营互联网平台服务、地产投资、金融投资服务、食品服务等。\n\n
+        \u0020\u0020\u0020\u0020香港山茶花国际集团有限公司HK Camellia International Group Limited全资子公司重庆山茶花网络科技有限公司，
+        致力于云计算技术、大数据技术、移动互联网技术的开发与应用，引领移动互联网生活+商业革新。公司主要经营电子商务网络科技，旗下拥有“第一点”、“第一同城”、“第一社区”等互联网产品。
+    </string>
+    <string name="message_title">消息中心</string>
+    <string name="shop_category">商品分类</string>
+    <string name="shop_brands">商品品牌</string>
+    <string name="member_vip_count">历史积分：%s 分</string>
+    <string name="member_rule_title">会员规则</string>
+    <string name="user_vip_list_item_integral">+%s分</string>
+    <string name="shop_coupon_list_item_condtion">第一点专用，收藏即可领取\n满%s元可用</string>
+    <string name="buffering">Loading</string>
+    <string name="look_logistics_title">查看物流</string>
+    <string name="live_isStart">悬浮框已开启，请关闭悬浮框</string>
+
+
+    <string name="btn_start">开始</string>
+    <string name="btn_pause">暂停</string>
+    <string name="btn_resume">继续</string>
+    <string name="btn_stop">停止</string>
+
+
+    <string name="hw_codec_camera_streaming_txt">HW Codec Camera Streaming</string>
+    <string name="sw_codec_camera_streaming_txt">SW Codec Camera Streaming</string>
+    <string name="pure_audio_streaming_txt">Audio Streaming</string>
+    <string name="screen_recorder_streaming_txt">Screen Recorder Streaming</string>
+
+    <string name="string_state_ready">READY</string>
+    <string name="string_state_preparing">PREPARING</string>
+    <string name="string_state_connecting">CONNECTING</string>
+    <string name="string_state_streaming">STREAMING</string>
+    <string name="string_state_netblocking">NETBLOCKING, STOPPING</string>
+    <string name="string_state_con_timeout">CONNECTION TIMEOUT</string>
+    <string name="title_activity_audio_streaming">AudioStreamingActivity</string>
+
+    <string name="flash_light_on">ON</string>
+    <string name="flash_light_off">OFF</string>
+
+    <string name="cd_et_input_url">cd_et_input_url</string>
+    <string name="cd_btn_hw_codec">cd_btn_hw_codec</string>
+    <string name="cd_btn_sw_codec">cd_btn_sw_codec</string>
+    <string name="cd_btn_pure_audio">cd_btn_pure_audio</string>
+    <string name="cd_tv_version_info">cd_tv_version_info</string>
+    <string name="cd_tv_log_info">cd_tv_log_info</string>
+    <string name="cd_et_input_method">cd_et_input_method</string>
+    <string name="cd_btn_camera_switcher">cd_btn_camera_switcher</string>
+    <string name="cd_tv_stream_status">cd_tv_stream_status</string>
+    <string name="cd_btn_torch">cd_btn_torch</string>
+    <string name="cd_btn_capture">cd_btn_capture</string>
+    <string name="cd_btn_orientation">cd_btn_orientation</string>
+    <string name="cd_btn_mute">cd_btn_mute</string>
+    <string name="cd_btn_fb">cd_btn_fb</string>
+    <string name="cd_tv_streaming_state_hint">cd_tv_streaming_state_hint</string>
+    <string name="cd_shutter_button">cd_shutter_button</string>
+    <string name="cd_btn_screen_recorder">cd_btn_screen_recorder</string>
+</resources>

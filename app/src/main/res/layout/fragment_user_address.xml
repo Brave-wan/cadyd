@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background">
+
+
+    <Button style="@style/button_style"
+            android:id="@+id/user_address_add"
+            android:text="+添加地址"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/horizontal_margin"/>
+
+    <ListView android:id="@+id/user_address_list"
+              android:layout_above="@id/user_address_add"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:dividerHeight="@dimen/horizontal_margin"
+              android:divider="@color/background"/>
+
+
+</RelativeLayout>
